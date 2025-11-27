@@ -1,0 +1,170 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+nav {
+  background: #1E2939;
+  height: 60px;
+  width: 100%;
+  display: flex;              
+  align-items: center;        
+  justify-content: space-between; 
+  padding: 0 20px;            
+}
+
+label.logo {
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;  
+  list-style: none;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0 10px; 
+}
+
+nav ul li a {
+  color: white;
+  font-size: 15px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  transition: .5s;
+}
+
+a:hover {
+  background: #364153;
+  transition: .5s;
+}
+
+.checkbtn {
+  font-size: 22px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 30px;
+  cursor: pointer;
+  display: none;
+}
+
+.radio {
+  appearance: none;
+  background-color: #DB4621;
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  border-radius: 4px;
+  box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+  box-sizing: border-box;
+  color: #24292e;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  padding: 6px 16px;
+  position: relative;
+  transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  word-wrap: break-word;
+  width: 140px;
+  height: 40px;
+}
+
+.radio:hover {
+  background-color: #f3f4f6;
+  text-decoration: none;
+  transition-duration: 0.1s;
+}
+
+.radio:disabled {
+  background-color: #fafbfc;
+  border-color: rgba(27, 31, 35, 0.15);
+  color: #959da5;
+  cursor: default;
+}
+
+.radio:active {
+  background-color: #edeff2;
+  box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
+  transition: none 0s;
+}
+
+.radio:focus {
+  outline: 1px transparent;
+}
+
+.radio:before {
+  display: none;
+}
+
+.radio:-webkit-details-marker {
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+@media (max-width: 1050px) {
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 500px) {
+  .logo {
+    width:50vw;
+  }
+}
+
+
+@media (max-width: 890px) {
+  .checkbtn {
+    display: block;
+  }
+  label.logo {
+    font-size: 22px;
+  }
+  nav ul {
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    z-index: 100000000000000000000;
+    height: 100vh;
+    background: #2c3e50;
+    top: 60px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a {
+    font-size: 20px;
+    text-align: center;
+
+  }
+  a:hover,
+  a.active {
+    background: none;
+    color: #0082e6;
+  }
+  #check:checked ~ ul {
+    left: 0;
+  }
+}

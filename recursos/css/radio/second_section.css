@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+.second-section {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 20px;
+    padding: 20px;
+    max-width: 100%;
+    margin: 50;
+}
+
+.second-section .section-title {
+    font-size: 2em;
+    text-align: center;
+    color: #333;
+    margin: 10px 0; }
+
+.second-section .section-subtitle {
+    font-size: 1.2em;
+    text-align: center;
+    color: #666;
+    margin-bottom: 15px; 
+}
+
+@media (max-width: 768px) {
+    .second-section .section-title {
+        font-size: 1.5em;
+    }
+    .second-section .section-subtitle {
+        font-size: 1em;
+    }
+}
+
+#izquierda {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
+    margin: 0 auto;
+    max-width: 90%;
+}
+
+#izquierda button {
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+    border-radius: 5px;
+    font-size: 13px; 
+    font-weight: bold;   
+    width: 110%; 
+    height: 70px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+} 
+
+button {
+width:40px;
+height:40px;
+}
+
+#programa1 {
+    background-image: url('<?php echo base_url(); ?>recursos/img/m5.jpg');
+    background-size: cover;
+    background-position: center; 
+}
+
+#programa2 {
+    background-image: url('/fotos/fotos/covers/cap. 2.jpg');
+    background-size: cover;
+    background-position: center; 
+}
+
+
+#programa3 {
+    background-image: url('/fotos/fotos/covers/cap. 3.jpg');
+    background-size: cover;
+    background-position: center; 
+}
+
+#programa4 {
+    background-image: url('/fotos/fotos/covers/cap. 4.jpg');
+    background-size: cover;
+    background-position: center; 
+}
+
+#programa5 {
+    background-image: url('/fotos/fotos/covers/cap. 5.jpg');
+    background-size: cover;
+    background-position: center; 
+}
+
+#programa6 {
+    background-image: url('/fotos/fotos/covers/cap. 6.jpg');
+    background-size: cover;
+    background-position: center; 
+}
+
+#programa7 {
+    background-image: url('/fotos/fotos/covers/cap. 7.jpg');
+    background-size: cover;
+    background-position: center; 
+}
+
+#programa8 {
+    background-image: url('/fotos/fotos/covers/cap. 8.jpg');
+    background-size: cover;
+    background-position: center; 
+}
+
+#programa9 {
+    background-image: url('/fotos/fotos/covers/cap. 9.jpg');
+    background-size: cover;
+    background-position: center; 
+}
+
+#programa10 {
+    background-image: url('/fotos/fotos/covers/cap. 10.jpg');
+    background-size: cover;
+    background-position: center; 
+}
+
+#programa11 {
+    background-image: url('/fotos/fotos/covers/cap. 11.jpg');
+    background-size: cover;
+    background-position: center; 
+}
+
+#programa12 {
+    background-image: url('/fotos/fotos/covers/cap. 12.jpg');
+    background-size: cover;
+    background-position: center; 
+}
+
+#programa13 {
+    background-image: url('/fotos/fotos/covers/cap. 13.jpg');
+    background-size: cover;
+    background-position: center; 
+}
+
+#programa14 {
+    background-image: url('/fotos/fotos/covers/cap. 14.jpg');
+    background-size: cover;
+    background-position: center; 
+}
+
+#programa15 {
+    background-image: url('/fotos/fotos/covers/cap. 15.jpg');
+    background-size: cover;
+    background-position: center; 
+}
+
+#programa16 {
+    background-image: url('/fotos/fotos/covers/cap. 16.jpg');
+    background-size: cover;
+    background-position: center; 
+}
+
+#programa17 {
+    background-image: url('/fotos/fotos/covers/cap. 17.jpg');
+    background-size: cover;
+    background-position: center; 
+}
+
+#programa18 {
+    background-image: url('/fotos/fotos/covers/cap. 18.jpg');
+    background-size: cover;
+    background-position: center; 
+}
+
+#programa19 {
+    background-image: url('/fotos/fotos/covers/cap. 19.jpg');
+    background-size: cover;
+    background-position: center; 
+}
+
+#izquierda button::before {
+    content: "";
+    position: absolute;
+    top: 0; 
+    left: 0;
+    right: 0; 
+    bottom: 0;
+    z-index: 1;
+}
+
+#izquierda button span {
+    position: relative;
+    z-index: 2; 
+    color: #ffffff;
+    font-weight: bold;
+}
+
+#izquierda button:hover {
+    filter: brightness(0.9);
+}
+
+#derecha {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 20px;
+    min-height: 400px;
+}
+
+.frame {
+    width: 100%;
+    max-width: 1200px; 
+    margin: 0 auto;
+    overflow: hidden; 
+}
+
+.frame iframe {
+    width: 100%;
+    height: 400px;
+    border: none;
+}
+
+#programSelect {
+    display: none;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 300px;
+}
+
+@media (max-width: 1150px) {
+
+
+    .frame {
+        max-width: 100%;
+    }
+
+    .frame iframe {
+        width: 100%;
+        height: 350px;
+    }
+
+    
+}
+
+@media (max-width: 768px) {
+    #programSelect {
+        display: block;
+        margin: 0 auto;
+    }
+    #izquierda {
+        display: none;
+    }
+    .frame iframe {
+        width: 100%;
+        height: 400px;
+    }
+
+}
+
+@media (max-width: 550px) {
+    .frame iframe {
+        width: 100%;
+        height: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .frame iframe {
+        height: 350px;
+    }
+}

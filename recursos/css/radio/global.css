@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+
+:root {
+    --primary-color: #43284E;  
+    --secondary-color: #6A4C93; 
+    --text-color: #ffffff; 
+    --background-color: #1A1A2E; 
+    
+    
+    --font-normal: 400;
+    --font-medium: 500;
+    --font-semibold: 600;
+    --font-bold: 700;
+    --font-extrabold: 900;
+
+   
+    --fontsize-large: clamp(20px, 8vw, 80px);
+}
+
+
+.normal {
+    font-weight: var(--font-normal);
+}
+
+.medium {
+    font-weight: var(--font-medium);
+}
+
+.semibold {
+    font-weight: var(--font-semibold);
+}
+
+.bold {
+    font-weight: var(--font-bold);
+}
+
+.extrabold {
+    font-weight: var(--font-extrabold);
+}
+
+
+#title-header {
+    color: var(--text-color);
+    font-weight: 700;
+    font-size: var(--fontsize-large);
+    //text-transform: uppercase;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+
+#paragraph-hero {
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 18px;
+    padding-top:40px;
+     -webkit-font-smoothing: antialiased; 
+    -moz-osx-font-smoothing: grayscale;
+    text-shadow: none;
+    line-height: 1.2;
+    
+
+}
+
+.logo-content {
+padding:20px;
+padding-top:40px;
+padding-left:20px;
+display:flex;
+justify-content: center; 
+align-items: center;
+flex-direction: row; 
+gap:40px;
+
+
+}
+
+#paragraph-logo {
+    color: black;
+    font-weight: 600;
+    font-size: 14px;
+    -webkit-font-smoothing: antialiased; 
+    -moz-osx-font-smoothing: grayscale;
+    text-shadow: none;
+    line-height: 1.2;
+    margin-right:8px;
+
+}
+
+.content-logo{
+background-color:white;
+border-radius:22px;
+width:110px;
+gap:8px;
+height:40px;
+justify-content: center; 
+align-items: center;
+display:flex;
+flex-direction: row; 
+border: 1px solid rgba(27, 31, 35, 0.15);
+box-shadow:
+    rgba(27, 31, 35, 0.04) 0 1px 0,
+    rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.content-logoson {
+background-color:white;
+border-radius:22px;
+width:150px;
+gap:8px;
+height:40px;
+justify-content: center; 
+align-items: center;
+display:flex;
+flex-direction: row;
+border: 1px solid rgba(27, 31, 35, 0.15);
+box-shadow:
+    rgba(27, 31, 35, 0.04) 0 1px 0,
+    rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+  box-sizing: border-box;
+  
+
+}
+
+
+#logo-hero{
+margin-left:8px;
+color:black;
+font-size:30px;
+}
+
+
+
+
+#parragraf-header{
+text-align:center;
+font-weight: 600;
+font-size:20px;
+
+
+}
+
+
+
+

@@ -1,0 +1,25 @@
+    .container {
+        display: flex;
+        flex-wrap: wrap; 
+        align-items: center; 
+    }
+
+    .cuadro-verde {
+        display: flex;
+        flex-direction: column;
+        width: 100%; 
+    }
+
+    #mapsContent {
+        flex: 1; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #maps{
+        border: 0;
+        width: 100%;
+        max-width: 1200px;        
+    }
+

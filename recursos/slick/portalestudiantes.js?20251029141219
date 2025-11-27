@@ -1,0 +1,110 @@
+var modalPortal = $("[name=modalPortal]");
+var modalPortalAula = $("[name=modalPortalAula]");
+
+const firstPartBaq = 'https://barranquilla';
+const extension = '.unisimon.edu.co';
+const newBaseUrlBaq = `${firstPartBaq}${extension}`;
+const newBaseUrlBaqWithS = `${firstPartBaq}s${extension}`;
+
+const firstPartCuc = 'https://cucuta';
+const newBaseUrlCuc = `${firstPartCuc}${extension}`;
+const newBaseUrlCucWithS = `${firstPartCuc}s${extension}`;
+
+var aulaextendida_anterior=function(){
+    modalPortalAula.find('[name=tituloModalAula]').html('Seleccione versión aula virtual');
+    modalPortalAula.find('[name=linkBan]').val('https://aulaextendida.unisimon.edu.co/');
+    modalPortalAula.find('[name=tipoBan]').val('_blank');
+    modalPortalAula.find('[name=linkBav]').val('http://aulavirtual.unisimonbolivar.edu.co/index.html');
+    modalPortalAula.find('[name=tipoBav]').val('_blank');
+    
+    modalPortalAula.modal();
+};
+
+var aulaextendida=function(){
+    modalPortal.find('[name=tituloModal]').html('Por favor seleccione sede');
+    // modalPortal.find('[name=linkBa]').val('http://10.0.10.104/mantenimiento/');
+    modalPortal.find('[name=linkBa]').val('https://aulaextendida.unisimon.edu.co/');
+    modalPortal.find('[name=tipoBa]').val('_blank');
+    // modalPortal.find('[name=linkCu]').val('http://10.0.10.104/mantenimiento/');
+    modalPortal.find('[name=linkCu]').val('https://aulaextendida.unisimon.edu.co/');
+    modalPortal.find('[name=tipoCu]').val('_blank');
+    
+    modalPortal.modal();
+};
+
+var portaladministrativo=function(url_barranquilla){
+    modalPortal.find('[name=tituloModal]').html('Por favor seleccione sede');
+    // modalPortal.find('[name=linkBa]').val(url_barranquilla);
+    modalPortal.find('[name=linkBa]').val(`${newBaseUrlBaq}/academico`);
+    modalPortal.find('[name=tipoBa]').val('_self');
+    // modalPortal.find('[name=linkCu]').val('http://academico.unisimoncucuta.edu.co/');
+    modalPortal.find('[name=linkCu]').val(`${newBaseUrlCuc}/academico`);
+    modalPortal.find('[name=tipoCu]').val('_self');
+    
+    modalPortal.modal();
+    
+};
+
+var portalestudiantes=function(url_barranquilla){
+    modalPortal.find('[name=tituloModal]').html('Por favor seleccione sede');
+    modalPortal.find('[name=linkBa]').val(url_barranquilla);
+    modalPortal.find('[name=tipoBa]').val('_self');
+    // modalPortal.find('[name=linkCu]').val('http://matricula.unisimoncucuta.edu.co/websiaa/index.php');
+    modalPortal.find('[name=linkCu]').val(`${newBaseUrlCuc}/estudiante`);
+    modalPortal.find('[name=tipoCu]').val('_self');
+    
+    modalPortal.modal();
+    
+};
+
+var portaltrabajodesdecasa=function(url_barranquilla){
+    modalPortal.find('[name=tituloModal]').html('Por favor seleccione sede');
+    modalPortal.find('[name=linkBa]').val(url_barranquilla);
+    modalPortal.find('[name=tipoBa]').val('_self');
+    modalPortal.find('[name=linkCu]').val('https://www.unisimon.edu.co/cucuta/servicios/trabajodesdecasa');
+    modalPortal.find('[name=tipoCu]').val('_self');
+    
+    modalPortal.modal();
+    
+};
+
+var portalinscripcionpre=function(){
+    modalPortal.find('[name=tituloModal]').html('Por favor seleccione sede');
+    modalPortal.find('[name=linkBa]').val(`${newBaseUrlBaqWithS}/matricula/index.php/?tipo=pregrado`);
+    // modalPortal.find('[name=linkBa]').val('https://barranquillas.unisimon.edu.co/matricula/index.php/?tipo=pregrado');
+    modalPortal.find('[name=tipoBa]').val('_blank');
+    // modalPortal.find('[name=linkCu]').val('http://matricula.unisimoncucuta.edu.co/websiaa/modulos/aspirantes/');
+    modalPortal.find('[name=linkCu]').val(`${newBaseUrlCuc}/estudiante/aspirantes`);
+    modalPortal.find('[name=tipoCu]').val('_blank');
+    
+    modalPortal.modal();
+};
+
+var portalinscripcionpos=function(){
+    modalPortal.find('[name=tituloModal]').html('Por favor seleccione sede');
+    modalPortal.find('[name=linkBa]').val(`${newBaseUrlBaqWithS}/inscripcion_/?niv=postgrados`);
+    // modalPortal.find('[name=linkBa]').val('https://barranquillas.unisimon.edu.co/inscripcion_/?niv=postgrados');
+    modalPortal.find('[name=tipoBa]').val('_blank');
+    // modalPortal.find('[name=linkCu]').val('http://matricula.unisimoncucuta.edu.co/websiaa/modulos/aspirantes/');
+    modalPortal.find('[name=linkCu]').val(`${newBaseUrlCuc}/estudiante/aspirantes`);
+    modalPortal.find('[name=tipoCu]').val('_blank');
+    
+    modalPortal.modal();
+};
+
+var portalinscripcionprelinea=function(ins_linea){
+    modalPortal.find('[name=tituloModal]').html('Por favor seleccione sede');
+	if(ins_linea=="pregrado" || ins_linea=="pregrados"){
+	    modalPortal.find('[name=linkBa]').val(`${newBaseUrlBaqWithS}/matricula/index.php/?tipo=pregrado`);
+	    // modalPortal.find('[name=linkBa]').val('https://barranquillas.unisimon.edu.co/matricula/index.php/?tipo=pregrado');
+	}else{
+	    modalPortal.find('[name=linkBa]').val(`${newBaseUrlBaqWithS}/inscripcion/?niv=${ins_linea}`);
+	    // modalPortal.find('[name=linkBa]').val('https://barranquillas.unisimon.edu.co/inscripcion/?niv=' + ins_linea);
+	}
+    modalPortal.find('[name=tipoBa]').val('_blank');
+    // modalPortal.find('[name=linkCu]').val('http://matricula.unisimoncucuta.edu.co/websiaa/modulos/aspirantes/');
+    modalPortal.find('[name=linkCu]').val(`${newBaseUrlCuc}/estudiante/aspirantes`);
+    modalPortal.find('[name=tipoCu]').val('_blank');
+    
+    modalPortal.modal();
+};

@@ -1,0 +1,123 @@
+.bloques{
+display:flex;
+flex-direction:column;
+margin:20px;
+}
+
+.titulo {
+position:relative;
+bottom:20px;
+left:120px;
+}
+    
+.cuadro-maps {
+        flex: 1;
+        width:100%;
+        background-color: #008F8A; 
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+  
+    }
+
+    #verdeContent {
+        margin:20px;
+        width: 100%;
+        text-align: center; 
+        color:white;
+        display:flex;
+        flex-direction: row;  
+
+    }
+    
+
+    @media (min-width: 768px) {
+        .cuadro-verde {
+            flex-direction: row;
+        }
+    }
+
+ul {
+    list-style-type: none;
+}	
+
+
+
+.cuadro-maps h1,
+.cuadro-maps h2,
+.cuadro-maps ul li {
+    text-align: left;
+}
+
+.cuadro-maps h1 {
+    font-size: 16px;
+    padding-bottom: 8px;
+}
+
+.cuadro-maps h2,
+.cuadro-maps ul li {
+    font-size:12px;
+    padding-bottom: 6px;
+}
+li {
+    list-style: none;
+    position: relative;
+    padding-left: 0px;
+}
+
+#icono_1::before {
+    margin-left:5px;
+    margin-right:5px;
+    content: "\e07b";
+    font-family: "Font Awesome 5 Brands";
+    font-weight: 400;
+}
+
+#icono_2::before {
+    margin-left:5px;
+    margin-right:5px;
+    content: "\f167";
+    font-family: "Font Awesome 5 Brands";
+    font-weight: 400;
+}
+
+
+#icono_3::before {
+    margin-left:5px;
+    margin-right:5px;
+    content: "\f16d";
+    font-family: "Font Awesome 5 Brands";
+    font-weight: 400;
+}
+
+#icono_4::before {
+    margin-left:5px;
+    margin-right:5px;
+    content: "\f095";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+#icono_8::before {
+    margin-left:5px;
+    margin-right:5px;
+    content: "\f095";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+
+}
+
+
+#icono_5::before {
+    margin-left:5px;
+    margin-right:5px;
+    content: "\f0e0";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
+
+a {
+    color:white;
+}
