@@ -1,0 +1,2591 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>POLICARIBE</title>
+    <link rel="icon" href="policaribe/images/ico.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1 user-scalable=no">
+    
+    <!-- Fuentes -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet" />
+    
+    <!-- CSS de UNISIMON para Header y Slider -->
+    <link rel="stylesheet" type="text/css" href="https://www.unisimon.edu.co/recursos/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="https://www.unisimon.edu.co/recursos/fuentes/style.css" />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://www.unisimon.edu.co/recursos/css/organicfoodicons.css" />
+    <link rel="stylesheet" type="text/css" href="https://www.unisimon.edu.co/recursos/css/component.css" />
+    <link rel="stylesheet" type="text/css" href="https://www.unisimon.edu.co/recursos/css/date.css" />
+    <link rel="stylesheet" type="text/css" href="https://www.unisimon.edu.co/recursos/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="https://www.unisimon.edu.co/recursos/css/stylemain.css" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
+    
+    <!-- CSS de POLICARIBE para secciones -->
+    <link href="policaribe/templates/shaper_macro/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="policaribe/templates/shaper_macro/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="policaribe/templates/shaper_macro/css/custom.css" rel="stylesheet" type="text/css" />
+    <link href="policaribe/templates/shaper_macro/css/template.css" rel="stylesheet" type="text/css" />
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    
+    <!-- Scripts necesarios -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="https://www.unisimon.edu.co/recursos/bootstrap/js/bootstrap.min.js"></script>
+    
+    <script type="text/javascript">
+		var BASE_URL='https://www.unisimon.edu.co/';
+	</script>
+    
+    <style>
+    /* Por debajo de 520px */
+    @media screen and (max-width: 520px){
+        .contenidotexto {
+            font-size:13px !important;
+        }
+        .titulo{
+            font-size:16px !important;
+            padding-bottom: 20px !important;
+        }
+    }
+    
+
+    .whatsapp-flotante {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #25D366;
+        color: white;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        z-index: 1000;
+    }
+
+    .whatsapp-flotante:hover {
+        background-color: #128C7E;
+    }
+
+    </style>
+    
+    <style>
+    /* Estilos generales */
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Roboto', Arial, sans-serif;
+        overflow-x: hidden;
+    }
+    
+    /* Animaciones simples del eslogan de POLICARIBE */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+    
+    .eslogan-text {
+        animation: fadeIn 1s ease-out;
+    }
+    
+    .eslogan-text span {
+        display: inline-block;
+    }
+    
+    /* Animaciones para palabras resaltadas */
+    .eslogan-highlight {
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+    }
+    
+    .animate-bounce {
+        animation-name: bounceHighlight;
+    }
+    
+    .animate-pulse {
+        animation-name: pulseHighlight;
+        animation-delay: 0.5s;
+    }
+    
+    @keyframes bounceHighlight {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-8px);
+        }
+    }
+    
+    @keyframes pulseHighlight {
+        0%, 100% {
+            transform: scale(1);
+            box-shadow: 0 0 0 rgba(144, 25, 19, 0);
+        }
+        50% {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(144, 25, 19, 0.4);
+        }
+    }
+    
+    /* Responsive eslogan */
+    @media screen and (max-width: 767px) {
+        .eslogan-text {
+            font-size: 28px !important;
+        }
+        .eslogan-text span {
+            display: inline !important;
+            margin: 2px !important;
+        }
+        
+        /* Reducir animaciones en móvil */
+        .eslogan-highlight {
+            animation-duration: 3s;
+        }
+        
+        @keyframes bounceHighlight {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-4px); }
+        }
+    }
+    
+    @media (max-width: 991px) {
+        .eslogan-text {
+            font-size: 32px !important;
+        }
+    }
+    
+    /* Estilos para secciones de POLICARIBE */
+    .sppb-section {
+        padding: 50px 20px;
+        background-color: #ffffff;
+        margin-bottom: 0;
+    }
+    
+    .sppb-row-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    /* Asegurar fondo blanco en secciones del cuerpo */
+    #section-programas,
+    #section-policredito {
+        background-color: #ffffff !important;
+    }
+    
+    #section-sobre-nosotros {
+        background-color: #f8f8f8 !important;
+    }
+    
+    .sppb-title-heading {
+        font-size: 48px;
+        font-weight: 700;
+        color: #333;
+        margin-bottom: 20px;
+    }
+    
+    .sppb-title-heading span {
+        color: #901913;
+    }
+    
+    .sppb-title-subheading {
+        font-size: 18px;
+        color: #666;
+        margin-bottom: 40px;
+    }
+    
+    /* Estilos para course cards */
+    .course-card {
+        background: #fff;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        margin-bottom: 20px;
+    }
+    
+    .course-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+    }
+    
+    .course-card__image img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+    
+    .course-card__content {
+        padding: 20px;
+    }
+    
+    .course-card__title {
+        font-size: 18px;
+        font-weight: 700;
+        color: #901913;
+        margin-bottom: 15px;
+        min-height: 50px;
+    }
+    
+    .course-card__info {
+        font-size: 14px;
+        color: #666;
+    }
+    
+    .course-card__badge {
+        display: inline-block;
+        padding: 5px 10px;
+        border-radius: 5px;
+        margin: 3px;
+        font-weight: 600;
+    }
+    
+    .course-card__badge--semestres {
+        background-color: #D4A017;
+        color: #ffffff;
+    }
+    
+    .course-card__badge--semestres i,
+    .course-card__badge--mixto i,
+    .course-card__badge--presencial i {
+        color: #ffffff !important;
+    }
+    
+    .course-card__badge--mixto,
+    .course-card__badge--presencial {
+        background-color: #901913;
+        color: #fff;
+    }
+    
+    /* Footer styles */
+    #sp-bottom {
+        background-color: #901913;
+        color: #fff;
+        padding: 40px 0;
+    }
+    
+    #sp-bottom a {
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    #sp-bottom a:hover {
+        color: #ECC31F;
+    }
+    
+    #sp-footer {
+        background-color: #7a1510;
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+    }
+    
+    .follow-us {
+        margin-top: 20px;
+    }
+    
+    .social-icons a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 55px;
+        height: 55px;
+        line-height: 55px;
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.15);
+        color: #ffffff;
+        border-radius: 50%;
+        margin: 0 8px;
+        transition: all 0.3s ease;
+        text-decoration: none;
+        backdrop-filter: blur(5px);
+        border: 2px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .social-icons a i {
+        font-size: 24px;
+        line-height: 1;
+    }
+    
+    .social-icons a:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+        border-color: rgba(255, 255, 255, 0.4);
+        transform: scale(1.15);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+    
+    /* Ajustes para que el header de UNISIMON trabaje con contenido de POLICARIBE */
+    .rel.w100 {
+        margin-bottom: 0;
+    }
+
+    /* Preheader layout */
+    .preheader-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        gap: 20px;
+    }
+
+    .preheader-left,
+    .preheader-center,
+    .preheader-right {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .preheader-left {
+        flex: 0 0 auto;
+    }
+
+    .preheader-center {
+        flex: 1 1 auto;
+        justify-content: center;
+    }
+
+    .preheader-right {
+        flex: 0 0 auto;
+        gap: 18px;
+        font-weight: 500;
+        color: #4d4d4d;
+    }
+
+    .preheader-right a {
+        text-decoration: none;
+    }
+
+    .preheader-medalla {
+        max-width: 220px;
+        width: 100%;
+        height: auto;
+    }
+
+    .preheader-logo {
+        display: block;
+    }
+
+    .preheader-logo img {
+        max-height: 62px;
+        width: auto;
+        height: auto;
+    }
+
+    .preheader-center .menu-mobile {
+        display: none;
+    }
+
+    .preheader-radio img {
+        width: 140px;
+        height: auto;
+    }
+
+    .preheader-social img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .preheader-separator {
+        color: #808080;
+        font-size: 20px;
+        line-height: 1;
+    }
+
+    .preheader-contacto {
+        color: #4d4d4d;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+    }
+
+    .preheader-contacto:hover {
+        color: #05803b;
+    }
+
+    .preheader-sede {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: linear-gradient(135deg, #b5241b, #7a1510);
+        border: none;
+        border-radius: 999px;
+        padding: 8px 20px;
+        font-size: 13px;
+        letter-spacing: 0.2px;
+        font-weight: 500;
+        color: #ffffff;
+        box-shadow: 0 6px 16px rgba(122, 21, 16, 0.28);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .preheader-sede i {
+        font-size: 16px;
+        color: #ffd166;
+    }
+
+    .preheader-sede a {
+        color: #ffffff !important;
+        text-transform: none;
+        font-weight: 700;
+        text-decoration: none;
+    }
+
+    .preheader-sede:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 10px 22px rgba(122, 21, 16, 0.38);
+    }
+
+    .preheader-sede a:hover {
+        color: #ffd166 !important;
+    }
+
+    @media (max-width: 991px) {
+        .preheader-bar {
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .preheader-left,
+        .preheader-right {
+            width: 100%;
+            justify-content: center;
+        }
+
+        .preheader-center {
+            width: 100%;
+        }
+
+        .preheader-center .menu-mobile {
+            display: block;
+            margin-right: 10px;
+        }
+
+        .preheader-center {
+            justify-content: center;
+        }
+
+        .preheader-logo img {
+            max-height: 48px;
+        }
+    }
+
+    #menu-es {background-color:#901913}
+
+    @media (max-width: 991px), (orientation: portrait) {
+        .preheader-center .menu-mobile { display: block; }
+    }
+
+    @media (max-width: 480px) {
+        .preheader-sede { padding: 8px 12px; font-size: 12px; gap: 8px; }
+    }
+
+    .menu-mobile .navbar-toggle { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border: 0; background: #FBBC21; border-radius: 6px; }
+    .menu-mobile .icon-bar { display: block; width: 20px; height: 2px; background: #fff; margin: 3px 0; }
+
+    #ml-menu { position: fixed; left: 0; right: 0; top: 0; bottom: 0; background: #fff; z-index: 9999; transform: translateY(-100%); transition: transform .25s ease; }
+    #ml-menu.show { transform: translateY(0); }
+    #ml-menu.menu { display: none; }
+    #ml-menu.menu.show { display: block; }
+    #ml-menu .menu__wrap { padding: 60px 12px; }
+    #ml-menu .menu__level { list-style: none; margin: 0; padding: 0; display: none; }
+    #ml-menu .menu__level.active { display: block; }
+    #ml-menu .menu__level .menu__item { border-bottom: 1px solid #e5e5e5; }
+    #ml-menu .menu__level .menu__link { display: block; padding: 14px 12px; text-decoration: none; color: #222; }
+    .action.action--close { border: 0; background: #fff; }
+
+    /* CORRECCIÓN: Forzar colores del menú UNISIMON */
+    #menu-es .b51 {
+        background-color: #901913 !important;
+    }
+    
+    /* Forzar enlaces de navegación a blanco */
+    #menu-es .nav.navbar-nav li a,
+    #menu-es .nav.navbar-nav li a:link,
+    #menu-es .nav.navbar-nav li a:visited {
+        color: #ffffff !important;
+        background-color: #901913 !important;
+        text-decoration: none !important;
+    }
+    
+    .b51 a:hover {
+        color: #2b2b2b !important;
+        opacity: 1;
+        text-decoration: none !important;
+    }
+    
+    #menu-es .servicios,
+    #menu-es .servicios:link,
+    #menu-es .servicios:visited {
+        color: #ffffff !important;
+        text-decoration: none !important;
+    }
+
+    #menu-es .servicios {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        font-weight: 600;
+        font-size: 15px;
+        color: #ffffff !important;
+        background-color: #901913;
+        border-radius: 14px;
+        padding: 10px 24px;
+        transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+        height: 44px;
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.16);
+    }
+
+    #menu-es .servicios i {
+        color: #ffc04d;
+        font-size: 16px;
+    }
+
+    #menu-es .servicios span {
+        display: inline-block;
+    }
+
+    #menu-es .servicios:hover {
+        background-color: #b5241b;
+        color: #ffffff !important;
+        transform: translateY(-1px);
+        box-shadow: 0 12px 22px rgba(122, 21, 16, 0.35);
+    }
+
+    #menu-es .servicios:focus,
+    #menu-es .servicios:active {
+        background-color: #901913;
+        color: #ffffff !important;
+        transform: none;
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.16);
+    }
+
+    #menu-es .servicios:focus-visible {
+        background-color: #b5241b;
+        color: #ffffff !important;
+        transform: translateY(-1px);
+        box-shadow: 0 12px 22px rgba(122, 21, 16, 0.35);
+    }
+
+    #menu-es .servicios:focus i,
+    #menu-es .servicios:active i {
+        color: #ffc04d;
+    }
+
+    #menu-es .servicios:hover i {
+        color: #ffd166;
+    }
+
+    #menu-es .servicios:focus-visible i {
+        color: #ffd166;
+    }
+    
+    /* Corregir enlaces del header superior */
+    #menu-es .c4d a {
+        color: #4d4d4d !important;
+        text-decoration: none;
+    }
+    
+    #menu-es .cverde a {
+        color: #05803b !important;
+        text-decoration: none;
+    }
+    
+    /* Ocultar elementos duplicados del menú mobile */
+    .b51 .menu-mobile {
+        display: none !important;
+    }
+
+    /* Ajustar contenedor del menú para centrar elementos */
+    #menu-es .b51 .content {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        padding: 0 24px;
+        gap: 20px;
+        min-height: 48px;
+    }
+
+    #menu-es .b51 .content nav {
+        flex: 1 1 auto;
+        width: auto;
+        display: flex;
+        align-items: stretch;
+    }
+
+    #menu-es .b51 .content .fright.w10,
+    #menu-es .b51 .content .fright.w10 .fright {
+        float: none !important;
+    }
+
+    #menu-es .b51 .content .fright.w10 {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex: 0 0 auto;
+    }
+
+    /* Mantener el menú principal en una sola fila */
+    #menu-es .nav.navbar-nav {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        justify-content: flex-start;
+        align-items: stretch;
+        width: 100%;
+        gap: 0;
+        padding: 0 10px;
+        height: 100%;
+    }
+
+    #menu-es .nav.navbar-nav > li {
+        float: none !important;
+        display: flex;
+        margin: 0;
+        padding: 0;
+        flex: 0 1 auto;
+        text-align: center;
+        white-space: nowrap;
+        align-items: stretch;
+    }
+
+    #menu-es .nav.navbar-nav > li > a {
+        font-size: 14px;
+        font-weight: 500;
+        padding: 0 18px;
+        white-space: nowrap;
+        position: relative;
+        background-color: #901913 !important;
+        color: #ffffff !important;
+        transition: background-color 0.12s ease, color 0.12s ease;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        height: 100%;
+    }
+
+    #menu-es .nav.navbar-nav > li > a::before {
+        display: none;
+    }
+
+    #menu-es .nav.navbar-nav > li:first-child > a::before {
+        display: none;
+    }
+
+    #menu-es .nav.navbar-nav > li.dropdown {
+        position: relative;
+    }
+
+    #menu-es .nav.navbar-nav > li.dropdown > a::after {
+        content: '\25BE';
+        font-size: 11px;
+        margin-left: 6px;
+        color: #ffc04d;
+        transition: transform 0.18s ease, color 0.18s ease;
+    }
+
+    #menu-es .nav.navbar-nav > li.dropdown:hover > a::after,
+    #menu-es .nav.navbar-nav > li.dropdown > a:focus-visible::after {
+        transform: rotate(180deg);
+        color: #2b2b2b;
+    }
+
+    #menu-es .nav.navbar-nav > li .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #ffffff;
+        border: 1px solid #e0e0e0;
+        border-radius: 0;
+        width: 900px;
+        max-height: 400px;
+        padding: 20px 10px 20px 20px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+        z-index: 20;
+        overflow: visible;
+    }
+    
+    #menu-es .nav.navbar-nav > li .dropdown-menu::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        background-image: url('showimagen/showimage/dropbox.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        pointer-events: none;
+    }
+
+    #menu-es .nav.navbar-nav > li.dropdown:hover > .dropdown-menu,
+    #menu-es .nav.navbar-nav > li.dropdown:focus-within > .dropdown-menu {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+    }
+
+    #menu-es .nav.navbar-nav > li .dropdown-menu > li {
+        white-space: normal;
+        list-style: none;
+        width: 50%;
+        box-sizing: border-box;
+        padding: 0 5px;
+    }
+    
+    #menu-es .nav.navbar-nav > li .dropdown-menu > li:nth-child(-n+4) {
+        padding-right: 7px;
+        padding-left: 0;
+    }
+    
+    #menu-es .nav.navbar-nav > li .dropdown-menu > li:nth-child(n+5) {
+        padding-left: 7px;
+        padding-right: 0;
+    }
+
+    #menu-es .nav.navbar-nav > li .dropdown-menu > li > a {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 12px;
+        font-size: 13px;
+        font-weight: 500;
+        color: #333333 !important;
+        background-color: transparent !important;
+        border: none;
+        border-radius: 0;
+        transition: all 0.2s ease;
+        text-align: left;
+    }
+    
+    #menu-es .nav.navbar-nav > li .dropdown-menu > li > a::before {
+        content: '→';
+        font-size: 16px;
+        font-weight: bold;
+        color: #901913;
+        display: inline-block;
+        transition: transform 0.2s ease;
+        flex-shrink: 0;
+    }
+
+    #menu-es .nav.navbar-nav > li .dropdown-menu > li > a:hover,
+    #menu-es .nav.navbar-nav > li .dropdown-menu > li > a:focus {
+        background-color: rgba(144, 25, 19, 0.05) !important;
+        color: #901913 !important;
+        padding-left: 16px;
+    }
+    
+    #menu-es .nav.navbar-nav > li .dropdown-menu > li > a:hover::before {
+        color: #901913;
+        transform: translateX(4px);
+    }
+
+    #menu-es .nav.navbar-nav > li .dropdown-menu > li > a::before {
+        display: inline-block;
+    }
+
+    #menu-es .nav.navbar-nav > li:hover > a,
+    #menu-es .nav.navbar-nav > li > a:focus-visible {
+        background-color: #901913 !important;
+        color: #ffffff !important;
+    }
+
+    #menu-es .nav.navbar-nav > li:hover > a::before,
+    #menu-es .nav.navbar-nav > li > a:focus-visible::before {
+        color: #ffc04d;
+    }
+
+    #menu-es .nav.navbar-nav > li > a:focus,
+    #menu-es .nav.navbar-nav > li > a:active,
+    #menu-es .nav.navbar-nav > li.open > a,
+    #menu-es .nav.navbar-nav > li.open > a:focus,
+    #menu-es .nav.navbar-nav > li.open > a:active {
+        background-color: #901913 !important;
+        color: #ffffff !important;
+    }
+
+    #menu-es .nav.navbar-nav > li > a:focus::before,
+    #menu-es .nav.navbar-nav > li > a:active::before,
+    #menu-es .nav.navbar-nav > li.open > a::before {
+        color: #ffc04d;
+    }
+
+    #menu-es .nav.navbar-nav > li.active-menu > a {
+        background-color: #5a0e0a;
+        color: #ffc04d !important;
+    }
+
+    #menu-es .nav.navbar-nav > li.active-menu > a::before {
+        color: #ffc04d;
+    }
+    
+    /* Botón de Inscripciones en el header */
+    .header-inscripciones {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 0 10px;
+    }
+    
+    .btn-inscripciones {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background-color: transparent;
+        color: #ffffff !important;
+        padding: 0;
+        border-radius: 0;
+        text-decoration: none !important;
+        font-weight: 600;
+        font-size: 14px;
+        transition: none;
+        white-space: nowrap;
+    }
+    
+    .btn-inscripciones:hover {
+        background-color: transparent;
+        color: #ffffff !important;
+        transform: none;
+        box-shadow: none;
+    }
+    
+    .btn-inscripciones i {
+        font-size: 16px;
+    }
+
+    /* Botón de Empleados */
+    .btn-empleados {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background-color: transparent;
+        color: #ffffff !important;
+        padding: 0;
+        border-radius: 0;
+        text-decoration: none !important;
+        font-weight: 600;
+        font-size: 14px;
+        transition: none;
+        white-space: nowrap;
+    }
+    
+    .btn-empleados:hover {
+        background-color: transparent;
+        color: #ffffff !important;
+    }
+    
+    .btn-empleados i {
+        font-size: 16px;
+    }
+
+    /* Ajustes responsivos para pantallas medianas */
+    @media (max-width: 1200px) {
+        #menu-es .nav.navbar-nav {
+            gap: 14px;
+        }
+
+        #menu-es .nav.navbar-nav > li > a {
+            padding: 16px 8px;
+            font-size: 14px;
+        }
+    }
+
+    /* En móviles se deja el comportamiento original */
+    @media (max-width: 991px) {
+        #menu-es .b51 .content {
+            padding: 10px 15px;
+            min-height: auto;
+            align-items: center;
+        }
+
+        #menu-es .b51 .content nav {
+            display: block;
+        }
+
+        #menu-es .nav.navbar-nav {
+            display: block !important;
+            height: auto;
+        }
+
+        #menu-es .nav.navbar-nav > li > a::before {
+            display: none;
+        }
+
+        #menu-es .nav.navbar-nav > li {
+            display: block;
+        }
+
+        #menu-es .nav.navbar-nav > li > a {
+            display: block;
+            padding: 12px 15px;
+            height: auto;
+        }
+
+        #menu-es .nav.navbar-nav > li .dropdown-menu {
+            position: relative;
+            top: 0;
+            left: 0;
+            transform: none;
+            box-shadow: none;
+            border-radius: 0;
+            background-color: transparent;
+            padding: 0;
+            display: block;
+        }
+
+        #menu-es .nav.navbar-nav > li .dropdown-menu > li > a {
+            padding: 10px 15px 10px 25px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        #menu-es .nav.navbar-nav > li .dropdown-menu > li:last-child > a {
+            border-bottom: none;
+        }
+    }
+    
+    /* Contenedor del menú inferior de programas */
+    .menu-inferior-programas {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: block;
+        line-height: 0;
+        font-size: 0;
+    }
+    
+    .menu-inferior-programas .w100 {
+        width: 100% !important;
+    }
+    
+    .menu-inferior-programas .otroMenu {
+        margin: 0 !important;
+        padding: 0 !important;
+        border-spacing: 0 !important;
+        display: table;
+        width: 100% !important;
+        border-collapse: collapse !important;
+    }
+    
+    /* Clases de ancho para menú inferior */
+    .w20 {
+        width: 20%;
+        float: left;
+    }
+    
+    .w33-3 {
+        width: 33.333%;
+        float: left;
+    }
+    
+    /* Forzar enlaces blancos en el menú inferior del slider */
+    .otroMenu a,
+    .otroMenu a:link,
+    .otroMenu a:visited {
+        color: #ffffff !important;
+        text-decoration: none !important;
+    }
+    
+    .otroMenu a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        color: #ffffff !important;
+        text-decoration: none !important;
+        font-weight: 500;
+        font-size: 15px !important;
+    }
+    
+    .otroMenu a:hover {
+        color: #ffffff !important;
+        opacity: 1;
+    }
+    
+    /* Eliminar espacios entre las celdas del menú */
+    .otroMenu > div {
+        margin: 0 !important;
+        padding: 0 !important;
+        border: none !important;
+        line-height: 1.2;
+        vertical-align: middle;
+        height: 27px;
+        font-size: 13px;
+        width: auto;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    /* Hacer que el enlace ocupe todo el espacio */
+    .otroMenu > div a {
+        padding: 10px 12px !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+    
+    /* Animación hover para los botones del menú inferior */
+    .otroMenu > div:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        z-index: 10;
+    }
+    
+    /* Efecto de brillo al pasar el cursor */
+    .otroMenu > div::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+        transition: left 0.5s ease;
+    }
+    
+    .otroMenu > div:hover::before {
+        left: 100%;
+    }
+    
+    /* Animación de escala suave */
+    .otroMenu > div:active {
+        transform: translateY(0);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* Asegurar que las filas del menú estén pegadas */
+    .dtable {
+        display: table;
+        border-spacing: 0 !important;
+        border-collapse: collapse !important;
+        table-layout: fixed;
+    }
+    
+    .h54 {
+        height: 27px;
+        line-height: 27px;
+    }
+    
+    .tcel {
+        display: table-cell !important;
+        border: 0 !important;
+        float: none !important;
+    }
+    
+    .mid {
+        vertical-align: middle;
+    }
+    
+    .tcenter {
+        text-align: center;
+    }
+    
+    /* Eliminar el <div class="clear"> entre las filas */
+    .menu-inferior-programas .clear {
+        display: none;
+        height: 0;
+        margin: 0;
+        padding: 0;
+        line-height: 0;
+    }
+    
+    /* Separación clara entre footer y contenido */
+    #sp-bottom {
+        background-color: #901913 !important;
+        margin-top: 50px;
+        clear: both;
+    }
+    
+    #sp-footer {
+        background-color: #7a1510 !important;
+        clear: both;
+    }
+    
+    /* Botón personalizado */
+    .sppb-btn-custom {
+        background-color: #901913;
+        color: #fff;
+        padding: 12px 30px;
+        border-radius: 25px;
+        display: inline-block;
+        text-decoration: none;
+        transition: all 0.3s ease;
+    }
+    
+    .sppb-btn-custom:hover {
+        background-color: #ECC31F;
+        color: #333;
+        transform: translateY(-2px);
+    }
+    
+    /* Responsive para tablets */
+    @media (max-width: 991px) {
+        .sppb-title-heading {
+            font-size: 36px;
+        }
+    }
+    
+    /* Responsive para móviles */
+    @media (max-width: 767px) {
+        .sppb-title-heading {
+            font-size: 28px;
+        }
+        
+        .sppb-section {
+            padding: 30px 15px;
+        }
+    }
+    
+    /* ========================================
+       SLIDER POLICARIBE - SWIPER (DESDE CERO)
+       ======================================== */
+    
+    .hero-slider {
+        position: relative;
+        width: 100%;
+        height: calc(100vw * 0.3025);
+        max-height: 500px;
+        min-height: 250px;
+        overflow: hidden;
+        margin-top: 0;
+    }
+    
+    .hero-slider .swiper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .hero-slider .swiper-slide {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: block;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    
+    .hero-slider .swiper-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+        transition: transform 0.3s ease;
+    }
+    
+    .hero-slider .swiper-slide:hover img {
+        transform: scale(1.02);
+    }
+    
+    .hero-slider .slide-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.5) 100%);
+        z-index: 1;
+    }
+
+    /* Contenido de texto sobre el slide */
+    .hero-slider .slide-content {
+        position: absolute;
+        bottom: 120px;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        color: white;
+        padding: 0 20px;
+    }
+
+    .hero-slider .slide-content h2 {
+        font-size: 27px;
+        font-weight: 300;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    }
+
+    .hero-slider .slide-content h3 {
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1.6;
+        margin-bottom: 15px;
+        text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+
+    /* Control de visibilidad del botón inscripción */
+    .inscripcion-btn {
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
+    .inscripcion-btn.hidden {
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+    }
+    
+    /* Botones de navegación */
+    .hero-slider .swiper-button-next,
+    .hero-slider .swiper-button-prev {
+        width: 50px;
+        height: 50px;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 50%;
+        color: #901913;
+        transition: all 0.3s ease;
+    }
+    
+    .hero-slider .swiper-button-next:after,
+    .hero-slider .swiper-button-prev:after {
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
+    .hero-slider .swiper-button-next:hover,
+    .hero-slider .swiper-button-prev:hover {
+        background: rgba(255, 255, 255, 1);
+        transform: scale(1.1);
+    }
+    
+    /* Responsive - 4K y pantallas muy grandes */
+    @media (min-width: 2560px) {
+        .hero-slider {
+            max-height: 800px;
+        }
+    }
+    
+    /* Responsive - 2K/QHD */
+    @media (min-width: 1920px) and (max-width: 2559px) {
+        .hero-slider {
+            max-height: 650px;
+        }
+    }
+    
+    /* Controles del slider - Estilo heredado de index_old.html */
+    .abs {
+        position: absolute;
+    }
+    
+    .bot120 {
+        bottom: 120px;
+    }
+    
+    .zind3 {
+        z-index: 3;
+    }
+    
+    .opcf {
+        pointer-events: none;
+    }
+    
+    .opcf > * {
+        pointer-events: auto;
+    }
+    
+    .maxw180 {
+        max-width: 240px;
+    }
+    
+    .bverde5 {
+        background: rgba(144, 25, 19, 0.5);
+    }
+    
+    .pad5 {
+        padding: 5px;
+    }
+    
+    .mb30 {
+        margin-bottom: 30px;
+    }
+    
+    .btrans {
+        background: transparent;
+    }
+    
+    .bgreen {
+        background: #901913;
+    }
+    
+    .bgreen:hover {
+        background: #6d1410;
+    }
+    
+    .pad-tb10 {
+        padding: 14px 0;
+    }
+    
+    .fz12 {
+        font-size: 15px;
+        font-weight: 700;
+    }
+    
+    .tcenter {
+        text-align: center;
+    }
+    
+    .poi {
+        cursor: pointer;
+    }
+    
+    .fizq {
+        display: inline-block;
+        transition: opacity 0.3s ease;
+    }
+    
+    .fder {
+        -ms-transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+        display: inline-block;
+        transition: opacity 0.3s ease;
+    }
+    
+    .ml10 {
+        margin-left: 10px;
+    }
+    
+    .fizq:hover,
+    .fder:hover {
+        opacity: 0.7;
+    }
+    
+    /* Responsive - Full HD */
+    @media (min-width: 1600px) and (max-width: 1919px) {
+        .hero-slider {
+            max-height: 580px;
+        }
+    }
+    
+    /* Responsive - HD+ */
+    @media (min-width: 1366px) and (max-width: 1599px) {
+        .hero-slider {
+            max-height: 500px;
+        }
+    }
+    
+    /* Responsive - HD */
+    @media (min-width: 1024px) and (max-width: 1365px) {
+        .hero-slider {
+            max-height: 420px;
+        }
+    }
+    
+    /* Responsive - Tabletas horizontales */
+    @media (min-width: 768px) and (max-width: 1023px) {
+        .hero-slider {
+            max-height: 380px;
+        }
+        
+        .bot120 {
+            bottom: 80px;
+        }
+        
+        .maxw180 {
+            max-width: 150px;
+        }
+        
+        .fizq,
+        .fder {
+            width: 20px;
+        }
+    }
+    
+    /* Responsive - Tabletas verticales y móviles grandes */
+    @media (min-width: 481px) and (max-width: 767px) {
+        .hero-slider {
+            max-height: 300px;
+            min-height: 200px;
+        }
+        
+        .bot120 {
+            bottom: 60px;
+        }
+        
+        .maxw180 {
+            max-width: 120px;
+        }
+        
+        .pad5 {
+            padding: 3px;
+        }
+        
+        .pad-tb10 {
+            padding: 6px 0;
+        }
+        
+        .fz12 {
+            font-size: 10px;
+        }
+        
+        .fizq,
+        .fder {
+            width: 18px;
+        }
+        
+        .ml10 {
+            margin-left: 8px;
+        }
+        
+        .hero-slider .swiper-button-next,
+        .hero-slider .swiper-button-prev {
+            width: 40px;
+            height: 40px;
+        }
+        
+        .hero-slider .swiper-button-next:after,
+        .hero-slider .swiper-button-prev:after {
+            font-size: 16px;
+        }
+    }
+    
+    /* Responsive - Móviles */
+    @media (max-width: 480px) {
+        .hero-slider {
+            max-height: 250px;
+            min-height: 180px;
+        }
+        
+        .bot120 {
+            bottom: 40px;
+        }
+        
+        .pad0m {
+            padding: 0 !important;
+        }
+        
+        .maxw180 {
+            max-width: 100px;
+        }
+        
+        .pad5 {
+            padding: 2px;
+        }
+        
+        .pad-tb10 {
+            padding: 5px 0;
+        }
+        
+        .fz12 {
+            font-size: 9px;
+        }
+        
+        .mb30 {
+            margin-bottom: 15px;
+        }
+        
+        .fizq,
+        .fder {
+            width: 16px;
+        }
+        
+        .ml10 {
+            margin-left: 6px;
+        }
+        
+        .hero-slider .swiper-button-next,
+        .hero-slider .swiper-button-prev {
+            width: 35px;
+            height: 35px;
+        }
+        
+        .hero-slider .swiper-button-next:after,
+        .hero-slider .swiper-button-prev:after {
+            font-size: 14px;
+        }
+    }
+    
+    /* Mejoras visuales para separación entre slider y contenido */
+    #section-eslogan-policaribe {
+        margin-top: 0;
+        padding-top: 60px !important;
+    }
+
+    /* Rediseño cromático del menú inferior del slider */
+    .otroMenu .bverde {
+        background-color: #b5241b !important;
+    }
+
+    .otroMenu .bverdec {
+        background-color: #7a1510 !important;
+    }
+
+    .otroMenu .bverdecl {
+        background-color: #d4645f !important;
+        color: #ffffff !important;
+    }
+
+    .otroMenu .bverdecl a {
+        color: #ffffff !important;
+    }
+    
+    /* Azul claro para Auxiliar en Enfermería */
+    .otroMenu .bazulm {
+        background-color: #5bc0de !important;
+    }
+    
+    /* Rojo oscuro para Auxiliar Contable */
+    .otroMenu .bazul {
+        background-color: #6d1410 !important;
+    }
+    /* Indicador de días con eventos en el datepicker */
+    #datepicker .has-event a {
+        background-color: #ECC31F !important;
+        color: #2b2b2b !important;
+        border-radius: 50% !important;
+    }
+    .acciones-secundarias{background:#fff}
+    .acciones-secundarias .container{max-width:1200px;margin:0 auto;display:flex;justify-content:center;gap:28px;padding:8px 16px 0;flex-wrap:nowrap}
+    .acciones-secundarias::after{content:"";display:block;height:2px;background:#d7d7d7;width:92%;margin:4px auto 0;border-radius:2px}
+    .sec-btn{position:relative;color:#666;font-weight:600;letter-spacing:.2px;text-decoration:none;padding:14px 12px;font-size:18px;white-space:nowrap;transition:.18s ease color;flex:0 0 auto}
+    .sec-btn i{font-size:18px;margin-right:8px}
+    .sec-btn:after{content:'';position:absolute;left:0;right:0;bottom:-6px;height:3px;background:#ddd;opacity:.6;transform:scaleX(0);transition:.18s ease transform}
+    .sec-btn:hover{color:#666}
+    .sec-btn:hover:after{background:#ECC31F;opacity:1;transform:scaleX(1)}
+    @media(max-width:991px){.acciones-secundarias .container{flex-wrap:wrap;gap:18px}.sec-btn{font-size:16px;padding:10px 8px}}
+    #datepicker{background:transparent;border-radius:0;box-shadow:none;padding:0}
+    .ui-datepicker{width:100%;background:#fff;border:none;border-radius:0;box-shadow:none;padding:0}
+    .ui-datepicker .ui-datepicker-header{background:#fff;color:#2b2b2b;border:none;padding:12px 8px 8px;border-radius:8px;margin-bottom:12px;display:flex;align-items:center;justify-content:space-between}
+    .ui-datepicker .ui-datepicker-title{font-weight:700;font-size:20px;color:#2b2b2b;letter-spacing:-0.3px}
+    .ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next{position:static;float:none;border:none;background:#f8f8f8;border-radius:50%;width:32px;height:32px;display:inline-flex;align-items:center;justify-content:center;color:#666;font-size:14px;transition:all 0.2s ease}
+    .ui-datepicker .ui-datepicker-prev:hover, .ui-datepicker .ui-datepicker-next:hover{background:#f0f0f0;color:#333}
+    .ui-datepicker table{width:100%;table-layout:fixed;border-collapse:separate;border-spacing:0}
+    .ui-datepicker-calendar{width:100%;border:1px solid #e6e6e6;border-collapse:separate;border-spacing:0;margin-top:8px}
+    .ui-datepicker-calendar th{background:transparent;border:none;color:#777;font-weight:600;font-size:13px;padding:12px 0 8px;text-transform:uppercase;letter-spacing:0.5px}
+    .ui-datepicker-calendar td{background:transparent;border:none;padding:0}
+    .ui-datepicker .ui-state-default{border:none;background:transparent;border-radius:0;padding:10px 0;color:#2b2b2b;font-weight:400;font-size:14px;transition:all 0.2s ease;position:relative}
+    .ui-datepicker .ui-state-hover{background:#f8f8f8;color:#2b2b2b}
+    .ui-datepicker .ui-state-active{background:#ECC31F;color:#2b2b2b;font-weight:600;border-radius:18px;padding:6px 10px;display:inline-block}
+    #datepicker .has-event a{background:transparent;position:relative}
+    #datepicker .has-event a::after{content:'';position:absolute;left:50%;bottom:4px;width:4px;height:4px;background:#ECC31F;border-radius:50%;transform:translateX(-50%)}
+    @media(max-width:768px){.ui-datepicker .ui-datepicker-title{font-size:18px}; .ui-datepicker{padding:12px}; .ui-datepicker-calendar th{padding:10px 0 6px;font-size:12px}; .ui-datepicker .ui-state-default{padding:8px 0;font-size:13px}}
+    @media(max-width:480px){.ui-datepicker{padding:10px}; .ui-datepicker .ui-datepicker-header{padding:10px 6px 6px}; .ui-datepicker-calendar th{padding:8px 0 4px;font-size:11px}; .ui-datepicker .ui-state-default{padding:6px 0;font-size:12px}; .ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next{width:28px;height:28px}}
+    #eventos .ev-card{background:#fff;border-radius:12px;box-shadow:0 10px 24px rgba(0,0,0,.12);padding:12px 14px;margin-bottom:12px}
+    #eventos .ev-title{font-weight:600;color:#2b2b2b;margin:0 0 6px}
+    #eventos .ev-desc{color:#666;font-size:13px}
+    .calendar-title-icon{margin-right:14px}
+    #noticias-vertical .img-wrap{width:100%;height:240px;border-radius:0;overflow:hidden;box-shadow:0 14px 32px rgba(0,0,0,.12)}
+    #noticias-vertical .img-wrap img{width:100%;height:100%;object-fit:cover}
+    #noticias-vertical .row.mb20{align-items:center}
+    
+    .calendar-col{position:relative}
+    .calendar-popover{position:absolute;right:-10px;top:10px;background:#fff;border:1px solid #eee;border-radius:12px;box-shadow:0 14px 28px rgba(0,0,0,.12);width:320px;max-width:90vw;padding:16px;z-index:30}
+    .calendar-popover .pop-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;color:#2b2b2b;font-weight:700;font-size:16px}
+    .calendar-popover .pop-close{background:transparent;border:0;color:#999;font-size:18px;line-height:1;cursor:pointer;padding:4px}
+    .calendar-popover ul{list-style:none;margin:0;padding:0}
+    .calendar-popover li{margin:8px 0;padding:8px 0;border-bottom:1px solid #f0f0f0}
+    .calendar-popover li:last-child{border-bottom:none}
+    .calendar-popover a{color:#7a1510;text-decoration:none;font-weight:500;font-size:14px}
+    .calendar-popover a:hover{color:#b5241b}
+    @media(max-width:768px){.calendar-popover{position:static;right:auto;top:auto;margin-top:16px;width:100%}}
+    </style>
+
+    <style>
+    .policaribe-content {
+        background-color: #ffffff;
+    }
+
+    .policaribe-section {
+        padding: 60px 20px;
+        background-color: #ffffff;
+    }
+
+    .policaribe-section.alt-background {
+        background-color: #f8f8f8;
+    }
+
+    .policaribe-container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .policaribe-section-title {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .policaribe-section-title h2 {
+        font-size: 48px;
+        font-weight: 700;
+        color: #333;
+        margin: 0 0 20px;
+    }
+
+    .policaribe-section-title h2 span {
+        color: #901913;
+    }
+
+    .policaribe-section-title p {
+        font-size: 18px;
+        color: #666;
+        margin: 0 auto;
+        max-width: 720px;
+    }
+
+    .policaribe-carousel .item-course-card {
+        padding: 10px 12px;
+    }
+
+    .policaribe-carousel .course-card {
+        height: 100%;
+    }
+
+    .course-card__separator {
+        margin: 0 6px;
+        color: #999;
+    }
+
+    .policaribe-about {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 40px;
+        align-items: center;
+    }
+
+    .policaribe-about-text {
+        flex: 1 1 55%;
+        font-size: 16px;
+        color: #444;
+        line-height: 1.7;
+    }
+
+    .policaribe-about-text strong {
+        color: #901913;
+    }
+
+    .policaribe-about-image {
+        flex: 1 1 35%;
+        text-align: center;
+    }
+
+    .policaribe-about-image img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 18px;
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+    }
+
+    .policaribe-btn {
+        display: inline-block;
+        margin-top: 24px;
+        background-color: #901913;
+        color: #fff;
+        padding: 12px 32px;
+        border-radius: 28px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .policaribe-btn:hover {
+        background-color: #ecc31f;
+        color: #333;
+        transform: translateY(-2px);
+    }
+
+    .policaribe-cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+    }
+
+    .policaribe-card {
+        flex: 1 1 280px;
+        max-width: 360px;
+        text-align: center;
+    }
+
+    .policaribe-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: contain;
+        object-position: center;
+        background-color: transparent;
+        margin-bottom: 20px;
+    }
+
+    .policaribe-card h3 {
+        font-size: 22px;
+        font-weight: 700;
+        color: #901913;
+        margin-bottom: 12px;
+    }
+
+    .policaribe-card p {
+        font-size: 15px;
+        color: #555;
+        margin: 0;
+    }
+
+    .policaribe-news-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    .policaribe-news-card {
+        flex: 1 1 340px;
+        background-color: #fff;
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 14px 32px rgba(0, 0, 0, 0.14);
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .policaribe-news-card img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+    }
+
+    .policaribe-news-body {
+        padding: 22px 24px 28px;
+        display: flex;
+        flex-direction: column;
+        flex: 1 1 auto;
+    }
+
+    .policaribe-news-body h3 {
+        font-size: 22px;
+        margin: 0 0 12px;
+        color: #2b2b2b;
+    }
+
+    .policaribe-news-meta {
+        font-size: 14px;
+        color: #777;
+        margin-bottom: 14px;
+    }
+
+    .policaribe-news-body a {
+        margin-top: auto;
+        color: #901913;
+        font-weight: 600;
+        text-decoration: none;
+    }
+
+    .policaribe-news-body a:hover {
+        color: #ecc31f;
+    }
+
+    #sp-bottom {
+        margin-top: 0;
+        padding: 60px 20px;
+    }
+
+    #sp-bottom .policaribe-bottom-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    #sp-bottom .bottom-column {
+        flex: 1 1 220px;
+    }
+
+    #sp-bottom h3,
+    #sp-bottom h6 {
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 16px;
+    }
+
+    #sp-bottom ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    #sp-bottom li {
+        margin-bottom: 10px;
+    }
+
+    #sp-bottom .contact-address p {
+        margin: 0 0 8px;
+    }
+
+    #sp-bottom .copy-right {
+        margin-top: 20px;
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.8);
+    }
+
+    #sp-footer {
+        padding: 22px 16px;
+        font-size: 14px;
+    }
+
+    #sp-footer a {
+        color: #ecc31f;
+        text-decoration: none;
+    }
+
+    #sp-footer a:hover {
+        color: #ffffff;
+    }
+
+    .policaribe-social {
+        margin-top: 20px;
+    }
+    
+    .policaribe-social p {
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 15px;
+        color: #ffffff;
+    }
+
+    .policaribe-social .social-icons {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+    }
+    
+    .policaribe-social .social-icons a {
+        margin: 0;
+    }
+
+    @media (max-width: 991px) {
+        .policaribe-section {
+            padding: 48px 18px;
+        }
+
+        .policaribe-section-title h2 {
+            font-size: 40px;
+        }
+
+        .policaribe-about {
+            gap: 28px;
+        }
+
+        .policaribe-about-text,
+        .policaribe-about-image {
+            flex: 1 1 100%;
+        }
+
+        .policaribe-card img {
+            height: 180px;
+        }
+    }
+
+    @media (max-width: 767px) {
+        .policaribe-section {
+            padding: 36px 16px;
+        }
+
+        .policaribe-section-title h2 {
+            font-size: 32px;
+        }
+
+        .policaribe-section-title p {
+            font-size: 16px;
+        }
+
+        .policaribe-cards,
+        .policaribe-news-grid,
+        #sp-bottom .policaribe-bottom-grid {
+            gap: 24px;
+        }
+
+        .policaribe-card img {
+            height: 160px;
+        }
+
+        .policaribe-btn {
+            width: 100%;
+            text-align: center;
+        }
+
+        #sp-bottom .bottom-column {
+            flex: 1 1 100%;
+        }
+
+        .policaribe-news-card {
+            flex: 1 1 100%;
+        }
+    }
+
+    /* Chatbot responsivo con scroll */
+    @media (max-width: 768px) {
+        /* Para widgets de chatbot externos (Tawk.to, Intercom, etc.) */
+        iframe[id*="chat"], 
+        iframe[class*="chat"],
+        iframe[src*="tawk"],
+        iframe[src*="intercom"],
+        [id*="chatbot"],
+        [class*="chatbot"],
+        .tawk-min-container,
+        .intercom-namespace,
+        #chat-widget,
+        .chat-widget {
+            max-width: 320px !important;
+            max-height: 500px !important;
+            width: 100% !important;
+        }
+
+        /* Contenedor del chat con scroll */
+        iframe[id*="chat"] > body,
+        [id*="chatbot-body"],
+        [class*="chat-body"],
+        .tawk-min-container > div,
+        .chat-messages {
+            max-height: 350px !important;
+            overflow-y: auto !important;
+            overflow-x: hidden !important;
+            -webkit-overflow-scrolling: touch !important;
+        }
+
+        /* Input del chat siempre visible en la parte inferior */
+        [id*="chat-input"],
+        [class*="chat-input"],
+        .tawk-textarea-wrapper,
+        .chat-input-wrapper {
+            position: sticky !important;
+            bottom: 0 !important;
+            background: #fff !important;
+            z-index: 1000 !important;
+            padding: 10px !important;
+            box-shadow: 0 -2px 5px rgba(0,0,0,0.1) !important;
+        }
+
+        /* Botones del chat accesibles */
+        [class*="chat-button"],
+        [id*="chat-button"],
+        .tawk-button {
+            min-height: 44px !important;
+            touch-action: manipulation !important;
+        }
+    }
+
+    /* Estilos adicionales para pantallas muy pequeñas */
+    @media (max-width: 480px) {
+        iframe[id*="chat"], 
+        iframe[class*="chat"],
+        [id*="chatbot"],
+        [class*="chatbot"] {
+            max-width: 280px !important;
+            max-height: 450px !important;
+            right: 10px !important;
+            bottom: 10px !important;
+        }
+
+        [id*="chatbot-body"],
+        [class*="chat-body"] {
+            max-height: 300px !important;
+        }
+    }
+    
+    /* Chatbot responsivo adicional - ajustar tamaño en móviles */
+    @media (max-width: 768px) {
+        /* Ajustar chatbots flotantes para móviles */
+        [class*="chat"]:not(input):not(textarea):not(button), 
+        [id*="chat"]:not(input):not(textarea):not(button), 
+        iframe[src*="chat"], 
+        iframe[src*="tawk"] {
+            max-width: 280px !important;
+            max-height: 400px !important;
+            bottom: 10px !important;
+            right: 10px !important;
+        }
+        
+        /* Asegurar que el widget sea clickeable */
+        [class*="tawk"] {
+            z-index: 9998 !important;
+        }
+    }
+    </style>
+</head>
+<body>
+
+<!-- Menu mobile lateral de servicios -->
+<div id="servicios" class="fixed top0 h100p w250 pad20 b4d cwhite opa0 pt40" style="overflow-y:auto;z-index: 9999;">
+    <img src="https://www.unisimon.edu.co/recursos/img/cerrar-25.png" id="cerrarS"
+        class="abs right0 mb20 poi pad20 top-10" alt="cerrar">
+    <div class="clear"></div>
+    <script>
+      (function() {
+        var cx = '012645434783224938308:p3ivkmo3eiy';
+        var gcse = document.createElement('script');
+        gcse.type = 'text/javascript';
+        gcse.async = true;
+        gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(gcse, s);
+      })();
+    </script>
+    <gcse:search></gcse:search>
+    <div class="cwhite fw5 lts1 mb30">
+        <span class="icon-aud-25 c292 fz16 mid"></span>
+        <span class="ml5">
+            <a href="#">Contacto</a>
+        </span>
+        <span class="icon-email-25 c292 fz12 mid ml10"></span>
+        <span class="ml5">
+            <a href="pqrs.html">PQRS</a>
+        </span>
+    </div>
+    <a href="https://www.unisimon.edu.co/servicios/acreditaciones"><div class="mb10">Acreditaciones, Premios y Reconocimientos</div></a>
+    <a href="https://www.unisimon.edu.co/servicios/alianzaelheraldo"><div class="mb10">Alianza Unisimón - El Heraldo</div></a>
+    <a href="https://biblioteca.unisimon.edu.co/"><div class="mb10">Biblioteca</div></a>
+    <a href="https://www.unisimon.edu.co/servicios/bienestaruniversitario"><div class="mb10">Bienestar Universitario</div></a>
+</div>
+
+<!-- Menu mobile desplegable -->
+<nav id="ml-menu" class="menu">
+    <div class="pad5 bwhite w100 top0 abs">
+        <div class="content">
+            <div class="fleft">
+                <button class="action action--close" aria-label="Cerrar menú">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="fright">
+                <a target="_blank" href="http://campuspolicaribe.q10.com">
+                    <img src="showimagen/showimage/campus.webp" 
+                         class="m13" 
+                         alt="youtube" 
+                         style="width:120px; height:31px;">
+                </a>
+                <a target="_blank" href="https://www.facebook.com/unisimonbolivar">
+                    <img class="w20px" src="https://www.unisimon.edu.co/recursos/img/redes-facebook2.png" alt="facebook">
+                </a>
+                <a target="_blank" href="https://www.instagram.com/unisimon/">
+                    <img class="w20px" src="https://www.unisimon.edu.co/recursos/img/redes-instagram2.png" class="ml3" alt="instagram">
+                </a>
+                <a target="_blank" href="https://x.com/unisimon">
+                    <img class="w20px" src="https://www.unisimon.edu.co/recursos/img/twi.png" class="ml3" alt="twitter">
+                </a>
+                <a target="_blank" href="https://www.youtube.com/user/videosunisimon">
+                    <img class="w20px" src="https://www.unisimon.edu.co/recursos/img/redes-youtube2.png" class="ml3" alt="youtube">
+                </a>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="menu__wrap">
+        <ul data-menu="main" class="menu__level">
+            <li class="menu__item"><a class="menu__link" href="index.html">Inicio</a></li>
+            <li class="menu__item"><a class="menu__link" href="policaribe/quienes-somos.html">Quienes somos</a></li>
+            <li class="menu__item"><a class="menu__link" href="cursos-cortos/index.html">Diplomados</a></li>
+            <li class="menu__item"><a class="menu__link" data-submenu="submenu-programas" href="#section-programas">Oferta Académica</a></li>
+            <li class="menu__item"><a class="menu__link" href="templates/plantilla-galeria.php">Noticias</a></li>
+            <li class="menu__item"><a class="menu__link" href="pqrs.html">PQRS</a></li>
+            <li class="menu__item"><a class="menu__link" href="#section-policredito">Obtén una beca</a></li>
+            <li class="menu__item"><a class="menu__link" href="https://site2.q10.com/preinscripcion?aplentId=cd2173fa-287d-40c7-84a7-ce6098ccf063" target="_blank">Inscripciones</a></li>
+            <li class="menu__item"><a class="menu__link" href="admin/login.php">Empleados</a></li>
+        </ul>
+        <ul data-menu="submenu-programas" class="menu__level">
+            <li class="menu__item"><a class="menu__link" href="policaribe/programas/auxiliar-administrativo.html">Auxiliar Administrativo</a></li>
+            <li class="menu__item"><a class="menu__link" href="policaribe/programas/preparacion-yentrenamiento-fisico.html">Preparación y Entrenamiento Físico</a></li>
+            <li class="menu__item"><a class="menu__link" href="policaribe/programas/seguridad-ocupacionalylaboral.html">Auxiliar en Seguridad Ocupacional y Laboral</a></li>
+            <li class="menu__item"><a class="menu__link" href="policaribe/programas/asistente-marketing-y-comunicaciones.html">Asistente de Marketing y Comunicaciones</a></li>
+            <li class="menu__item"><a class="menu__link" href="policaribe/programas/auxiliar-en-enfermeria.html">Auxiliar en Enfermería</a></li>
+            <li class="menu__item"><a class="menu__link" href="policaribe/programas/auxiliar-contable-y-financiero.html">Auxiliar Contable y Financiero</a></li>
+            <li class="menu__item"><a class="menu__link" href="policaribe/programas/animacion-graficayde-multimedia.html">Animación Gráfica y de Multimedia</a></li>
+            <li class="menu__item"><a class="menu__link" href="policaribe/programas/auxiliar-en-educacion-para-la-primera-infancia.html">Auxiliar en Educación para la Primera Infancia</a></li>
+        </ul>
+    </div>
+</nav>
+
+
+<!-- HEADER DE UNISIMON -->
+<div class="rel w100" id="tope">
+    <div class="abs top0 zind10 w100 bwhite" id="menu-es">
+        <!-- Inicio cabecera -->
+        <div class="container-fluid">
+            <div class="content">
+                <div class="preheader-bar pad-tb10">
+                    <div class="preheader-left">
+                        <img src="images/acreditacion-logo.png" 
+                             class="preheader-medalla" 
+                             alt="Acreditación Policaribe">
+                    </div>
+                    <div class="preheader-center">
+                        <div class="menu-mobile">
+                            <button class="navbar-toggle" id="preheader-hamburger" aria-label="Abrir menú">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <a href="https://policaribe.edu.co/" class="preheader-logo">
+                            <img src="recursos/img/policaribe-horizontal-color.png" 
+                                 alt="logo">
+                        </a>
+                    </div>
+                    <div class="preheader-right">
+                        <a target="_blank" href="http://campuspolicaribe.q10.com/" class="preheader-radio">
+                            <img src="showimagen/showimage/campus.webp" 
+                                 style="width:120px; height:31px;"
+                                 alt="Emisora Unisimón">
+                        </a>
+                        <span class="preheader-separator">|</span>
+                        <a href="#" id="facebookLink" class="preheader-social">
+                            <img src="https://www.unisimon.edu.co/recursos/img/ICONO_REDES_FINAL.svg" 
+                                 alt="facebook">
+                        </a>
+                        <span class="preheader-separator">|</span>
+                        <a href="mailto:contacto@policaribe.edu.co" class="preheader-contacto">CONTACTO</a>
+                        <div class="preheader-sede">
+                            <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                            <a href="https://site2.q10.com/preinscripcion?aplentId=cd2173fa-287d-40c7-84a7-ce6098ccf063" target="_blank">Obtén una beca</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- fin cabecera -->	
+        
+        <!-- inicio menu -->
+        <div class="b51 dnonem">
+            <div class="content">
+                <nav class="w90 fleft rel">
+                    <ul class="nav navbar-nav rel">
+                      <li class="active-menu"><a href="index.html">Inicio</a></li>
+                                                                    <li><a href="info/index.html">Quienes somos</a></li>
+                                                                    <li><a href="cursos-cortos/index.html">Diplomados</a></li>
+                                            <li class="dropdown">
+                                                                        <a href="#section-programas" class="dropdown-toggle">Oferta Académica</a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="policaribe/programas/auxiliar-administrativo.html">Auxiliar Administrativo</a></li>
+                                                    <li><a href="policaribe/programas/preparacion-yentrenamiento-fisico.html">Preparación y Entrenamiento Físico</a></li>
+                                                    <li><a href="policaribe/programas/seguridad-ocupacionalylaboral.html">Auxiliar en Seguridad Ocupacional y Laboral</a></li>
+                                                    <li><a href="policaribe/programas/asistente-marketing-y-comunicaciones.html">Asistente de Marketing y Comunicaciones</a></li>
+                                                    <li><a href="policaribe/programas/auxiliar-en-enfermeria.html">Auxiliar en Enfermería</a></li>
+                                                    <li><a href="policaribe/programas/auxiliar-contable-y-financiero.html">Auxiliar Contable y Financiero</a></li>
+                                                    <li><a href="policaribe/programas/animacion-graficayde-multimedia.html">Animación Gráfica y de Multimedia</a></li>
+                                                    <li><a href="policaribe/programas/auxiliar-en-educacion-para-la-primera-infancia.html">Auxiliar en Educación para la Primera Infancia</a></li>
+                                                </ul>
+                                            </li>
+                                              <li><a href="templates/plantilla-galeria.php">Noticias</a></li>
+                                            <li><a href="pqrs.html">PQRS</a></li>
+                    </ul>
+                </nav>
+                <div class="header-inscripciones">
+                    <a href="https://site2.q10.com/preinscripcion?aplentId=cd2173fa-287d-40c7-84a7-ce6098ccf063" target="_blank" class="btn-inscripciones">
+                        <i class="fas fa-user-graduate"></i>
+                        <span>Inscripciones</span>
+                    </a>
+                    <a href="admin/login.php" class="btn-empleados">
+                        <i class="fas fa-user-tie"></i>
+                        <span>Empleados</span>
+                    </a>
+                    <button class="btn-menu" id="header-hamburger" aria-label="Abrir menú">
+                      <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Espaciador para compensar el header fijo -->
+    <div style="height: 140px;"></div>
+    
+    <!-- SLIDER HERO POLICARIBE - SWIPER -->
+        <div class="hero-slider">
+            <div class="swiper heroSwiper">
+                <div class="swiper-wrapper">
+                <!-- Slides con imágenes del directorio showimagen/showimage -->
+                <a href="https://site2.q10.com/preinscripcion?aplentId=cd2173fa-287d-40c7-84a7-ce6098ccf063" target="_blank" class="swiper-slide" data-slide="1">
+                    <img src="showimagen/showimage/slider1.png" alt="Slider 1">
+                    <div class="slide-overlay"></div>
+                </a>
+                <a href="https://site2.q10.com/preinscripcion?aplentId=cd2173fa-287d-40c7-84a7-ce6098ccf063" target="_blank" class="swiper-slide" data-slide="2">
+                    <img src="showimagen/showimage/slider2.png" alt="Slider 2">
+                    <div class="slide-overlay"></div>
+                </a>
+                <a href="https://site2.q10.com/preinscripcion?aplentId=cd2173fa-287d-40c7-84a7-ce6098ccf063" target="_blank" class="swiper-slide" data-slide="3">
+                    <img src="showimagen/showimage/slider3.png" alt="Slider 3">
+                    <div class="slide-overlay"></div>
+                </a>
+                <a href="https://site2.q10.com/preinscripcion?aplentId=cd2173fa-287d-40c7-84a7-ce6098ccf063" target="_blank" class="swiper-slide" data-slide="4">
+                    <img src="showimagen/showimage/slider4.png" alt="Slider 4">
+                    <div class="slide-overlay"></div>
+                </a>
+                <a href="https://site2.q10.com/preinscripcion?aplentId=cd2173fa-287d-40c7-84a7-ce6098ccf063" target="_blank" class="swiper-slide" data-slide="5">
+                    <img src="showimagen/showimage/slider5.png" alt="Slider 5">
+                    <div class="slide-overlay"></div>
+                </a>
+                <a href="https://site2.q10.com/preinscripcion?aplentId=cd2173fa-287d-40c7-84a7-ce6098ccf063" target="_blank" class="swiper-slide" data-slide="6">
+                    <img src="showimagen/showimage/slider6.png" alt="Slider 6">
+                    <div class="slide-overlay"></div>
+                </a>
+                <a href="https://site2.q10.com/preinscripcion?aplentId=cd2173fa-287d-40c7-84a7-ce6098ccf063" target="_blank" class="swiper-slide" data-slide="7">
+                    <img src="showimagen/showimage/slider7.png" alt="Slider 7">
+                    <div class="slide-overlay"></div>
+                </a>
+                <a href="https://site2.q10.com/preinscripcion?aplentId=cd2173fa-287d-40c7-84a7-ce6098ccf063" target="_blank" class="swiper-slide" data-slide="8">
+                    <img src="showimagen/showimage/slider8.png" alt="Slider 8">
+                    <div class="slide-overlay"></div>
+                </a>
+                <a href="https://site2.q10.com/preinscripcion?aplentId=cd2173fa-287d-40c7-84a7-ce6098ccf063" target="_blank" class="swiper-slide" data-slide="9">
+                    <img src="showimagen/showimage/slider9.png" alt="Slider 9">
+                    <div class="slide-overlay"></div>
+                </a>
+                </div>
+                
+                <!-- Controles del slider - siempre visibles -->
+                <div class="abs bot120 zind3 w100 opcf">
+                    <div class="content">
+                        <!-- Flechas de navegación - siempre visibles -->
+                        <img src="https://www.unisimon.edu.co/recursos/img/flecha-26.png" class="fizq poi swiper-button-prev-custom" alt="flecha izquierda">
+                        <img src="https://www.unisimon.edu.co/recursos/img/flecha-26.png" class="fder ml10 poi swiper-button-next-custom" alt="flecha derecha">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-slider-mobile">
+            <div class="swiper heroSwiperMobile">
+                <div class="swiper-wrapper">
+                    <a href="cursos-cortos/index.html" class="swiper-slide" data-slide="m1">
+                        <img src="showimagen/showimage/cursos/diplomado-contratacion-estatal.jpeg" alt="Diplomado Contratación Estatal">
+                        <div class="slide-overlay"></div>
+                    </a>
+                    <a href="cursos-cortos/index.html" class="swiper-slide" data-slide="m2">
+                        <img src="showimagen/showimage/cursos/diplomado-docencia-universitaria.jpeg" alt="Diplomado Docencia Universitaria">
+                        <div class="slide-overlay"></div>
+                    </a>
+                    <a href="cursos-cortos/index.html" class="swiper-slide" data-slide="m3">
+                        <img src="showimagen/showimage/cursos/diplomado-ganaderia.jpeg" alt="Diplomado Ganadería">
+                        <div class="slide-overlay"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+    <!-- Menu inferior del slider - 1 fila de programas -->
+    <div class="menu-inferior-programas">
+            <!-- Fila de programas -->
+            <div class="w100 dtable h54 otroMenu">
+                <div class="cwhite tcel tcenter mid bnara"><a href="policaribe/programas/auxiliar-administrativo.html">Auxiliar<br>Administrativo</a></div>
+                <div class="cwhite tcel tcenter mid bverde"><a href="policaribe/programas/preparacion-yentrenamiento-fisico.html">Preparación y<br>Entrenamiento Físico</a></div>
+                <div class="cwhite tcel tcenter mid bverdec"><a href="policaribe/programas/seguridad-ocupacionalylaboral.html">Auxiliar en Seguridad<br>Ocupacional y Laboral</a></div>
+                <div class="cwhite tcel tcenter mid bverdecl"><a href="policaribe/programas/asistente-marketing-y-comunicaciones.html">Asistente de Marketing<br>y Comunicaciones</a></div>
+                <div class="cwhite tcel tcenter mid bazulm"><a href="policaribe/programas/auxiliar-en-enfermeria.html">Auxiliar en<br>Enfermería</a></div>
+                <div class="cwhite tcel tcenter mid bnara desktop-hide"><a href="policaribe/programas/auxiliar-contable-y-financiero.html">Auxiliar Contable<br>y Financiero</a></div>
+                <div class="cwhite tcel tcenter mid bverde desktop-hide"><a href="policaribe/programas/animacion-graficayde-multimedia.html">Animación Gráfica<br>y Multimedia</a></div>
+                <div class="cwhite tcel tcenter mid bverdec desktop-hide"><a href="policaribe/programas/auxiliar-en-educacion-para-la-primera-infancia.html">Auxiliar en Educación<br>para la Primera Infancia</a></div>
+            </div>
+        </div>
+    <div class="acciones-secundarias">
+        <div class="container">
+            <a class="sec-btn" href="http://localhost/sitio_web/policaribe/documentos/calendario-academico-virtual.pdf"><i class="fa fa-calendar"></i> Calendario Académico Virtual</a>
+            <a class="sec-btn" href="http://localhost/sitio_web/policaribe/documentos/calendario-academico-a-distancia.pdf"><i class="fa fa-calendar"></i> Calendario Académico a Distancia</a>
+        </div>
+    </div>
+</div>
+<!-- FIN HEADER Y SLIDER DE UNISIMON -->
+
+        <!-- CONTENIDO PRINCIPAL POLICARIBE -->
+        <main class="policaribe-content">
+            <section id="section-calendario-noticias" class="policaribe-section">
+                <div class="policaribe-container">
+                    <div class="row mb50" id="varurl">
+                        <div class="col-md-6">
+                            <p class="c3 fz16 fw5 mb30"><span class="icon-iconos-36 fz19 mid cama calendar-title-icon"></span> Eventos Policaribe</p>
+                            <div class="row">
+                                <div class="col-md-6 calendar-col">
+                                    <div id="datepicker"></div>
+                                    <div id="event-popover" class="calendar-popover" hidden></div>
+                                </div>
+                                <div class="fleft w40 mlp5 mt30m eventosm mb30m">
+                                    <div id="eventos"></div>
+                                    <a href="templates/plantilla-galeria.php">
+                                        <div class="dtable pad12 cwhite fz12 fw5 bama">Ver todos</div>
+                                    </a>
+                                </div>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="c3 fz15 fw5 mb30">Noticias Policaribe
+                                <p class="tright fright fw5 fz12 cverde">
+                                    <a href="templates/plantilla-galeria.php">Ver todas las noticias</a>
+                                </p>
+                            </div>
+                            <div id="noticias-vertical"></div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </section>
+
+            
+
+            <section id="aliados-strip" style="padding: 20px 0; background: #ffffff;">
+                <div class="policaribe-container" style="text-align:center;">
+                    <picture>
+                        <source srcset="showimagen/slick.webp" type="image/webp">
+                        <img src="showimagen/slick.webp" alt="Aliados y convenios" style="max-width:100%; height:auto;" />
+                    </picture>
+                </div>
+            </section>
+
+            <section id="sp-bottom">
+                <div class="policaribe-bottom-grid">
+                    <div class="bottom-column">
+                        <img src="images/logo-blanco-footer.png" alt="Policaribe" style="max-width: 180px; height: auto;">
+                        <p style="margin-top: 18px;">Formamos técnicos laborales a través de una educación inclusiva y de calidad, basada en valores como el respeto, la solidaridad y la excelencia.</p>
+                        <p class="copy-right">© POLICARIBE 2025</p>
+                    </div>
+                    <div class="bottom-column">
+                        <h6>Normatividad Institucional</h6>
+                        <ul>
+                            <li><a href="https://drive.google.com/file/d/1yp_BmQ_fDIB4RwKgo6LS5LXfrB_MQR6M/view?usp=sharing">Creación y reconocimiento Personería Jurídica</a></li>
+                            <li><a href="policaribe/index.html#">Política de Tratamiento de Información Personal</a></li>
+                        </ul>
+                    </div>
+                    <div class="bottom-column">
+                        <h3>Enlaces rápidos</h3>
+                        <ul>
+                            <li><a href="policaribe/documentos/calendario-academico-virtual.pdf">Calendario Académico Virtual</a></li>
+                            <li><a href="policaribe/documentos/calendario-academico-a-distancia.pdf">Calendario Académico a Distancia</a></li>
+                            <li><a href="policaribe/documentos/estatuto-general.pdf">Estatuto General</a></li>
+                            <li><a href="policaribe/index.html#">Derechos Pecuniarios</a></li>
+                            <li><a href="http://Campuspolicaribe.q10.com">Inscripciones</a></li>
+                        </ul>
+                    </div>
+                    <div class="bottom-column">
+                        <h3>Contacto</h3>
+                        <div class="contact-address">
+                            <p><i class="fas fa-envelope"></i> contacto@policaribe.edu.co</p>
+                            <p><i class="fas fa-phone"></i> +57 311 614 9733</p>
+                        </div>
+                        <div class="policaribe-social">
+                            <p>SÍGUENOS</p>
+                            <div class="social-icons">
+                                <a href="https://www.facebook.com/policaribe" target="_blank" aria-label="Facebook">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="https://www.instagram.com/policaribe_oficial/" target="_blank" aria-label="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="https://www.youtube.com/@policaribe" target="_blank" aria-label="YouTube">
+                                    <i class="fab fa-youtube"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            
+
+            <footer id="sp-footer">
+                © 2025 <a href="https://www.joomshaper.com/">Policaribe</a> · Todos los derechos reservados
+            </footer>
+            
+        </main>
+        <!-- FIN CONTENIDO PRINCIPAL POLICARIBE -->
+
+<!-- Scripts de UNISIMON -->
+<script type="text/javascript" src="https://www.unisimon.edu.co/recursos/slick/classie.js"></script>
+<script type="text/javascript" src="https://www.unisimon.edu.co/recursos/slick/main.js"></script>
+<script type="text/javascript" src="https://www.unisimon.edu.co/recursos/slick/funciones.js"></script>
+<script type="text/javascript" src="https://www.unisimon.edu.co/recursos/slick/menu.js"></script>
+
+<script src="js/main.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<script>
+// Calendario y Noticias dinámicos conectados al panel de administración
+(function($){
+  var SITE_URL = window.location.origin + '/sitio_web';
+  function normSrc(s){
+    if(!s) return 'images/demo/blog/1.jpg';
+    s = (s||'').trim();
+    if(/^https?:\/\//i.test(s) || s.indexOf('data:') === 0) return s;
+    if(s.charAt(0) === '/') return SITE_URL + s;
+    return SITE_URL + '/' + s.replace(/\s/g, '%20');
+  }
+  function cargarNoticias(){
+    $.getJSON('api/articulos.php', { type: 'news', limit: 3 }, function(resp){
+      var $container = $('#noticias-vertical').empty();
+      if(resp && resp.data && resp.data.length){
+        resp.data.forEach(function(a){
+          var href = 'templates/plantilla-articulo.php?slug=' + encodeURIComponent(a.slug);
+          var html = '<div class="row mb20">'
+            + '<a href="' + href + '">' 
+            +   '<div class="col-md-7">' 
+            +     '<div class="img-wrap">' 
+            +       '<img data-src="' + normSrc(a.imagen_principal) + '" alt="' + (a.titulo || 'noticia') + '" onerror="fallbackImg(this, buildCandidates(this.getAttribute(\'data-src\')))">' 
+            +     '</div>' 
+            +   '</div>' 
+            +   '<div class="col-md-5 pl15">' 
+            +     '<p class="c6 tita mb5 fz12 mt10">' + a.fecha + '</p>' 
+            +     '<p class="c3 mb5 fz12">' + a.titulo + '</p>' 
+            +     '<p class="c6 mb10 fz11">' + (a.descripcion_corta || '') + '</p>' 
+            +     '<span class="cverde fw5">Ver noticia</span>' 
+            +   '</div>' 
+            +   '<div class="clear"></div>' 
+            + '</a>' 
+          $container.append(html);
+
+          // Disparar la carga de la imagen después de añadirla al DOM
+          $container.find('img[data-src]:last').each(function() {
+              var candidates = buildCandidates(this.getAttribute('data-src'));
+              fallbackImg(this, candidates);
+          });
+        });
+      } else {
+        $container.html('<p class="c6 fz12">No hay noticias publicadas.</p>');
+      }
+    });
+  }
+
+  function cargarFechasMes(year, month, cb){
+    $.getJSON('api/articulos.php', { type:'calendar-month', year:year, month:month }, function(resp){
+      cb(resp && resp.dates ? resp.dates : []);
+    });
+  }
+
+  function cargarEventosDia(date){
+    $.getJSON('api/articulos.php', { type:'calendar-day', date:date }, function(resp){
+      var $ev = $('#eventos').empty();
+      var $pop = $('#event-popover');
+      if(resp && resp.data && resp.data.length){
+        var listHtml = '<div class="pop-header"><span>Eventos</span><button class="pop-close" type="button" aria-label="Cerrar">×</button></div><ul>';
+        function tw(s, n){
+          var arr = (s||'').trim().split(/\s+/);
+          if(arr.length <= n) return s||'';
+          return arr.slice(0, n).join(' ') + '…';
+        }
+        resp.data.forEach(function(a){
+          var href = 'templates/plantilla-articulo.php?slug=' + encodeURIComponent(a.slug);
+          var html = '<a href="' + href + '"><div class="ev-card">'
+            +   '<p class="ev-title">' + a.titulo + '</p>'
+            +   '<p class="ev-desc">' + (a.descripcion_corta || '') + '</p>'
+            + '</div></a>';
+          $ev.append(html);
+          listHtml += '<li><a href="' + href + '">' + tw(a.titulo, 8) + '</a></li>';
+        });
+        listHtml += '</ul>';
+        $pop.html(listHtml).removeAttr('hidden');
+        $pop.find('.pop-close').on('click', function(){ $pop.attr('hidden', true); });
+      } else {
+        $ev.html('<p class="c6 fz12">Sin eventos para esta fecha.</p>');
+        $pop.attr('hidden', true).empty();
+      }
+    });
+  }
+
+  $(function(){
+    cargarNoticias();
+
+    var hoy = new Date();
+    var y = hoy.getFullYear();
+    var m = hoy.getMonth() + 1;
+
+    var fechasMes = {};
+
+      $('#datepicker').datepicker({
+      dateFormat: 'yy-mm-dd',
+      monthNames: ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'],
+      dayNamesMin: ['Do','Lu','Ma','Mi','Ju','Vi','Sa'],
+      beforeShowDay: function(date){
+        var d = $.datepicker.formatDate('yy-mm-dd', date);
+        var resaltado = !!fechasMes[d];
+        return [true, resaltado ? 'has-event' : '', resaltado ? 'Evento' : ''];
+      },
+      onChangeMonthYear: function(year, month){
+        cargarFechasMes(year, month, function(dates){
+          fechasMes = {};
+          dates.forEach(function(d){ fechasMes[d] = true; });
+          $('#datepicker').datepicker('refresh');
+        });
+      },
+      onSelect: function(dateText){}
+    });
+
+    cargarFechasMes(y, m, function(dates){
+      fechasMes = {};
+      dates.forEach(function(d){ fechasMes[d] = true; });
+      $('#datepicker').datepicker('setDate', hoy);
+      $('#datepicker').datepicker('refresh');
+      var hoyStr = $.datepicker.formatDate('yy-mm-dd', hoy);
+      cargarEventosDia(hoyStr);
+    });
+
+  $(document).on('click', function(e){
+    if(!$(e.target).closest('#event-popover, #datepicker').length){
+      $('#event-popover').attr('hidden', true);
+    }
+  });
+  });
+})(jQuery);
+</script>
+
+<!-- Chatbot flotante de Policaribe -->
+<div id="chatbot-widget" aria-live="polite">
+  <div class="chatbot-inline">
+    <button class="chatbot-bubble" id="chatbot-cta" title="Contacta a un asesor">Contacta a un asesor <span class="wave-emoji">👋</span></button>
+    <button id="chatbot-toggle" aria-expanded="false" aria-controls="chatbot-panel" title="Chat Policaribe">
+      <img src="policaribe/images/ico.ico" alt="Chatbot" />
+    </button>
+  </div>
+  <div id="chatbot-panel" role="dialog" aria-label="Chat de Policaribe" hidden>
+    <div class="chatbot-header">
+      <strong>Asistente Policaribe</strong>
+      <button class="chatbot-close" aria-label="Cerrar">×</button>
+    </div>
+    <div class="chatbot-body">
+      <div class="chatbot-messages">
+        <div class="msg bot">Hola 👋 Soy tu asistente virtual. Escribe tu pregunta abajo o usa estos enlaces rápidos:</div>
+        <div class="quick-links">
+          <a href="#" data-msg="Programas disponibles">📚 Programas</a>
+          <a href="#" data-msg="Sobre nosotros">ℹ️ Sobre nosotros</a>
+          <a href="#" data-msg="Inscripciones">📝 Inscripciones</a>
+          <a href="#" data-msg="PQRS">📋 PQRS</a>
+          <a href="https://wa.me/573042134088" target="_blank" rel="noopener">💬 Asesor WhatsApp</a>
+        </div>
+      </div>
+      <form class="chatbot-input" autocomplete="off">
+        <input type="text" name="q" placeholder="Escribe tu pregunta..." aria-label="Mensaje" />
+        <button type="submit" aria-label="Enviar">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+          </svg>
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="js/chatbot-root.js"></script>
+
+ 
+<a href="https://api.whatsapp.com/send/?phone=573042134088&text&type=phone_number&app_absent=0&wame_ctl=1" class="whatsapp-flotante" target="_blank">
+    <i class="fa-brands fa-whatsapp"></i>
+</a>
+</body>
+</html>
