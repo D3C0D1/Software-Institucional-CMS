@@ -1,0 +1,492 @@
+/**
+ * @package Varsita
+ * @author JoomShaper http://www.joomshaper.com
+ * @copyright Copyright (c) 2010 - 2016 JoomShaper
+ * @license http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2 or later
+
+ /*==========  Non-Mobile First Method  ==========*/
+
+ /* Large Devices, Wide Screens */
+ @media only screen and (max-width : 1200px) {
+ 	//social-bar
+ 	ul.social-icons >li{
+ 		margin-right: 130px;
+ 	}
+	//coming-soon
+	.sp-comingsoon{
+		.days,
+		.hours,
+		.seconds,
+		.minutes{
+			.number{
+				font-size: 80px;
+				line-height: 80px;
+				&:after{
+					margin: 0 40px 15px;
+				}
+			}
+			.string{
+				margin-left: 25px;
+			}
+		}
+	}
+	.sp-comingsoon .inputbox{
+		width: 75% !important;
+	}
+	.sp-comingsoon .acysubbuttons{
+		width: 25%;
+	}
+}
+
+/* Medium Devices, Desktops */
+@media (max-width: 992px) {
+	//social-bar
+ 	ul.social-icons >li{
+ 		margin-right: 50px;
+ 	}
+
+	.macro-core-service .sppb-feature-box-title{
+		line-height: inherit;
+	}
+	//service
+	.sppb-addon-pricing-table{
+		.sppb-pricing-box .sppb-pricing-features ul li{
+			margin: 0 20px;
+			&:before{
+				left: 0;
+			}	
+		}
+	}
+	.macro-subscribe-wrapper .acymailing_form .inputbox{
+		width: 65% !important;
+	}
+	//coming-soon
+	.sp-comingsoon{
+		.days,
+		.hours,
+		.seconds,
+		.minutes{
+			.number{
+				font-size: 80px;
+				&:after{
+					margin: 0 40px 15px;
+				}
+			}
+			.string{
+				margin-left: 25px;
+			}
+		}
+	}
+
+	//Contact
+	span.contact-info-bold{
+		font-size: 18px !important
+	}
+
+	//Portfolio Details
+	.sp-simpleportfolio-view-item .sp-simpleportfolio-details .sp-simpleportfolio-description h2{
+		font-size: 32px;
+	}
+
+	//Blog
+	.popular-post h3.sp-module-title{
+		padding-left: 15px;
+	}
+	.popular-post .latestnews > div{
+		padding: 15px;
+	}
+
+	//Bottom
+	#sp-bottom2{
+		padding-left: 15px;
+		margin-bottom: 30px;
+	}
+	//coming soon
+	.sp-comingsoon .acysubbuttons .btn{
+		padding: 0;
+	}
+}
+
+
+/* Small Devices, Tablets */
+@media (max-width: 768px) {
+	h1{
+		font-size: 30px !important;	
+		line-height: 35px !important;
+		small{
+			letter-spacing: inherit !important;
+		}
+	}
+	h2{
+		font-size: 25px !important;	
+		line-height: 30px !important;
+	}
+	h3{
+		font-size: 20px !important;	
+		line-height: 25px !important;
+	}
+	h4{
+		font-size: 18px !important;	
+		line-height: 23px !important;
+	}
+	.sppb-addon-feature{
+		margin-bottom: 40px;
+		&+.sppb-empty-space{
+			display: none;
+		}
+	}
+	.sppb-addon-animated-number{
+		margin-bottom: 40px;
+	}
+	.macro-featured-client{
+		img{
+			margin-bottom: 30px;
+		}
+	}
+	#offcanvas-toggler{
+		margin-right: 10px;
+	}
+	.has-sub-image #sp-page-title .sp-page-title{
+		padding: 120px 0 50px;
+	}
+	//search
+	.macro-top-search .icon-top-wrapper{
+		right: 15px;
+	}
+	.macro-top-search .searchwrapper{
+		// left: -15px;
+	}
+	.sppb-slider-wrapper.sppb-slider-fullwidth-wrapper .footer-animation{
+		display: none;
+	}
+	.sppb-slider-wrapper.sppb-slider-fullwidth-wrapper .customNavigation a{
+		font-size: 50px;
+	}
+	//macro-skills-wrapper
+	.macro-skills-wrapper{
+		padding: 0 !important;
+		margin-top: 50px;
+	}
+	.macro-less-padding{
+		padding: 30px 0 !important;
+	}
+	.macro-portfolio-wrapper{
+		padding-bottom: 0 !important;
+	}
+	.macro-skils{
+		.sppb-addon-single-image{
+			margin-bottom: 30px;
+		}
+	}
+	.sppb-addon-persion{
+		margin-bottom: 30px;
+		&+.sppb-empty-space{
+			display: none;
+		}
+	}
+	.sppb-progress-wrap{
+		margin-bottom: 20px;
+	}
+	//macro-testimonial-pro
+	.macro-testimonial-pro .sppb-testimonial-message{
+		font-size: 20px;
+		line-height: 25px;
+	}
+	.sppb-carousel-indicators >li.sppb-tm-indicators{
+		width: 35px;
+		height: 35px;
+		border-radius: 100%;
+		margin: 0 10px 0 0;
+		img{
+			display: block !important;
+		}
+	}
+	//portfolio
+	.sp-simpleportfolio{
+		.sp-simpleportfolio-item{
+			.sp-simpleportfolio-title{
+				font-size: 22px !important;
+				line-height: 25px !important;	
+			}
+			.sp-simpleportfolio-tags{
+				font-size: 14px !important;
+			}
+		}
+	}
+	.scrollup{
+		right: 15px;
+	}
+	
+	//service
+	.sppb-addon-pricing-table .sppb-pricing-box{
+		margin-bottom: 30px;
+		.sppb-pricing-header{
+			.sppb-pricing-title{
+				margin-bottom: 30px;
+			}
+			.sppb-pricing-price{
+				font-size: 45px;
+			}
+		}
+	}
+	
+	//bottom
+	#sp-bottom1,#sp-bottom2,#sp-bottom3,#sp-bottom4{
+		margin-bottom: 40px;
+	}
+	#sp-bottom2{
+		padding-left: 15px;
+	}
+	#sp-footer{
+		text-align: center;
+	}
+	//coming-soon
+	.sp-comingsoon{
+		.days,
+		.hours,
+		.seconds,
+		.minutes{
+			margin: 0 50px 0 0;
+			.number{
+				font-size: 50px;
+				line-height: inherit;
+				&:after{
+					display: none;
+					
+				}
+			}
+			.string{
+				margin-top: 15px;
+				text-align: center;
+				margin-left: 0;
+			}
+		}
+		.sp-comingsoon-logo{
+			margin: 80px 0;
+		}
+	}
+
+	//About
+	.sppb-person-image img{
+		width: 100%;
+	}
+	//Timeline(About)
+	.timeline-movement{
+		.timeline-item{
+			width: 50%;
+			float: left;
+		}
+	}
+	#timeline .timeline-movement .timeline-item .timeline-date{
+		margin: 0 80px;
+	}
+	.sppb-addon-single-image{
+		text-align: center;
+	}
+	#sp-page-builder img{
+		display: inline-block;
+	}
+	.sppb-addon-gmap{
+		max-height: 200px;
+		overflow: hidden;
+	}
+	//Contact Info
+	.contact-info .sppb-addon-text-block{
+		margin-bottom: 20px;
+	}
+
+	//Blog
+	.view-category .item .entry-image{
+		float: none;
+	}
+}
+
+/* Extra Small Devices, Phones  */
+@media (max-width: 480px) {
+	ul.social-icons >li{
+		width: 50%;
+		margin: 0 0 15px 0;
+		text-align: left;
+		font-size: 13px;
+		a i{
+			text-align: center;
+		}
+	}
+	//sppb-icon
+	.sppb-icon{
+		i{
+			font-size: 35px !important;
+			width: 40px !important;
+			height: 40px !important;
+			line-height: 40px !important;
+		}
+		&+.sppb-empty-space{
+			margin-bottom: 10px !important;	
+		}
+	}
+	.sppb-animated-number{
+		font-size: 25px !important;
+		line-height: 30px !important;
+	}
+	
+	#timeline .timeline-movement .timeline-item .timeline-panel .title{
+		font-size: 18px;
+	}
+	#timeline .timeline-movement .timeline-item .timeline-date{
+		margin: 0 0 0 70px;
+	}	
+	#timeline .timeline-movement .timeline-item .timeline-date.text-right{
+		margin: 0 70px 0 0;
+	}
+	//portfolio
+	.sp-simpleportfolio{
+		.sp-simpleportfolio-item{
+			width: 100% !important;
+		}
+	}
+	//sp-simpleportfolio
+	.sp-simpleportfolio .sp-simpleportfolio-filter > ul > li{
+		margin-bottom: 15px;
+		margin-right: 15px;
+		font-size: 14px;
+	}
+	.macro-subscribe-wrapper .acymailing_form .inputbox{
+		width: 100% !important;
+		margin-bottom: 15px;
+	}
+	//coming-soon
+	.sp-comingsoon{
+		.sp-comingsoon-logo{
+			margin: 50px 0;
+			img{
+				width: 120px;
+				margin-top: 30px;
+			}
+		}
+		.days,
+		.hours,
+		.seconds,
+		.minutes{
+			margin: 0;
+			width: 50%;
+			padding-bottom: 30px;
+		}
+		.sp-comingsoon-content{
+			font-size: 18px;
+			line-height: 22px;
+		}
+		.acymailing_module{
+			.inputbox{
+				width: 70% !important;
+			}
+			.acysubbuttons{
+				width: 30%;
+				.btn{
+					font-size: 13px;
+				}
+			}
+		}
+		.sp-position-comingsoon{
+			padding: 25px;
+			margin-top: 40px;
+		}
+		.social-icons li{
+			width: inherit;
+		}
+		.copyright{
+			margin-top: 0;
+		}
+	}
+	.sp-comingsoon .sp-comingsoon-countdown >div{
+		margin-right: 0;
+	}
+	.sp-comingsoon .days, .sp-comingsoon .hours, .sp-comingsoon .seconds, .sp-comingsoon .minutes{
+		width: 25%;
+	}
+	.sp-comingsoon .sp-comingsoon-countdown >div:after{
+		right: -10px;
+		top: 20%;
+	}
+	.error-page .error-page-inner img{
+		width: 200px;
+	}
+	//Search
+	.macro-top-search .searchwrapper .top-search-box{
+		left: 0;
+		width: 100%;
+		margin-left: 0;
+		margin-top: 0;
+		padding: 0 30px;
+		.search-inputbox{
+			font-size: 16px;
+		}
+		 .search-submit{
+			right: 30px;
+		}
+	}
+	//About-Page
+	.macro-skils .sppb-addon-single-image{
+		padding-right: 0;
+	}
+}
+
+/* iPhones 5s  */
+@media (max-width: 320px) {
+
+	//Offcanvus
+	.offcanvas .offcanvas-menu{
+		right: 320px;
+	}
+	.offcanvas-menu .offcanvas-inner{
+		right: 320px;
+		padding: 50px 90px 90px;
+	}
+
+	//Search
+	[class*=" icon-"]{
+		margin-right: 0;
+	}
+	
+	//contact from
+	.sppb-addon-ajax-contact .sppb-input-group >div{
+		width: 100%;
+		padding-right: 0;
+	}
+
+	//Pagination
+	.pagination-wraper .pagination >li.disabled:first-child > a{
+		margin-right: 30px;
+	}
+	.pagination-wraper ul.pagination li [title~="End"]{
+		margin-left: 30px;
+	}
+
+	//Portfolio Details
+	.sp-simpleportfolio-view-item .sp-simpleportfolio-details .sp-simpleportfolio-description h2{
+		font-size: 20px  !important;
+	}
+
+	//Coming Soon
+	.sp-comingsoon .days .number, .sp-comingsoon .hours .number, .sp-comingsoon .seconds .number, .sp-comingsoon .minutes .number{
+		font-size: 30px;
+	}
+	.sp-comingsoon .days .string, .sp-comingsoon .hours .string, .sp-comingsoon .seconds .string, .sp-comingsoon .minutes .string{
+		font-size: 15px;
+	}
+	.sp-comingsoon .sp-comingsoon-countdown >div:after{
+		right: -5px;
+		top: 20%;
+	}
+	.sp-comingsoon .sp-comingsoon-countdown >div:after{
+		width: 10px;
+		height: 10px;
+	}
+	.sppb-carousel-indicators >li.sppb-tm-indicators{
+		margin: 0 8px 0 0;
+	}
+
+	//Blog Details
+	.sp-social-share ul li{
+		margin: 0;
+	}
+}

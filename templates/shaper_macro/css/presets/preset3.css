@@ -1,0 +1,264 @@
+a {
+  color: #e59b95;
+}
+a:hover {
+  color: #db746c;
+}
+.view-article .entry-header .article-info dd.category-name a:hover {
+  color: #e59b95;
+}
+.btn-primary,
+.sppb-btn-primary {
+  background-color: #e59b95;
+  border-color: #c93d31;
+  color: #fff;
+}
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.sppb-btn-primary:hover,
+.sppb-btn-primary:focus,
+.sppb-btn-primary:active {
+  color: #fff;
+  background-color: #db746c;
+  border-color: #b5372c;
+}
+ul.social-icons >li a:hover {
+  color: #e59b95;
+}
+.layout-boxed .body-innerwrapper {
+  background: #ffffff;
+}
+.sp-module ul >li >a {
+  color: #6f6f6f;
+}
+.sp-module ul >li >a:hover {
+  color: #e59b95;
+}
+.sp-module .latestnews >div >a:hover {
+  color: #e59b95;
+}
+.sp-module .tagscloud .tag-name:hover {
+  background: #e59b95;
+}
+.sp-simpleportfolio .sp-simpleportfolio-filter > ul > li.active > a,
+.sp-simpleportfolio .sp-simpleportfolio-filter > ul > li > a:hover {
+  color: #e59b95;
+}
+.sp-simpleportfolio .sp-simpleportfolio-filter > ul > li.active > a:before,
+.sp-simpleportfolio .sp-simpleportfolio-filter > ul > li > a:hover:before {
+  width: 100%;
+}
+.search .btn-toolbar button {
+  background: #e59b95;
+}
+.post-format {
+  background: #e59b95;
+}
+.voting-symbol span.star.active:before {
+  color: #e59b95;
+}
+.sp-rating span.star:hover:before,
+.sp-rating span.star:hover ~ span.star:before {
+  color: #db746c;
+}
+.entry-link,
+.entry-quote {
+  background: #e59b95;
+}
+blockquote {
+  border-color: #e59b95;
+}
+.carousel-left:hover,
+.carousel-right:hover {
+  background: #e59b95;
+}
+.sp-comingsoon body {
+  background-color: #e59b95;
+}
+.pagination>li>a,
+.pagination>li>span {
+  color: #6f6f6f;
+}
+.pagination>li>a:hover,
+.pagination>li>a:focus,
+.pagination>li>span:hover,
+.pagination>li>span:focus {
+  color: #e59b95;
+  background-color: transparent;
+}
+.pagination>.active>a,
+.pagination>.active>span {
+  border-color: #e59b95;
+  background-color: #e59b95;
+}
+.pagination>.active>a:hover,
+.pagination>.active>a:focus,
+.pagination>.active>span:hover,
+.pagination>.active>span:focus {
+  border-color: #e59b95;
+  background-color: #e59b95;
+}
+.pagination>.active>a:after {
+  border-left: 30px solid #e59b95;
+}
+.sppb-progress-bar {
+  background-color: #e59b95;
+}
+.sppb-addon-thumb-gallery .flex-direction-nav .flex-prev {
+  background: #e59b95;
+}
+.sppb-addon-thumb-gallery .flex-direction-nav .flex-next {
+  background: #e59b95;
+}
+.sppb-addon-thumb-gallery #carousel li.flex-active-slide:after {
+  background-color: rgba(229,155,149,0.4);
+}
+.sppb-addon-thumb-gallery #carousel li.flex-active-slide img {
+  border-color: #efc2be !important;
+}
+#sp-footer .sp-copyright a:hover {
+  color: #e59b95;
+}
+#sp-bottom3 .telephone:first-letter {
+  color: #e59b95;
+}
+.contact-address .sppb-icon {
+  color: #e59b95;
+}
+.sppb-addon-pricing-table .sppb-pricing-featured .sppb-pricing-header .sppb-pricing-price {
+  color: #e59b95;
+}
+.sppb-addon-pricing-table .sppb-pricing-featured .sppb-pricing-footer a.sppb-btn {
+  color: #e59b95;
+}
+.pf-audio:hover .entry-header .published-date,
+.pf-audio:hover .entry-header dl.article-info dd {
+  color: #e59b95 !important;
+}
+.pf-audio:hover .entry-header h2 a {
+  color: #e59b95 !important;
+}
+.btn-link:hover,
+.btn-link:focus,
+.btn-link:active,
+.sppb-btn-link:hover,
+.sppb-btn-link:focus,
+.sppb-btn-link:active {
+  color: #e59b95;
+}
+#sp-top-bar #sp-top1 ul.social-icons li a:hover {
+  color: #e59b95;
+}
+.sp-contact-info li i {
+  color: #e59b95;
+}
+.sp-comingsoon body:before {
+  background-color: #e59b95;
+}
+.sp-comingsoon .acymailing_module .acysubbuttons input[type="submit"]:hover {
+  background-color: #e59b95;
+}
+.sp-simpleportfolio .sp-simpleportfolio-filter > ul > li >a:before {
+  background: #e59b95;
+}
+.pager li>a:hover {
+  background-color: #e59b95;
+  border-color: #e59b95;
+}
+.macro-top-search .searchwrapper .top-search-box .search-inputbox {
+  border-bottom: 3px solid #e59b95;
+}
+.macro-top-search .searchwrapper .top-search-box .search-submit:hover {
+  color: #e59b95;
+}
+.macro-core-service .sppb-addon-feature:hover .sppb-icon i {
+  color: #e59b95;
+}
+.macro-skills-wrapper .sppb-addon-feature:hover .sppb-icon i,
+.macro-our-offers .sppb-addon-feature:hover .sppb-icon i {
+  color: #e59b95;
+}
+.sppb-addon-articles .title a:hover {
+  color: #e59b95;
+}
+.sppb-addon-articles .sppb-article-meta a:hover {
+  color: #e59b95;
+}
+.macro-testimonial-pro .sppb-carousel-icon {
+  color: #e59b95;
+}
+.macro-testimonial-pro .sppb-testimonial-message {
+  color: #e59b95;
+}
+.macro-subscribe-wrapper .acymailing_form .inputbox:focus {
+  border-color: #e59b95;
+}
+.macro-subscribe-wrapper .acymailing_form .acysubbuttons input {
+  border-bottom: 2px solid #d14e43;
+}
+.sppb-addon-persion .sppb-person-image:before {
+  background: rgba(229,155,149,0.8);
+}
+.timeline-movement:hover .timeline-badge:before {
+  box-shadow: 0 0 0 3px rgba(229,155,149,0.3);
+}
+.timeline-badge:before {
+  border: 3px solid #e59b95;
+}
+.contact-info .sppb-icon {
+  color: #e59b95;
+}
+.entry-header h2 a:hover {
+  color: #e59b95;
+}
+.view-category .item .entry-header dl.article-info dd.category-name a:hover {
+  color: #e59b95;
+}
+.view-category .item p.readmore a.btn {
+  background-color: #e59b95;
+  border-color: #e59b95;
+}
+.view-category .item p.readmore a.btn:hover {
+  background-color: #db746c;
+  border-color: #db746c;
+}
+.view-category .item .tags a.label-info {
+  background-color: #e59b95;
+}
+.view-article strong {
+  color: #e59b95;
+}
+.view-article .pagenav li.previous a,
+.view-article .pagenav li.next a {
+  background-color: #e59b95;
+}
+.view-article .pagenav li.previous a:hover,
+.view-article .pagenav li.next a:hover {
+  background-color: #db746c;
+}
+.tag-cloud .tagspopular ul li a:hover {
+  background-color: #e59b95;
+}
+.pagination >li > a:hover {
+  color: #e59b95;
+}
+.sp-simpleportfolio-title a:hover {
+  color: #e59b95 !important;
+}
+#preloader .cube1,
+.cube2 {
+  background-color: #db746c;
+}
+.sp-dropdown li.sp-menu-item >a:not(.sp-group-title):hover {
+  background: #e59b95;
+}
+.sp-dropdown li.sp-menu-item.active>a:not(.sp-group-title) {
+  background: #e59b95;
+}
+.sp-page-title .breadcrumb > li > a:hover {
+  color: #e59b95;
+}
+.has-sub-image #sp-page-title .sp-page-title  .breadcrumb li a:hover {
+  color: #e59b95;
+}

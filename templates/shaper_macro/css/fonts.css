@@ -1,0 +1,127 @@
+/* Trada Sans Thin */
+@font-face {
+  font-family: 'Trada Sans';
+  src: url('../fonts/TradaSans-Thin.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Trada Sans';
+  src: url('https://policaribe.edu.co/templates/shaper_macro/fonts/TradaSans-Thinitalic.otf') format('opentype');
+  font-weight: 100;
+  font-style: italic;
+}
+
+/* Trada Sans ExtraLight */
+@font-face {
+  font-family: 'Trada Sans';
+  src: url('../fonts/TradaSans-ExtraLight.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Trada Sans';
+  src: url('https://policaribe.edu.co/templates/shaper_macro/fonts/TradaSans-ExtraLightitalic.otf') format('opentype');
+  font-weight: 200;
+  font-style: italic;
+}
+
+/* Trada Sans Light */
+@font-face {
+  font-family: 'Trada Sans';
+  src: url('../fonts/TradaSans-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Trada Sans';
+  src: url('https://policaribe.edu.co/templates/shaper_macro/fonts/TradaSans-Lightitalic.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+/* Trada Sans Book */
+@font-face {
+  font-family: 'Trada Sans';
+  src: url('../fonts/TradaSans-Book.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Trada Sans';
+  src: url('https://policaribe.edu.co/templates/shaper_macro/fonts/TradaSans-Bookitalic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+/* Trada Sans Regular (también 400, si lo requieres separado de Book) */
+@font-face {
+  font-family: 'Trada Sans';
+  src: url('../fonts/TradaSans-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Trada Sans Medium */
+@font-face {
+  font-family: 'Trada Sans';
+  src: url('../fonts/TradaSans-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Trada Sans';
+  src: url('https://policaribe.edu.co/templates/shaper_macro/fonts/TradaSans-Mediumitalic.otf') format('opentype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+/* Trada Sans Semibold */
+@font-face {
+  font-family: 'Trada Sans';
+  src: url('https://policaribe.edu.co/templates/shaper_macro/fonts/TradaSans-Semibold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Trada Sans';
+  src: url('https://policaribe.edu.co/templates/shaper_macro/fonts/TradaSans-Semibolditalic.otf') format('opentype');
+  font-weight: 600;
+  font-style: italic;
+}
+
+/* Trada Sans Bold */
+@font-face {
+  font-family: 'Trada Sans';
+  src: url('../fonts/TradaSans-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Trada Sans';
+  src: url('https://policaribe.edu.co/templates/shaper_macro/fonts/TradaSans-Bolditalic.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* Trada Sans Black */
+@font-face {
+  font-family: 'Trada Sans';
+  src: url('../fonts/TradaSans-Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Trada Sans';
+  src: url('https://policaribe.edu.co/templates/shaper_macro/fonts/TradaSans-Blackitalic.otf') format('opentype');
+  font-weight: 900;
+  font-style: italic;
+}

@@ -1,0 +1,330 @@
+/* Inline styles extraídos de index.html (limpiados) */
+
+.sp-page-builder .page-content #section-id-1757434355969 { padding:50px 0; margin:0; }
+#column-id-1757434355968 { box-shadow:0 0 0 0 #fff; }
+
+.sp-page-builder .page-content #section-id-1742091346150 { padding:80px 0; margin:0; background-color:#ffffff; }
+.sp-page-builder .page-content #section-id-1742091346150 .sppb-section-title .sppb-title-heading { font-size:70px; line-height:70px; color:#901913; }
+.sp-page-builder .page-content #section-id-1742091346150 .sppb-section-title .sppb-title-subheading { font-size:25px; }
+#column-id-1742091346149 { box-shadow:0 0 0 0 #fff; }
+
+.sp-page-builder .page-content #section-id-1742138051815 { padding-top:20px; margin:0; background-color:#F1F2F2; }
+#column-id-1742138051814 { box-shadow:0 0 0 0 #fff; }
+
+.sp-page-builder .page-content #section-id-1742138051831 { padding:50px 0 20px; margin:0; background-color:#F1F2F2; }
+#column-id-1742138051829 { box-shadow:0 0 0 0 #fff; }
+
+#sppb-addon-1742138051834 { padding:0 0 50px; }
+#sppb-addon-1742138051834 .sppb-addon-content { font-family:Roboto; }
+
+#sppb-addon-1742138051862 #btn-1742138051862.sppb-btn-custom { background-color:#FBBC21; color:#000000; }
+#sppb-addon-1742138051862 #btn-1742138051862.sppb-btn-custom:hover { background-color:#901913; color:#FFFFFF; }
+
+#column-id-1742138051830 { box-shadow:0 0 0 0 #fff; }
+.sp-page-builder .page-content #section-id-1742138051915 { padding:0; margin:0; }
+
+.sp-page-builder .page-content #section-id-1742138051925 { padding:10px 0 50px; margin:0; }
+#column-id-1742138051922 { box-shadow:0 0 0 0 #fff; }
+
+#sppb-addon-1742138051977 { margin:0 0 10px; }
+#sppb-addon-1742138051977 img { border-radius:378px; }
+
+#sppb-addon-1742138051980 { color:#060100; }
+#sppb-addon-1742138051980 .sppb-addon-title { font-weight:600; font-family:Roboto; }
+#sppb-addon-1742138051980 h3.sppb-addon-title { margin:0 0 30px; padding:0; text-transform:none; }
+
+#column-id-1742138051923 { box-shadow:0 0 0 0 #fff; }
+#sppb-addon-1742138051928 { margin:0 0 10px; }
+#sppb-addon-1742138051928 img { border-radius:378px; }
+
+#sppb-addon-1742138051990 { color:#000000; }
+#sppb-addon-1742138051990 .sppb-addon-title { font-weight:600; font-family:Roboto; }
+#sppb-addon-1742138051990 h3.sppb-addon-title { margin:0 0 30px; padding:0; text-transform:none; }
+
+#column-id-1742138051924 { box-shadow:0 0 0 0 #fff; }
+#sppb-addon-1742138052002 img { border-radius:378px; }
+
+#sppb-addon-1742138051993 { color:#060100; }
+#sppb-addon-1742138051993 .sppb-addon-title { font-weight:600; font-family:Roboto; }
+#sppb-addon-1742138051993 h3.sppb-addon-title { margin:0 0 30px; padding:0; text-transform:none; }
+
+.sp-page-builder .page-content #section-id-1480324188 { padding-top:100px; padding-bottom:50px; background-color:#F1F2F2; }
+.sp-page-builder .page-content #section-id-1480324188 .sppb-section-title .sppb-title-heading { font-size:36px; line-height:36px; font-weight:700; color:#000000; }
+
+/* SmartSlider spinner */
+.n2-ss-spinner-simple-white { outline:1px solid rgba(0,0,0,0); width:100%; height:100%; }
+/* Variable global para altura del preheader (para posicionar el header sticky) */
+:root { --preheader-height: 48px; }
+/* Preheader superior */
+.preheader {
+  background: #f5f7fb;
+  color: #283457;
+  font-size: 16px;
+  line-height: 1.4;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  min-height: var(--preheader-height);
+}
+.preheader .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+}
+.preheader-left, .preheader-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.preheader a.preheader-link {
+  color: inherit;
+  text-decoration: none;
+}
+.preheader a.preheader-link:hover {
+  text-decoration: underline;
+}
+.preheader .preheader-phone {
+  font-weight: 600;
+  background: #e9f7ef;
+  color: #1b5e20;
+  border: 1px solid #c8e6c9;
+  padding: 4px 10px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Fuente y pesos heredados del header para el preheader */
+.preheader, .preheader a.preheader-link, .preheader .preheader-phone {
+  font-family: Roboto, Arial, sans-serif;
+  font-weight: 500;
+}
+
+@media (max-width: 767px) {
+  .preheader .container {
+    flex-direction: column;
+    gap: 6px;
+  }
+  .preheader-left, .preheader-right {
+    width: 100%;
+    justify-content: center;
+  }
+}
+/* Header personalizado */
+#sp-header {
+  background: #ffffff;
+}
+.custom-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0; /* compacto altura del header */
+}
+.header-left .header-logo img {
+  height: 64px;
+  width: auto;
+  display: block;
+}
+.header-nav {
+  display: none; /* oculto nav personalizado para usar el mega menú */
+  gap: 22px;
+}
+.header-nav .nav-link {
+  color: #901913;
+  text-decoration: none;
+  font-family: Roboto, Arial, sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  font-size: 15px;
+}
+.header-nav .nav-link:hover { color: #6f120e; text-decoration: none; }
+.cta-group {
+  display: flex;
+  gap: 10px;
+}
+.btn-cta {
+  background: #901913;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 0;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+}
+.btn-cta:hover { opacity: 0.9; }
+
+/* Reactivo el mega menú Helix con dropdown y hamburguesa */
+.sp-megamenu-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  margin-top: 0;
+  padding-top: 0;
+}
+.sp-megamenu-parent > li > a {
+  color: #901913;
+  text-transform: uppercase;
+  font-family: Roboto, Arial, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  font-size: 15px;
+  padding: 10px 12px;
+  display: inline-block;
+}
+.sp-megamenu-parent > li > a:hover { color: #6f120e; }
+#offcanvas-toggler { color: #901913; font-size: 22px; }
+#offcanvas-toggler i { color: inherit; }
+
+/* Normaliza la grilla del header para que el menú no desborde */
+#sp-header .row { margin-left: 0; margin-right: 0; }
+#sp-header .sp-column { padding-left: 0; padding-right: 0; }
+.macro-top-search { display: none; }
+#sp-logo { display: none; }
+
+@media (max-width: 991px) {
+  .custom-header { flex-wrap: wrap; gap: 10px; }
+  .cta-group { width: 100%; justify-content: center; }
+  #offcanvas-toggler { display: inline-block; }
+}
+
+/* Landing hero */
+.landing-hero {
+  position: relative;
+  background-image: url('images/sliders/Capt.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 420px;
+  margin: 0 0 24px 0; /* sin margen superior para no mostrar overlay bajo el header */
+}
+.landing-hero .hero-overlay {
+  position: absolute;
+  inset: 0;
+  /* cambiar overlay a blanco para evitar banda oscura */
+  background: linear-gradient(90deg, rgba(255,255,255,0.45) 0%, rgba(255,255,255,0.15) 60%, rgba(255,255,255,0) 100%);
+}
+.landing-hero .hero-content {
+  position: relative;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+}
+.landing-hero .hero-text {
+  max-width: 680px;
+  color: #fff;
+}
+.landing-hero .hero-text h2 {
+  font-size: 34px;
+  line-height: 1.25;
+  margin: 0 0 10px 0;
+}
+.landing-hero .hero-text p {
+  font-size: 16px;
+  margin: 0 0 16px 0;
+}
+.landing-hero .btn-hero {
+  background: #f3b21a;
+  color: #1a1a1a;
+  padding: 10px 18px;
+  border-radius: 24px;
+  text-decoration: none;
+  font-weight: 700;
+}
+.landing-hero .btn-hero:hover { opacity: 0.9; }
+
+@media (max-width: 767px) {
+  .landing-hero { min-height: 320px; }
+  .landing-hero .hero-content { min-height: 320px; }
+  .landing-hero .hero-text h2 { font-size: 26px; }
+}
+
+/* Ajuste de ancho y centrado del slider/hero y secciones */
+.sp-page-builder .sppb-container-inner {
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+}
+#n2-ss-1 {
+  width: 1140px !important;
+  float: none !important;
+  margin: 0 auto !important;
+}
+.n2-ss-align { max-width: 1140px; margin: 0 auto; }
+/* Asegura que las capas internas del slider respeten el mismo ancho */
+#n2-ss-1 .n2-ss-layers-container { width: 1140px !important; }
+.n2-ss-align { max-width: 1140px; margin: 0 auto; }
+.sp-page-builder .page-content .sppb-section:not(#section-id-1757434355969) {
+  padding-top: 40px !important;
+  padding-bottom: 40px !important;
+}
+.custom-header { border-bottom: 0; }
+#sp-page-title { background: #ffffff; padding: 0; margin: 0; border: 0; }
+#sp-main-body { background: #ffffff; }
+#sp-title .sp-column { padding: 0; }
+
+/* Sticky header y preheader + estilo verde WhatsApp para teléfono */
+.preheader {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 1000;
+}
+#sp-header {
+  position: sticky;
+  position: -webkit-sticky;
+  top: var(--preheader-height);
+  z-index: 999;
+}
+.preheader .preheader-phone {
+  background: #2e7d32 !important;
+  color: #ffffff !important;
+  border: none !important;
+  padding: 6px 12px !important;
+  border-radius: 0 !important;
+}
+.preheader .preheader-phone i { color: #ffffff !important; }
+
+/* Alineación horizontal: mismo ancho y padding en preheader y header */
+#sp-header .container, .preheader .container {
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.page-1 .sppb-container-inner { padding-left: 20px; padding-right: 20px; }
+.preheader .container { justify-content: space-between; }
+.preheader-right { margin-left: auto; }
+/* Inline mega menú entre el logo y el botón CTA */
+.custom-header .sp-megamenu-wrapper {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  margin: 0 24px;
+}
+.custom-header .sp-megamenu-parent {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+/* Ocultar la fila inferior duplicada del header (grid Helix) */
+#sp-header .row,
+#sp-menu,
+#sp-logo {
+  display: none !important;
+}
+/* Reducir espacio entre preheader y header */
+.preheader { margin-bottom: 0 !important; }
+#sp-header { margin-top: 0 !important; }
+.custom-header { padding: 6px 0 !important; }
+
+/* Compactar espaciado del menú para que no salte */
+.custom-header .sp-megamenu-wrapper { margin: 0 16px; }
+.custom-header .sp-megamenu-parent { gap: 16px; }
+.sp-megamenu-parent > li > a { white-space: nowrap; }
+
+/* Agregar espacio debajo del header, antes del landing/slider */
+#sp-header { margin-bottom: 24px !important; }
+.sppb-slider-wrapper, .n2-section-smartslider { margin-top: 0 !important; }

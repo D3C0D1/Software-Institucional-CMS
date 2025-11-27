@@ -1,0 +1,69 @@
+.wcontenedorprincipal {
+    position: fixed;
+    bottom:10px;
+    right: 10px;
+    box-shadow: -3px 3px 6px #666;
+    z-index: 9999;
+}
+
+.wcontenedorprincipal1 {
+    position: absolute;
+    bottom: 60px;
+    right: 10px;
+    border: 1px solid;
+    border-color: #626262;
+}
+
+.wcontenedor a {
+    color:#333;
+}
+
+.wcontenedor .toolbar {
+    width:100%;
+    height:40px;
+    background:rgba(0,106,69,0.8);
+    color:#fff;
+    line-height:40px;
+    overflow:hidden
+}
+.wcontenedor .toolbar a {
+    color:#fff;       
+    margin-left:12px;  
+}
+
+.wcontenedor {
+    color:#333;
+}
+
+.wcontenedor .anythingSlider{
+    border-bottom:1px solid #888
+}
+
+/*.wcontenedor .panel {
+  border-radius:0;
+  border:none;
+  margin:0;
+  padding:0;
+  transition:background .5s;
+  -moz-transition:background .5s;
+  -webkit-transition:background .5s;
+  -ms-transition:background .5s;
+  -o-transition:background .5s;
+  height:190px !important;
+  width:340px!important;
+}*/
+
+
+.wcontenedor .anythingSlider .panel img {
+    float:left;
+    margin:10px;
+}
+.wcontenedor .anythingSlider .panel span {
+    line-height:22px;
+    float:left;
+    height:72px;
+    margin:12px 10px 3px 0;
+    width:200px;
+}
+
+
