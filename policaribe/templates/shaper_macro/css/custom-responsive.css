@@ -1,0 +1,33 @@
+
+/* Móviles (hasta 767px) */
+@media (max-width: 767px) {
+
+	div#n2-ss-1 .n2-ss-layer .n2-font-0662c30e9c2d008d9735738d35eec994-hover {
+		font-size: 70.5% !important;
+	}
+	
+	#section-id-1743983637963{
+		    padding: 50px 0px !important;
+	}
+
+	/*
+	.banner-programas h1 {
+		font-size: 6rem;
+	}
+
+	*/
+
+
+}
+
+/* Tablets (768px a 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+	
+	
+}
+
+
+/* Escritorios (992px en adelante) */
+@media (min-width: 992px) {
+
+}

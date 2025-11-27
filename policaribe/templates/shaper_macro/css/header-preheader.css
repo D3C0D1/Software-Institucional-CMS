@@ -1,0 +1,245 @@
+/* Header y Preheader aislados - Policaribe */
+:root {
+  --brand-red: #901913;
+  --brand-red-dark: #6f120e;
+  --preheader-height: 48px;
+  --header-height: 90px; /* altura del header ajustada */
+}
+
+/* Barra superior (preheader) */
+.site-preheader {
+  position: fixed;
+  top: 0;
+  left: 0; right: 0;
+  z-index: 9500; /* por encima del header */
+  background: #f5f7fb;
+  color: #283457;
+  border-bottom: 2px solid rgba(0,0,0,0.00);
+  overflow: visible; /* evitar scroll interno */
+}
+.site-preheader .container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 6px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: visible;
+}
+.site-preheader a { color: inherit; text-decoration: none; }
+.site-preheader a:hover { text-decoration: underline; }
+.site-preheader .preheader-left, .site-preheader .preheader-right {
+  display: flex; align-items: center; gap: 12px;
+}
+.site-preheader .preheader-phone { 
+  font-weight: 600; background:#2e7d32; color:#fff; padding:6px 12px; border-radius:0; display:inline-flex; align-items:center; gap:6px; 
+}
+
+/* Header principal */
+#sp-header.site-header {
+  position: fixed;
+  top: var(--preheader-height);
+  left: 0; right: 0;
+  z-index: 6500;
+  background: #ffffff;
+  border-bottom: 2px solid rgba(0,0,0,0.00);
+  overflow: visible; /* evitar scroll interno cuando se abre el dropdown */
+  margin-bottom: 0 !important; /* evitar banda visible entre header y contenido */
+}
+
+/* Ajuste explícito del ID para cubrir reglas menos específicas del tema */
+#sp-header {
+  height: var(--header-height);
+  z-index: 6500 !important;
+  background-color: #ffffff !important;
+}
+#sp-header.site-header .container {
+  max-width: 1140px; margin: 0 auto; padding: 8px 20px; display:flex; align-items:center; justify-content: space-between; overflow: visible;
+}
+.site-header-inner { display:flex; align-items:center; justify-content: space-between; width:100%; min-height: var(--header-height); }
+.site-logo img { height:60px; display:block; }
+.site-nav { flex:1; margin:0 20px; position: relative; z-index: 1350; overflow: visible; }
+.site-nav .sp-megamenu-parent { display:flex; align-items:center; gap:20px; }
+.site-nav .sp-megamenu-parent > li { position: relative; }
+.site-nav .sp-megamenu-parent > li > a {
+  color: var(--brand-red); text-transform: uppercase; font-family: Roboto, Arial, sans-serif; font-weight:600; letter-spacing: .3px; font-size:15px; padding:10px 6px; display:inline-block; white-space:nowrap;
+}
+.site-nav .sp-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 7000;
+  display: none;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  margin-top: 0; /* sin gap para evitar que se pierda el hover */
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(0);
+  transition: opacity 160ms ease, visibility 160ms ease, transform 160ms ease;
+}
+.site-nav .sp-dropdown-inner { padding: 10px 12px; }
+.site-nav .sp-has-child:hover > .sp-dropdown { 
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  transform: translateY(4px);
+}
+
+/* Estado abierto forzado por JS para retraso de cierre */
+.site-nav .sp-dropdown.open {
+  display: block !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  transform: translateY(4px);
+}
+.site-nav .sp-megamenu-parent > li > a:hover,
+.site-nav .sp-megamenu-parent > li.active > a,
+.site-nav .sp-megamenu-parent > li.current-item > a { color: var(--brand-red-dark); }
+.site-cta { display:flex; gap:10px; }
+.site-cta .btn-cta { background: var(--brand-red); color:#fff; padding:10px 18px; font-weight:600; border-radius:9999px; text-decoration:none; transition: transform 200ms ease, box-shadow 200ms ease; animation: cta-breath 3.5s ease-in-out infinite; }
+.site-cta .btn-cta:hover { opacity:1; transform: translateY(-1px) scale(1.04); box-shadow: 0 6px 18px rgba(144, 25, 19, 0.25); }
+
+@keyframes cta-breath {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 0 rgba(0,0,0,0); }
+  50% { transform: scale(1.03); box-shadow: 0 8px 22px rgba(144,25,19,0.28); }
+}
+
+/* Hamburguesa */
+#offcanvas-toggler { color: var(--brand-red); font-size:22px; }
+#offcanvas-toggler i { color: inherit; }
+
+/* Oculta grilla Helix inferior para evitar duplicados */
+#sp-header .row, #sp-menu, #sp-logo, .macro-top-search { display:none !important; }
+/* Ocultar bloques heredados que generan un segundo header fuera del aislado */
+.sp-megamenu-wrapper { display:none !important; }
+.searchwrapper.top-search { display:none !important; }
+/* Ocultar iconos de búsqueda flotantes heredados */
+.search-icon.icon-search, #search_close { display:none !important; }
+
+/* Mantener el slider por debajo del header y su dropdown */
+.sppb-slider-wrapper, .n2-section-smartslider { position: relative; z-index: 100; }
+
+/* Empujar el contenido hacia abajo por headers fijos */
+.body-innerwrapper { padding-top: calc(var(--preheader-height) + var(--header-height)); }
+
+/* Forzar fondo blanco cuando Helix aplica estado sticky "menu-fixed" */
+#sp-header.menu-fixed {
+  background-color: #ffffff !important;
+  -webkit-transition: none;
+  -o-transition: none;
+  transition: none;
+}
+
+/* Altura específica para estados con slideshow/sub-image y sticky */
+.has-sub-image #sp-header.menu-fixed#sp-header,
+.has-sub-image #sp-header.menu-fixed#sp-header .logo,
+.has-slideshow #sp-header.menu-fixed#sp-header,
+.has-slideshow #sp-header.menu-fixed#sp-header .logo,
+#sp-header.menu-fixed#sp-header,
+#sp-header.menu-fixed#sp-header .logo {
+  height: 90px !important;
+}
+
+/* Separadores en preheader */
+.site-preheader .preheader-left > *:not(:last-child)::after,
+.site-preheader .preheader-right > *:not(:last-child)::after {
+  content: "";
+  display: inline-block;
+  width: 1px; height: 14px;
+  background: rgba(0,0,0,0.15);
+  margin: 0 8px; vertical-align: middle;
+}
+
+/* Submenu al hover para "Conoce Policaribe" */
+.preheader-dropdown { position: relative; }
+.preheader-dropdown > a { position: relative; z-index: 1; }
+.preheader-submenu {
+  position: absolute; top: calc(100% + 8px); left: 0;
+  width: 840px; max-width: calc(100vw - 40px);
+  padding: 14px 16px;
+  background: #ffffff; color: #283457;
+  border: 1px solid rgba(0,0,0,0.15);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.18);
+  border-radius: 0; /* cuadrado */
+  opacity: 0; visibility: hidden; pointer-events: none;
+  transform: translateY(6px);
+  transition: opacity 160ms ease, visibility 160ms ease, transform 160ms ease;
+  z-index: 9600; /* sobre el preheader y header */
+  display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px;
+}
+.preheader-submenu a { display:block; padding:6px 8px; text-decoration:none; color:inherit; }
+.preheader-submenu a:hover { background:#f5f7fb; }
+.preheader-dropdown:hover .preheader-submenu {
+  opacity: 1; visibility: visible; pointer-events: auto; transform: translateY(0);
+}
+/* Estado abierto controlado por JS para retardo de cierre */
+.preheader-dropdown.open .preheader-submenu {
+  opacity: 1; visibility: visible; pointer-events: auto; transform: translateY(0);
+}
+
+/* Columnas y títulos dentro del submenu */
+.preheader-submenu .submenu-col { border-right: 1px solid rgba(0,0,0,0.08); padding-right: 10px; }
+.preheader-submenu .submenu-col:last-child { border-right: none; }
+.preheader-submenu .submenu-title { font-weight: 700; text-transform: uppercase; font-size: 14px; letter-spacing: .4px; color:#6b748c; margin: 2px 0 8px; }
+.preheader-submenu .contact-item { display:flex; align-items:center; gap:8px; padding:6px 8px; color:inherit; text-decoration:none; }
+.preheader-submenu .contact-item:hover { background:#f5f7fb; }
+
+/* Botón Campus en preheader */
+.preheader-campus {
+  color: #ffffff !important;
+  background: var(--brand-red);
+  padding: 6px 12px;
+  border-radius: 9999px;
+  font-family: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: .2px;
+}
+.preheader-campus:hover { background: var(--brand-red-dark); text-decoration: none; }
+
+/* Botón Inscripciones en preheader (amarillo, mismo estilo que Campus) */
+.preheader-inscripciones {
+  color: #1a1a1a !important;
+  background: #ecc31f; /* amarillo institucional */
+  padding: 6px 12px;
+  border-radius: 9999px;
+  font-family: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: .2px;
+}
+.preheader-inscripciones:hover { background: #d4aa1a; text-decoration: none; }
+
+/* Responsivo */
+@media (max-width: 991px){
+  #sp-header.site-header .container { flex-wrap:wrap; gap:10px; }
+  .site-nav { width:100%; order:3; }
+  .site-cta { width:100%; justify-content:center; order:2; }
+  #offcanvas-toggler { order:1; }
+}
+.preheader-submenu a[href$=".pdf"]::before {
+  content: "\f1c1"; /* fa-file-pdf-o */
+  font: normal normal normal 14px/1 FontAwesome;
+  display: inline-block; margin-right: 8px; color: var(--brand-red);
+}
+
+/* Tipografía y espaciado estilo referencia (UDAVINCI) */
+.site-preheader,
+.site-preheader a,
+.preheader-submenu,
+.preheader-submenu a,
+.preheader-submenu .submenu-title {
+  font-family: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  letter-spacing: .2px;
+}
+.site-nav .sp-megamenu-parent > li > a {
+  font-family: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  font-weight: 600;
+  letter-spacing: .3px;
+  text-transform: uppercase;
+  font-size: 14px;
+  padding: 10px 8px;
+}

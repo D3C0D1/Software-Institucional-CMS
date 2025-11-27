@@ -1,0 +1,2273 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>POLICARIBE - PQRS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1 user-scalable=no">
+
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="https://www.unisimon.edu.co/recursos/bootstrap/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="https://www.unisimon.edu.co/recursos/fuentes/style.css" />
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://www.unisimon.edu.co/recursos/css/organicfoodicons.css" />
+    <link rel="stylesheet" type="text/css" href="https://www.unisimon.edu.co/recursos/css/component.css" />
+    <link rel="stylesheet" type="text/css" href="https://www.unisimon.edu.co/recursos/css/date.css" />
+    <link rel="stylesheet" type="text/css" href="https://www.unisimon.edu.co/recursos/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="https://www.unisimon.edu.co/recursos/css/stylemain.css" />
+
+    <link href="policaribe/templates/shaper_macro/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="policaribe/templates/shaper_macro/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link href="policaribe/templates/shaper_macro/css/custom.css" rel="stylesheet" type="text/css" />
+    <link href="policaribe/templates/shaper_macro/css/template.css" rel="stylesheet" type="text/css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    
+    <!-- Scripts necesarios -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="https://www.unisimon.edu.co/recursos/bootstrap/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+        var BASE_URL = 'https://www.unisimon.edu.co/';
+    </script>
+
+    <style>
+    #sp-bottom {
+        background-color: #901913;
+        color: #fff;
+        padding: 40px 0;
+    }
+
+    #sp-bottom a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    #sp-bottom a:hover {
+        color: #ECC31F;
+    }
+
+    #sp-footer {
+        background-color: #7a1510;
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .follow-us {
+        margin-top: 20px;
+    }
+
+    .social-icons a {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        background-color: #fff;
+        color: #901913;
+        border-radius: 50%;
+        margin: 0 5px;
+        transition: all 0.3s ease;
+    }
+
+    .social-icons a:hover {
+        background-color: #ECC31F;
+        color: #fff;
+        transform: scale(1.1);
+    }
+
+    .rel.w100 {
+        margin-bottom: 0;
+    }
+
+    .preheader-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        gap: 20px;
+    }
+
+    .preheader-left,
+    .preheader-center,
+    .preheader-right {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .preheader-left {
+        flex: 0 0 auto;
+    }
+
+    .preheader-center {
+        flex: 1 1 auto;
+        justify-content: center;
+    }
+
+    .preheader-right {
+        flex: 0 0 auto;
+        gap: 18px;
+        font-weight: 600;
+        color: #4d4d4d;
+    }
+
+    .preheader-right a {
+        text-decoration: none;
+    }
+
+    .preheader-medalla {
+        max-width: 220px;
+        width: 100%;
+        height: auto;
+    }
+
+    .preheader-logo {
+        display: block;
+    }
+
+    .preheader-logo img {
+        max-height: 62px;
+        width: auto;
+        height: auto;
+    }
+
+    .preheader-center .menu-mobile {
+        display: none;
+    }
+
+    .preheader-radio img {
+        width: 140px;
+        height: auto;
+    }
+
+    .preheader-social img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .preheader-separator {
+        color: #808080;
+        font-size: 20px;
+        line-height: 1;
+    }
+
+    .preheader-contacto {
+        color: #4d4d4d;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+    }
+
+    .preheader-contacto:hover {
+        color: #05803b;
+    }
+
+    .preheader-sede {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        background: linear-gradient(135deg, #b5241b, #7a1510);
+        border: none;
+        border-radius: 999px;
+        padding: 8px 20px;
+        font-size: 13px;
+        letter-spacing: 0.2px;
+        font-weight: 600;
+        color: #ffffff;
+        box-shadow: 0 6px 16px rgba(122, 21, 16, 0.28);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .preheader-sede i {
+        font-size: 16px;
+        color: #ffd166;
+    }
+
+    .preheader-sede a {
+        color: #ffffff !important;
+        text-transform: none;
+        font-weight: 700;
+        text-decoration: none;
+    }
+
+    .preheader-sede:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 10px 22px rgba(122, 21, 16, 0.38);
+    }
+
+    .preheader-sede a:hover {
+        color: #ffd166 !important;
+    }
+
+    @media (max-width: 991px) {
+        .preheader-bar {
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .preheader-left,
+        .preheader-right {
+            width: 100%;
+            justify-content: center;
+        }
+
+        .preheader-center {
+            width: 100%;
+        }
+
+        .preheader-center .menu-mobile {
+            display: block;
+            margin-right: 10px;
+        }
+
+        .preheader-center {
+            justify-content: center;
+        }
+
+        .preheader-logo img {
+            max-height: 48px;
+        }
+    }
+
+    #menu-es .b51 {
+        background-color: #7a1510 !important;
+    }
+
+    .b51 a,
+    .b51 a:link,
+    .b51 a:visited,
+    #menu-es .nav.navbar-nav li a,
+    #menu-es .nav.navbar-nav li a:link,
+    #menu-es .nav.navbar-nav li a:visited {
+        color: #ffffff !important;
+        background-color: #7a1510 !important;
+        text-decoration: none !important;
+    }
+
+    #menu-es .servicios,
+    #menu-es .servicios:link,
+    #menu-es .servicios:visited {
+        color: #ffffff !important;
+        text-decoration: none !important;
+    }
+
+    #menu-es .servicios {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        font-weight: 600;
+        font-size: 15px;
+        color: #ffffff !important;
+        background-color: #7a1510;
+        border-radius: 14px;
+        padding: 10px 24px;
+        transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+        height: 44px;
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.16);
+    }
+
+    #menu-es .servicios i {
+        color: #ffc04d;
+        font-size: 16px;
+    }
+
+    #menu-es .servicios span {
+        display: inline-block;
+    }
+
+    #menu-es .servicios:hover {
+        background-color: #b5241b;
+        color: #ffffff !important;
+        transform: translateY(-1px);
+        box-shadow: 0 12px 22px rgba(122, 21, 16, 0.35);
+    }
+
+    #menu-es .servicios:focus,
+    #menu-es .servicios:active {
+        background-color: #7a1510;
+        color: #ffffff !important;
+        transform: none;
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.16);
+    }
+
+    #menu-es .servicios:focus-visible {
+        background-color: #b5241b;
+        color: #ffffff !important;
+        transform: translateY(-1px);
+        box-shadow: 0 12px 22px rgba(122, 21, 16, 0.35);
+    }
+
+    #menu-es .servicios:focus i,
+    #menu-es .servicios:active i {
+        color: #ffc04d;
+    }
+
+    #menu-es .servicios:hover i {
+        color: #ffd166;
+    }
+
+    #menu-es .servicios:focus-visible i {
+        color: #ffd166;
+    }
+
+    #menu-es .c4d a {
+        color: #4d4d4d !important;
+        text-decoration: none;
+    }
+
+    #menu-es .cverde a {
+        color: #05803b !important;
+        text-decoration: none;
+    }
+
+    .b51 .menu-mobile {
+        display: none !important;
+    }
+
+    #menu-es .b51 .content {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        padding: 0 24px;
+        gap: 20px;
+        min-height: 64px;
+    }
+
+    #menu-es .b51 .content nav {
+        flex: 1 1 auto;
+        width: auto;
+        display: flex;
+        align-items: stretch;
+    }
+
+    #menu-es .b51 .content .fright.w10,
+    #menu-es .b51 .content .fright.w10 .fright {
+        float: none !important;
+    }
+
+    #menu-es .b51 .content .fright.w10 {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex: 0 0 auto;
+    }
+
+    #menu-es .nav.navbar-nav {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        justify-content: center;
+        align-items: stretch;
+        width: 100%;
+        gap: 22px;
+        padding: 0 10px;
+        height: 100%;
+    }
+
+    #menu-es .nav.navbar-nav > li {
+        float: none !important;
+        display: flex;
+        margin: 0;
+        padding: 0;
+        flex: 0 1 auto;
+        text-align: center;
+        white-space: nowrap;
+        align-items: stretch;
+    }
+
+    #menu-es .nav.navbar-nav > li > a {
+        font-size: 15px;
+        font-weight: 500;
+        padding: 0 18px;
+        white-space: nowrap;
+        position: relative;
+        background-color: #7a1510 !important;
+        color: #ffffff !important;
+        transition: background-color 0.12s ease, color 0.12s ease;
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+
+    #menu-es .nav.navbar-nav > li > a::before {
+        content: '\2022';
+        color: #ffc04d;
+        margin-right: 6px;
+        font-size: 12px;
+        vertical-align: middle;
+        display: inline-block;
+    }
+
+    #menu-es .nav.navbar-nav > li:first-child > a::before {
+        display: none;
+    }
+
+    #menu-es .nav.navbar-nav > li.dropdown {
+        position: relative;
+    }
+
+    #menu-es .nav.navbar-nav > li.dropdown > a::after {
+        content: '\u25BE';
+        font-size: 11px;
+        margin-left: 6px;
+        color: #ffc04d;
+        transition: transform 0.18s ease, color 0.18s ease;
+    }
+
+    #menu-es .nav.navbar-nav > li.dropdown:hover > a::after,
+    #menu-es .nav.navbar-nav > li.dropdown > a:focus-visible::after {
+        transform: rotate(180deg);
+        color: #2b2b2b;
+    }
+
+    #menu-es .nav.navbar-nav > li .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #5a0e0a;
+        border: none;
+        border-radius: 10px;
+        min-width: 260px;
+        padding: 8px 0;
+        box-shadow: 0 12px 24px rgba(0,0,0,0.28);
+        z-index: 20;
+    }
+
+    #menu-es .nav.navbar-nav > li.dropdown:hover > .dropdown-menu,
+    #menu-es .nav.navbar-nav > li.dropdown:focus-within > .dropdown-menu {
+        display: block;
+    }
+
+    #menu-es .nav.navbar-nav > li .dropdown-menu > li {
+        white-space: normal;
+    }
+
+    #menu-es .nav.navbar-nav > li .dropdown-menu > li > a {
+        display: block;
+        padding: 10px 20px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #ffffff !important;
+        background-color: transparent !important;
+        transition: background-color 0.18s ease, color 0.18s ease;
+    }
+
+    #menu-es .nav.navbar-nav > li .dropdown-menu > li > a:hover,
+    #menu-es .nav.navbar-nav > li .dropdown-menu > li > a:focus {
+        background-color: rgba(255, 255, 255, 0.12) !important;
+        color: #ffc04d !important;
+    }
+
+    #menu-es .nav.navbar-nav > li .dropdown-menu > li > a::before {
+        display: none;
+    }
+
+    #menu-es .nav.navbar-nav > li:hover > a,
+    #menu-es .nav.navbar-nav > li > a:focus-visible {
+        background-color: #ffffff !important;
+        color: #2b2b2b !important;
+    }
+
+    #menu-es .nav.navbar-nav > li:hover > a::before,
+    #menu-es .nav.navbar-nav > li > a:focus-visible::before {
+        color: #ffc04d;
+    }
+
+    #menu-es .nav.navbar-nav > li > a:focus,
+    #menu-es .nav.navbar-nav > li > a:active,
+    #menu-es .nav.navbar-nav > li.open > a,
+    #menu-es .nav.navbar-nav > li.open > a:focus,
+    #menu-es .nav.navbar-nav > li.open > a:active {
+        background-color: #7a1510 !important;
+        color: #ffffff !important;
+    }
+
+    #menu-es .nav.navbar-nav > li > a:focus::before,
+    #menu-es .nav.navbar-nav > li > a:active::before,
+    #menu-es .nav.navbar-nav > li.open > a::before {
+        color: #ffc04d;
+    }
+
+    #menu-es .nav.navbar-nav > li.active-menu > a {
+        background-color: #5a0e0a;
+        color: #ffc04d !important;
+    }
+
+    #menu-es .nav.navbar-nav > li.active-menu > a::before {
+        color: #ffc04d;
+    }
+
+    @media (max-width: 1200px) {
+        #menu-es .nav.navbar-nav {
+            gap: 14px;
+        }
+
+        #menu-es .nav.navbar-nav > li > a {
+            padding: 16px 8px;
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width: 991px) {
+        #menu-es .b51 .content {
+            padding: 10px 15px;
+            min-height: auto;
+            align-items: center;
+        }
+
+        #menu-es .b51 .content nav {
+            display: block;
+        }
+
+        #menu-es .nav.navbar-nav {
+            display: block !important;
+            height: auto;
+        }
+
+        #menu-es .nav.navbar-nav > li > a::before {
+            display: none;
+        }
+
+        #menu-es .nav.navbar-nav > li {
+            display: block;
+        }
+
+        #menu-es .nav.navbar-nav > li > a {
+            display: block;
+            padding: 12px 18px;
+        }
+
+        #menu-es .nav.navbar-nav > li.dropdown > a::after {
+            display: inline-block;
+            transform: none;
+        }
+
+        #menu-es .nav.navbar-nav > li .dropdown-menu {
+            position: static;
+            transform: none;
+            box-shadow: none;
+            border-radius: 0;
+            min-width: 100%;
+        }
+    }
+
+#sp-bottom {
+    margin-top: 0;
+    padding: 60px 20px;
+}
+
+#sp-bottom .policaribe-bottom-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#sp-bottom .bottom-column {
+    flex: 1 1 220px;
+}
+
+#sp-bottom h3,
+#sp-bottom h6 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+#sp-bottom ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#sp-bottom li {
+    margin-bottom: 10px;
+}
+
+#sp-bottom .contact-address p {
+    margin: 0 0 8px;
+}
+
+#sp-bottom .copy-right {
+    margin-top: 20px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.policaribe-social {
+    margin-top: 16px;
+}
+
+.policaribe-social .social-icons a {
+    margin: 0 6px;
+}
+
+@media (max-width: 991px) {
+    .policaribe-section {
+        padding: 48px 18px;
+    }
+
+    .policaribe-section-title h2 {
+        font-size: 40px;
+    }
+
+    #sp-bottom .policaribe-bottom-grid {
+        gap: 24px;
+    }
+
+    #sp-bottom .bottom-column {
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .policaribe-section {
+        padding: 36px 16px;
+    }
+
+    .policaribe-section-title h2 {
+        font-size: 32px;
+    }
+
+    #sp-bottom .policaribe-bottom-grid {
+        gap: 24px;
+    }
+
+    #sp-bottom .bottom-column {
+        flex: 1 1 100%;
+    }
+}
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Roboto', Arial, sans-serif;
+        background-color: #ffffff;
+    }
+
+    .pqrs-content {
+        padding-top: 120px;
+    }
+
+    .pqrs-section {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 70px 20px;
+    }
+
+    .pqrs-section h2 {
+        font-size: 42px;
+        font-weight: 700;
+        text-align: center;
+        color: #222;
+        margin-bottom: 24px;
+    }
+
+    .pqrs-section p.lead {
+        font-size: 18px;
+        color: #555;
+        text-align: center;
+        margin: 0 auto 40px;
+        max-width: 820px;
+        line-height: 1.7;
+    }
+
+    .pqrs-section strong {
+        color: #901913;
+    }
+
+    /* Sección del correo de contacto PQRS */
+    .pqrs-email-contact {
+        margin: 50px 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .pqrs-email-wrapper {
+        background: linear-gradient(135deg, #901913 0%, #6d1410 100%);
+        padding: 30px 50px;
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        box-shadow: 0 10px 30px rgba(144, 25, 19, 0.3);
+        transition: all 0.3s ease;
+    }
+
+    .pqrs-email-wrapper:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(144, 25, 19, 0.4);
+    }
+
+    .pqrs-email-wrapper i {
+        font-size: 48px;
+        color: #f3b21a;
+    }
+
+    .pqrs-email-content {
+        text-align: left;
+    }
+
+    .pqrs-email-label {
+        margin: 0 0 8px 0;
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    .pqrs-email-address {
+        display: block;
+        color: #f3b21a;
+        font-size: 24px;
+        font-weight: 700;
+        text-decoration: none;
+        transition: all 0.2s ease;
+    }
+
+    .pqrs-email-address:hover {
+        color: #ffd866;
+        text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+        .pqrs-email-wrapper {
+            flex-direction: column;
+            text-align: center;
+            padding: 25px 30px;
+        }
+
+        .pqrs-email-content {
+            text-align: center;
+        }
+
+        .pqrs-email-wrapper i {
+            font-size: 40px;
+        }
+
+        .pqrs-email-address {
+            font-size: 20px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .pqrs-email-wrapper {
+            padding: 20px 20px;
+        }
+
+        .pqrs-email-address {
+            font-size: 18px;
+            word-break: break-all;
+        }
+    }
+
+    .pqrs-action {
+        display: flex;
+        justify-content: center;
+        margin: 32px 0;
+    }
+
+    .pqrs-radicar-btn {
+        border: none;
+        background: linear-gradient(135deg, #fbbc21, #ffd866);
+        color: #5a0e0a;
+        padding: 16px 52px;
+        border-radius: 999px;
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+        box-shadow: 0 20px 34px rgba(251, 188, 33, 0.35);
+        cursor: pointer;
+        transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .pqrs-radicar-btn:hover,
+    .pqrs-radicar-btn:focus {
+        transform: translateY(-2px);
+        box-shadow: 0 26px 48px rgba(251, 188, 33, 0.42);
+        background: linear-gradient(135deg, #ffd866, #fbbc21);
+        outline: none;
+    }
+
+    .pqrs-radicar-btn:focus-visible {
+        box-shadow: 0 0 0 4px rgba(251, 188, 33, 0.45);
+    }
+
+    .pqrs-types-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 24px;
+        margin-top: 40px;
+    }
+
+    .pqrs-type-card {
+        background: #fff7d6;
+        border: 1px solid rgba(251,188,33,0.4);
+        border-radius: 18px;
+        padding: 24px;
+        box-shadow: 0 16px 32px rgba(0,0,0,0.08);
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .pqrs-type-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 24px 44px rgba(0,0,0,0.12);
+    }
+
+    .pqrs-type-card h3 {
+        font-size: 20px;
+        font-weight: 700;
+        color: #901913;
+        margin: 0 0 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+    }
+
+    .pqrs-type-card p {
+        margin: 0 0 16px;
+        color: #333;
+        line-height: 1.5;
+        font-size: 15px;
+    }
+
+    .pqrs-type-card span {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-weight: 600;
+        color: #5a0e0a;
+        background: rgba(144,25,19,0.1);
+        padding: 6px 12px;
+        border-radius: 999px;
+        font-size: 13px;
+    }
+
+    .pqrs-form-wrapper {
+        background: #fff;
+        border-radius: 22px;
+        box-shadow: 0 24px 48px rgba(0,0,0,0.12);
+        padding: 40px;
+        max-width: 920px;
+        margin: 0 auto;
+        border: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .pqrs-form-wrapper h3 {
+        margin-top: 0;
+        font-size: 28px;
+        color: #901913;
+        text-align: center;
+    }
+
+    .pqrs-form-wrapper p {
+        text-align: center;
+        color: #555;
+        margin-bottom: 30px;
+    }
+
+    .pqrs-form {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 20px 24px;
+    }
+
+    .pqrs-form .full-width {
+        grid-column: 1 / -1;
+    }
+
+    .pqrs-form label {
+        display: block;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 8px;
+        font-size: 14px;
+        letter-spacing: 0.2px;
+    }
+
+    .pqrs-form input,
+    .pqrs-form select,
+    .pqrs-form textarea {
+        width: 100%;
+        padding: 12px 16px;
+        border-radius: 12px;
+        border: 1px solid rgba(0,0,0,0.12);
+        background: rgba(255,255,255,0.98);
+        font-size: 15px;
+        transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .pqrs-form input:focus,
+    .pqrs-form select:focus,
+    .pqrs-form textarea:focus {
+        outline: none;
+        border-color: #901913;
+        box-shadow: 0 0 0 3px rgba(144,25,19,0.18);
+    }
+
+    .pqrs-form textarea {
+        min-height: 140px;
+        resize: vertical;
+    }
+
+    .pqrs-submit {
+        grid-column: 1 / -1;
+        text-align: center;
+    }
+
+    .pqrs-submit button {
+        background: linear-gradient(135deg, #901913, #b5241b);
+        border: none;
+        color: #fff;
+        padding: 14px 36px;
+        border-radius: 999px;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .pqrs-submit button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 14px 30px rgba(144,25,19,0.24);
+    }
+
+    .pqrs-help {
+        margin-top: 24px;
+        text-align: center;
+        font-size: 14px;
+        color: #666;
+    }
+
+    #pqrsModal .modal-dialog {
+        max-width: 960px;
+        width: 92%;
+        margin: 50px auto;
+    }
+
+    .pqrs-modal-content {
+        border-radius: 24px;
+        border: none;
+        overflow: hidden;
+        box-shadow: 0 28px 64px rgba(0,0,0,0.28);
+    }
+
+    .pqrs-modal-content .modal-header {
+        background: linear-gradient(135deg, #901913, #b5241b);
+        color: #ffffff;
+        border: none;
+        padding: 22px 32px;
+    }
+
+    .pqrs-modal-content .modal-title {
+        font-size: 26px;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    .pqrs-modal-content .close {
+        color: #ffffff;
+        opacity: 0.8;
+        text-shadow: none;
+    }
+
+    .pqrs-modal-content .close:hover,
+    .pqrs-modal-content .close:focus {
+        opacity: 1;
+        outline: none;
+    }
+    
+    .modal-backdrop { z-index: 1040; opacity: 0.55; }
+    #pqrsModal { z-index: 1051; }
+
+    .pqrs-modal-content .modal-body {
+        padding: 32px 40px 40px;
+        background: #ffffff;
+    }
+
+    .pqrs-modal-content .pqrs-form-wrapper {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 0;
+        max-width: none;
+        margin: 0;
+    }
+
+    .pqrs-modal-content .pqrs-form-wrapper p {
+        margin-bottom: 24px;
+    }
+
+    .pqrs-modal-content .pqrs-form {
+        margin-top: 0;
+    }
+
+    .pqrs-file-hint {
+        display: block;
+        margin-top: 6px;
+        font-size: 13px;
+        color: #777;
+    }
+
+    @media (max-width: 768px) {
+        .pqrs-content {
+            padding-top: 100px;
+        }
+        .pqrs-form-wrapper {
+            padding: 24px;
+        }
+        .pqrs-radicar-btn {
+            width: 100%;
+            max-width: 320px;
+        }
+        #pqrsModal .modal-dialog {
+            width: 94%;
+            margin: 40px auto;
+        }
+        .pqrs-modal-content .modal-body {
+            padding: 24px 22px 32px;
+        }
+    }
+
+    @media (max-width: 520px) {
+        .pqrs-modal-content .modal-header {
+            padding: 18px 22px;
+        }
+        .pqrs-modal-content .modal-title {
+            font-size: 22px;
+        }
+        .pqrs-radicar-btn {
+            padding: 14px 30px;
+            font-size: 15px;
+        }
+    }
+
+    /* ==============================================
+       ESTILOS PARA EL HEADER Y SLIDER DE INDEX.HTML
+       ============================================== */
+
+    /* Contenedor del menú inferior de programas */
+    .menu-inferior-programas {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: block;
+        line-height: 0;
+        font-size: 0;
+    }
+    
+    .menu-inferior-programas .w100 {
+        width: 100% !important;
+    }
+    
+    .menu-inferior-programas .otroMenu {
+        margin: 0 !important;
+        padding: 0 !important;
+        border-spacing: 0 !important;
+        display: table;
+        width: 100% !important;
+        border-collapse: collapse !important;
+    }
+    
+    /* Forzar enlaces blancos en el menú inferior del slider */
+    .otroMenu a,
+    .otroMenu a:link,
+    .otroMenu a:visited {
+        color: #ffffff !important;
+        text-decoration: none !important;
+    }
+    
+    .otroMenu a:hover {
+        color: #ffffff !important;
+        opacity: 0.9;
+    }
+    
+    /* Eliminar espacios entre las celdas del menú */
+    .otroMenu > div {
+        margin: 0 !important;
+        padding: 15px 10px !important;
+        border: none !important;
+        line-height: 1.3;
+        vertical-align: middle;
+        height: 54px;
+        font-size: 14px;
+        width: auto;
+    }
+    
+    /* Asegurar que las filas del menú estén pegadas */
+    .dtable {
+        display: table;
+        border-spacing: 0 !important;
+        border-collapse: collapse !important;
+        table-layout: fixed;
+    }
+    
+    .h54 {
+        height: 54px;
+        line-height: 54px;
+    }
+    
+    .tcel {
+        display: table-cell !important;
+        border: 0 !important;
+        float: none !important;
+    }
+    
+    .mid {
+        vertical-align: middle;
+    }
+    
+    .tcenter {
+        text-align: center;
+    }
+
+    /* Rediseño cromático del menú inferior del slider */
+    .otroMenu .bverde {
+        background-color: #b5241b !important;
+    }
+
+    .otroMenu .bverdec {
+        background-color: #7a1510 !important;
+    }
+
+    .otroMenu .bverdecl {
+        background-color: #d4645f !important;
+        color: #ffffff !important;
+    }
+
+    .otroMenu .bverdecl a {
+        color: #ffffff !important;
+    }
+    
+    .otroMenu .bnara {
+        background-color: #ff8f1e !important;
+    }
+    
+    /* Cambiar azul claro a rojo oscuro */
+    .otroMenu .bazulm {
+        background-color: #6d1410 !important;
+    }
+    
+    .otroMenu .bazul {
+        background-color: #6d1410 !important;
+    }
+
+    /* ========================================
+       SLIDER POLICARIBE - SWIPER
+       ======================================== */
+    
+    .hero-slider {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-bottom: 30.25%;
+        overflow: hidden;
+    }
+    
+    .hero-slider .swiper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    
+    .hero-slider .swiper-slide {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        display: block;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    
+    .hero-slider .swiper-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.3s ease;
+    }
+    
+    .hero-slider .swiper-slide:hover img {
+        transform: scale(1.02);
+    }
+    
+    .hero-slider .slide-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.5) 100%);
+        z-index: 1;
+    }
+    
+    /* Botones de navegación */
+    .hero-slider .swiper-button-next,
+    .hero-slider .swiper-button-prev {
+        width: 50px;
+        height: 50px;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 50%;
+        color: #901913;
+        transition: all 0.3s ease;
+    }
+    
+    .hero-slider .swiper-button-next:after,
+    .hero-slider .swiper-button-prev:after {
+        font-size: 20px;
+        font-weight: bold;
+    }
+    
+    .hero-slider .swiper-button-next:hover,
+    .hero-slider .swiper-button-prev:hover {
+        background: rgba(255, 255, 255, 1);
+        transform: scale(1.1);
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+        .hero-slider {
+            padding-bottom: 35%;
+        }
+        
+        .hero-slider .swiper-button-next,
+        .hero-slider .swiper-button-prev {
+            width: 40px;
+            height: 40px;
+        }
+        
+        .hero-slider .swiper-button-next:after,
+        .hero-slider .swiper-button-prev:after {
+            font-size: 16px;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .hero-slider {
+            padding-bottom: 40%;
+        }
+    }
+
+    /* CORRECCIÓN: Forzar colores del menú UNISIMON */
+    #menu-es .b51 {
+        background-color: #7a1510 !important;
+    }
+    
+    /* Forzar todos los enlaces del menú a blanco */
+    .b51 a,
+    .b51 a:link,
+    .b51 a:visited,
+    #menu-es .nav.navbar-nav li a,
+    #menu-es .nav.navbar-nav li a:link,
+    #menu-es .nav.navbar-nav li a:visited {
+        color: #ffffff !important;
+        background-color: #7a1510 !important;
+        text-decoration: none !important;
+    }
+    
+    .b51 a:hover {
+        color: #2b2b2b !important;
+        opacity: 1;
+        text-decoration: none !important;
+    }
+
+    #menu-es .servicios,
+    #menu-es .servicios:link,
+    #menu-es .servicios:visited {
+        color: #ffffff !important;
+        text-decoration: none !important;
+    }
+
+    #menu-es .servicios {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        font-weight: 600;
+        font-size: 15px;
+        color: #ffffff !important;
+        background-color: #7a1510;
+        border-radius: 14px;
+        padding: 10px 24px;
+        transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+        height: 44px;
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.16);
+    }
+
+    #menu-es .servicios i {
+        color: #ffc04d;
+        font-size: 16px;
+    }
+
+    #menu-es .servicios span {
+        display: inline-block;
+    }
+
+    #menu-es .servicios:hover {
+        background-color: #b5241b;
+        color: #ffffff !important;
+        transform: translateY(-1px);
+        box-shadow: 0 12px 22px rgba(122, 21, 16, 0.35);
+    }
+
+    /* Mantener el menú principal en una sola fila */
+    #menu-es .nav.navbar-nav {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        justify-content: center;
+        align-items: stretch;
+        width: 100%;
+        gap: 22px;
+        padding: 0 10px;
+        height: 100%;
+    }
+
+    #menu-es .nav.navbar-nav > li {
+        float: none !important;
+        display: flex;
+        margin: 0;
+        padding: 0;
+        flex: 0 1 auto;
+        text-align: center;
+        white-space: nowrap;
+        align-items: stretch;
+    }
+
+    #menu-es .nav.navbar-nav > li > a {
+        font-size: 15px;
+        font-weight: 500;
+        padding: 0 18px;
+        white-space: nowrap;
+        position: relative;
+        background-color: #7a1510 !important;
+        color: #ffffff !important;
+        transition: background-color 0.12s ease, color 0.12s ease;
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+
+    #menu-es .nav.navbar-nav > li > a::before {
+        content: '\2022';
+        color: #ffc04d;
+        margin-right: 6px;
+        font-size: 12px;
+        vertical-align: middle;
+        display: inline-block;
+    }
+
+    #menu-es .nav.navbar-nav > li:first-child > a::before {
+        display: none;
+    }
+
+    #menu-es .nav.navbar-nav > li.dropdown > a::after {
+        content: '\25BE';
+        font-size: 11px;
+        margin-left: 6px;
+        color: #ffc04d;
+        transition: transform 0.18s ease, color 0.18s ease;
+    }
+
+    #menu-es .nav.navbar-nav > li .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: #5a0e0a;
+        border: none;
+        border-radius: 10px;
+        min-width: 260px;
+        padding: 8px 0;
+        box-shadow: 0 12px 24px rgba(0,0,0,0.28);
+        z-index: 20;
+    }
+
+    #menu-es .nav.navbar-nav > li.dropdown:hover > .dropdown-menu {
+        display: block;
+    }
+
+    #menu-es .nav.navbar-nav > li .dropdown-menu > li > a {
+        display: block;
+        padding: 10px 20px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #ffffff !important;
+        background-color: transparent !important;
+        transition: background-color 0.18s ease, color 0.18s ease;
+    }
+
+    #menu-es .nav.navbar-nav > li .dropdown-menu > li > a:hover {
+        background-color: rgba(255, 255, 255, 0.12) !important;
+        color: #ffc04d !important;
+    }
+
+    #menu-es .nav.navbar-nav > li .dropdown-menu > li > a::before {
+        display: none;
+    }
+
+    #menu-es .nav.navbar-nav > li:hover > a {
+        background-color: #ffffff !important;
+        color: #2b2b2b !important;
+    }
+
+    #menu-es .nav.navbar-nav > li.active-menu > a {
+        background-color: #5a0e0a;
+        color: #ffc04d !important;
+    }
+
+    #menu-es .b51 .content {
+        display: flex;
+        align-items: stretch;
+        justify-content: space-between;
+        padding: 0 24px;
+        gap: 20px;
+        min-height: 64px;
+    }
+
+    #menu-es .b51 .content nav {
+        flex: 1 1 auto;
+        width: auto;
+        display: flex;
+        align-items: stretch;
+    }
+
+    #menu-es .b51 .content .fright.w10 {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex: 0 0 auto;
+        float: none !important;
+    }
+
+    @media (max-width: 991px) {
+        #menu-es .b51 .content {
+            padding: 10px 15px;
+            min-height: auto;
+        }
+
+        #menu-es .nav.navbar-nav {
+            display: block !important;
+            height: auto;
+        }
+
+        #menu-es .nav.navbar-nav > li {
+            display: block;
+        }
+
+        #menu-es .nav.navbar-nav > li > a {
+            display: block;
+            padding: 12px 15px;
+            height: auto;
+        }
+
+        #menu-es .nav.navbar-nav > li > a::before {
+            display: none;
+        }
+    }
+
+    /* Ajustes de social icons en footer */
+    .social-icons a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 55px;
+        height: 55px;
+        background-color: rgba(255, 255, 255, 0.15);
+        color: #ffffff;
+        border-radius: 50%;
+        margin: 0 8px;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(5px);
+        border: 2px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .social-icons a i {
+        font-size: 24px;
+    }
+    
+    .social-icons a:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+        border-color: rgba(255, 255, 255, 0.4);
+        transform: scale(1.15);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    #sp-bottom .policaribe-bottom-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    #sp-bottom .bottom-column {
+        flex: 1 1 220px;
+    }
+
+    #sp-bottom h3 {
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 16px;
+    }
+
+    #sp-bottom ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    #sp-bottom li {
+        margin-bottom: 10px;
+    }
+
+    #sp-bottom .contact-address p {
+        margin: 0 0 8px;
+    }
+
+    .policaribe-social {
+        margin-top: 20px;
+    }
+    
+    .policaribe-social p {
+        font-size: 16px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 15px;
+        color: #ffffff;
+    }
+
+    .policaribe-social .social-icons {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+    }
+    
+    .policaribe-social .social-icons a {
+        margin: 0;
+    }
+
+    @media (max-width: 767px) {
+        #sp-bottom .bottom-column {
+            flex: 1 1 100%;
+        }
+    }
+
+    /* Chatbot responsivo con scroll - Más alto */
+    @media (max-width: 768px) {
+        /* Para widgets de chatbot externos (Tawk.to, Intercom, etc.) */
+        iframe[id*="chat"], 
+        iframe[class*="chat"],
+        iframe[src*="tawk"],
+        iframe[src*="intercom"],
+        [id*="chatbot"],
+        [class*="chatbot"],
+        .tawk-min-container,
+        .intercom-namespace,
+        #chat-widget,
+        .chat-widget {
+            max-width: 360px !important;
+            max-height: 600px !important;
+            height: 600px !important;
+            width: 100% !important;
+        }
+
+        /* Contenedor del chat con scroll */
+        iframe[id*="chat"] > body,
+        [id*="chatbot-body"],
+        [class*="chat-body"],
+        .tawk-min-container > div,
+        .chat-messages {
+            max-height: 480px !important;
+            height: 480px !important;
+            overflow-y: auto !important;
+            overflow-x: hidden !important;
+            -webkit-overflow-scrolling: touch !important;
+        }
+
+        /* Input del chat siempre visible en la parte inferior */
+        [id*="chat-input"],
+        [class*="chat-input"],
+        .tawk-textarea-wrapper,
+        .chat-input-wrapper {
+            position: sticky !important;
+            bottom: 0 !important;
+            background: #fff !important;
+            z-index: 1000 !important;
+            padding: 12px !important;
+            box-shadow: 0 -2px 8px rgba(0,0,0,0.15) !important;
+        }
+
+        /* Botones del chat accesibles */
+        [class*="chat-button"],
+        [id*="chat-button"],
+        .tawk-button {
+            min-height: 48px !important;
+            touch-action: manipulation !important;
+        }
+    }
+
+    /* Estilos adicionales para pantallas muy pequeñas */
+    @media (max-width: 480px) {
+        iframe[id*="chat"], 
+        iframe[class*="chat"],
+        [id*="chatbot"],
+        [class*="chatbot"] {
+            max-width: 320px !important;
+            max-height: 550px !important;
+            height: 550px !important;
+            right: 10px !important;
+            bottom: 10px !important;
+        }
+
+        [id*="chatbot-body"],
+        [class*="chat-body"] {
+            max-height: 420px !important;
+            height: 420px !important;
+        }
+    }
+    </style>
+</head>
+<body>
+
+<!-- Menu mobile lateral de servicios -->
+<div id="servicios" class="fixed top0 h100p w250 pad20 b4d cwhite opa0 pt40" style="overflow-y:auto;z-index: 9999;">
+    <img src="https://www.unisimon.edu.co/recursos/img/cerrar-25.png" id="cerrarS"
+        class="abs right0 mb20 poi pad20 top-10" alt="cerrar">
+    <div class="clear"></div>
+    <script>
+      (function() {
+        var cx = '012645434783224938308:p3ivkmo3eiy';
+        var gcse = document.createElement('script');
+        gcse.type = 'text/javascript';
+        gcse.async = true;
+        gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(gcse, s);
+      })();
+    </script>
+    <gcse:search></gcse:search>
+    <div class="cwhite fw5 lts1 mb30">
+        <span class="icon-aud-25 c292 fz16 mid"></span>
+        <span class="ml5">
+            <a href="https://www.unisimon.edu.co/servicios/contacto">Contacto</a>
+        </span>
+        <span class="icon-email-25 c292 fz12 mid ml10"></span>
+        <span class="ml5">
+            <a href="pqrs.html">PQRS</a>
+        </span>
+    </div>
+    <a href="https://www.unisimon.edu.co/servicios/acreditaciones"><div class="mb10">Acreditaciones, Premios y Reconocimientos</div></a>
+    <a href="https://www.unisimon.edu.co/servicios/alianzaelheraldo"><div class="mb10">Alianza Unisimón - El Heraldo</div></a>
+    <a href="https://biblioteca.unisimon.edu.co/"><div class="mb10">Biblioteca</div></a>
+    <a href="https://www.unisimon.edu.co/servicios/bienestaruniversitario"><div class="mb10">Bienestar Universitario</div></a>
+</div>
+
+<!-- Menu mobile desplegable -->
+<nav id="ml-menu" class="menu">
+    <div class="pad5 bwhite w100 top0 abs">
+        <div class="content">
+            <div class="fleft">
+                <button class="action action--close" style="position: relative; width: 20px;" aria-label="Close Menu">
+                    <span class="icon icon--cross"></span>
+                </button>
+            </div>
+            <div class="fright">
+                <a target="_blank" href="https://www.unisimon.edu.co/index.php/UnisimonRadio">
+                    <img src="https://www.unisimon.edu.co/recursos/img/EMISORAUNISIMONbotonweb.png" 
+                         class="m13" 
+                         alt="youtube" 
+                         style="width:120px; height:31px;">
+                </a>
+                <a target="_blank" href="https://www.facebook.com/unisimonbolivar">
+                    <img class="w20px" src="https://www.unisimon.edu.co/recursos/img/redes-facebook2.png" alt="facebook">
+                </a>
+                <a target="_blank" href="https://www.instagram.com/unisimon/">
+                    <img class="w20px" src="https://www.unisimon.edu.co/recursos/img/redes-instagram2.png" class="ml3" alt="instagram">
+                </a>
+                <a target="_blank" href="https://x.com/unisimon">
+                    <img class="w20px" src="https://www.unisimon.edu.co/recursos/img/twi.png" class="ml3" alt="twitter">
+                </a>
+                <a target="_blank" href="https://www.youtube.com/user/videosunisimon">
+                    <img class="w20px" src="https://www.unisimon.edu.co/recursos/img/redes-youtube2.png" class="ml3" alt="youtube">
+                </a>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="menu__wrap">
+        <ul data-menu="main" class="menu__level">
+            <li class="menu__item"><a class="menu__link" href="index.html">Inicio</a></li>
+            <li class="menu__item"><a class="menu__link" href="policaribe/quienes-somos.html">Quienes somos</a></li>
+            <li class="menu__item"><a class="menu__link" href="cursos-cortos/index.html">Diplomado</a></li>
+            <li class="menu__item"><a class="menu__link" data-submenu="submenu-programas" href="index.html#section-programas">Oferta Académica</a></li>
+            <li class="menu__item"><a class="menu__link" href="index.html#section-noticias">Noticias</a></li>
+            <li class="menu__item"><a class="menu__link" href="pqrs.html">PQRS</a></li>
+            <li class="menu__item"><a class="menu__link" href="index.html#section-policredito">Obtén una beca</a></li>
+        </ul>
+        <ul data-menu="submenu-programas" class="menu__level">
+            <li class="menu__item"><a class="menu__link" href="policaribe/programas/auxiliar-administrativo.html">Auxiliar Administrativo</a></li>
+            <li class="menu__item"><a class="menu__link" href="policaribe/programas/preparacion-yentrenamiento-fisico.html">Preparación y Entrenamiento Físico</a></li>
+            <li class="menu__item"><a class="menu__link" href="policaribe/programas/seguridad-ocupacionalylaboral.html">Auxiliar en Seguridad Ocupacional y Laboral</a></li>
+            <li class="menu__item"><a class="menu__link" href="policaribe/programas/asistente-marketing-y-comunicaciones.html">Asistente de Marketing y Comunicaciones</a></li>
+            <li class="menu__item"><a class="menu__link" href="policaribe/programas/auxiliar-en-enfermeria.html">Auxiliar en Enfermería</a></li>
+            <li class="menu__item"><a class="menu__link" href="policaribe/programas/auxiliar-contable-y-financiero.html">Auxiliar Contable y Financiero</a></li>
+            <li class="menu__item"><a class="menu__link" href="policaribe/programas/animacion-graficayde-multimedia.html">Animación Gráfica y de Multimedia</a></li>
+            <li class="menu__item"><a class="menu__link" href="policaribe/programas/auxiliar-en-educacion-para-la-primera-infancia.html">Auxiliar en Educación para la Primera Infancia</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- HEADER DE UNISIMON -->
+<div class="rel w100" id="tope">
+    <div class="abs top0 zind10 w100 bwhite" id="menu-es">
+        <!-- Inicio cabecera -->
+        <div class="container-fluid">
+            <div class="content">
+                <div class="preheader-bar pad-tb10">
+                    <div class="preheader-left">
+                        <img src="images/acreditacion-logo.png" 
+                             class="preheader-medalla" 
+                             alt="Acreditación Policaribe">
+                    </div>
+                    <div class="preheader-center">
+                        <div class="menu-mobile action action--open">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+                              <span class="sr-only">Toggle navigation</span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                              <span class="icon-bar"></span>
+                            </button>
+                        </div>
+                        <a href="index.html" class="preheader-logo">
+                            <img src="recursos/img/policaribe-horizontal-color.png" 
+                                 alt="universidad simon bolivar logo">
+                        </a>
+                    </div>
+                    <div class="preheader-right">
+                        <a href="#" id="facebookLink" class="preheader-social">
+                            <img src="https://www.unisimon.edu.co/recursos/img/ICONO_REDES_FINAL.svg" 
+                                 alt="facebook">
+                        </a>
+                        <span class="preheader-separator">|</span>
+                        <a href="mailto:contacto@policaribe.edu.co" class="preheader-contacto">CONTACTO</a>
+                        <div class="preheader-sede">
+                            <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                            <a href="https://site2.q10.com/preinscripcion?aplentId=cd2173fa-287d-40c7-84a7-ce6098ccf063" target="_blank">Obtén una beca</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- fin cabecera -->	
+        
+        <!-- inicio menu -->
+        <div class="b51 dnonem">
+            <div class="content">
+                <nav class="w90 fleft rel">
+                    <ul class="nav navbar-nav rel">
+                      <li><a href="index.html">Inicio</a></li>
+                                                                    <li><a href="policaribe/quienes-somos.html">Quienes somos</a></li>
+                                                                    <li><a href="cursos-cortos/index.html">Diplomado</a></li>
+                                            <li class="dropdown">
+                                                                        <a href="index.html#section-programas" class="dropdown-toggle">Oferta Académica</a>
+                                                <ul class="dropdown-menu">
+                                                    <li><a href="policaribe/programas/auxiliar-administrativo.html">Auxiliar Administrativo</a></li>
+                                                    <li><a href="policaribe/programas/preparacion-yentrenamiento-fisico.html">Preparación y Entrenamiento Físico</a></li>
+                                                    <li><a href="policaribe/programas/seguridad-ocupacionalylaboral.html">Auxiliar en Seguridad Ocupacional y Laboral</a></li>
+                                                    <li><a href="policaribe/programas/asistente-marketing-y-comunicaciones.html">Asistente de Marketing y Comunicaciones</a></li>
+                                                    <li><a href="policaribe/programas/auxiliar-en-enfermeria.html">Auxiliar en Enfermería</a></li>
+                                                    <li><a href="policaribe/programas/auxiliar-contable-y-financiero.html">Auxiliar Contable y Financiero</a></li>
+                                                    <li><a href="policaribe/programas/animacion-graficayde-multimedia.html">Animación Gráfica y de Multimedia</a></li>
+                                                    <li><a href="policaribe/programas/auxiliar-en-educacion-para-la-primera-infancia.html">Auxiliar en Educación para la Primera Infancia</a></li>
+                                                </ul>
+                                            </li>
+                                              <li><a href="index.html#section-noticias">Noticias</a></li>
+                                            <li class="active-menu"><a href="pqrs.html">PQRS</a></li>
+                    </ul>
+                </nav>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Espaciador para compensar el header fijo -->
+    <div style="height: 105px;"></div>
+</div>
+<!-- FIN HEADER DE UNISIMON -->
+
+<main class="pqrs-content">
+    <section class="pqrs-section">
+        <h2>¡Bienvenido!</h2>
+        <p class="lead">Apreciado usuario: La institución agradece su confianza en el uso de este aplicativo, el cual ha sido concebido a fin de garantizar respuestas pertinentes y oportunas ante sus inquietudes, siempre con el objetivo de prestarle a usted un mejor servicio.</p>
+        <p class="lead"><strong>Conozca los tipos de PQRS y sus tiempos de respuesta.</strong></p>
+
+        
+
+        <div class="pqrs-types-grid">
+            <article class="pqrs-type-card">
+                <h3>Felicitación</h3>
+                <p>Expresión de satisfacción por la forma en que se presta un servicio en general.</p>
+                <span><i class="fa fa-clock"></i>Respuesta en 8 días hábiles</span>
+            </article>
+            <article class="pqrs-type-card">
+                <h3>Petición</h3>
+                <p>Solicitud presentada en forma verbal o escrita en ejercicio del derecho a obtener información oportuna.</p>
+                <span><i class="fa fa-clock"></i>Respuesta en 8 días hábiles</span>
+            </article>
+            <article class="pqrs-type-card">
+                <h3>Queja</h3>
+                <p>Manifestación de inconformidad relacionada con la forma en que se presta o no un servicio.</p>
+                <span><i class="fa fa-clock"></i>Respuesta en 8 días hábiles</span>
+            </article>
+            <article class="pqrs-type-card">
+                <h3>Reclamo</h3>
+                <p>Declaración formal de un usuario que considera vulnerado un derecho por la prestación de un servicio.</p>
+                <span><i class="fa fa-clock"></i>Respuesta en 8 días hábiles</span>
+            </article>
+            <article class="pqrs-type-card">
+                <h3>Sugerencia</h3>
+                <p>Propuesta o idea para mejorar un servicio o proceso institucional.</p>
+                <span><i class="fa fa-clock"></i>Respuesta en 8 días hábiles</span>
+            </article>
+        </div>
+        <div class="pqrs-action" style="display:flex;gap:16px;justify-content:center;align-items:center;flex-wrap:wrap">
+            <button type="button" class="pqrs-radicar-btn" data-toggle="modal" data-target="#pqrsModal">
+                Radicar solicitud PQRS
+            </button>
+            <button type="button" class="pqrs-radicar-btn" id="btn-consultar-radicado" data-toggle="modal" data-target="#consultaModal">
+                Consultar radicado PQRS
+            </button>
+        </div>
+    </section>
+</main>
+
+<div class="modal fade" id="pqrsModal" tabindex="-1" role="dialog" aria-labelledby="pqrsModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content pqrs-modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h3 class="modal-title" id="pqrsModalLabel">Radica tu solicitud PQRS</h3>
+            </div>
+            <div class="modal-body">
+                <div class="pqrs-form-wrapper">
+                    <p>Complete el siguiente formulario y nuestro equipo de atención dará respuesta dentro de los tiempos establecidos.</p>
+                    <form class="pqrs-form" action="pqrs_submit.php" method="post" enctype="multipart/form-data">
+                        <div>
+                            <label for="pqrs-nombre">Nombre completo</label>
+                            <input type="text" id="pqrs-nombre" name="nombre" placeholder="Escribe tu nombre" required>
+                        </div>
+                        <div>
+                            <label for="pqrs-identificacion">Documento de identidad</label>
+                            <input type="text" id="pqrs-identificacion" name="identificacion" placeholder="Número de documento" required>
+                        </div>
+                        <div>
+                            <label for="pqrs-correo">Correo electrónico</label>
+                            <input type="email" id="pqrs-correo" name="correo" placeholder="nombre@correo.com" required>
+                        </div>
+                        <div>
+                            <label for="pqrs-telefono">Teléfono de contacto</label>
+                            <input type="tel" id="pqrs-telefono" name="telefono" placeholder="(xxx) xxx xxxx" required>
+                        </div>
+                        <div class="full-width">
+                            <label for="pqrs-tipo">Tipo de solicitud</label>
+                            <select id="pqrs-tipo" name="tipo" required>
+                                <option value="" disabled selected>Selecciona una opción</option>
+                                <option value="felicitacion">Felicitación</option>
+                                <option value="peticion">Petición</option>
+                                <option value="queja">Queja</option>
+                                <option value="reclamo">Reclamo</option>
+                                <option value="sugerencia">Sugerencia</option>
+                            </select>
+                        </div>
+                        <div class="full-width">
+                            <label for="pqrs-resumen">Resumen</label>
+                            <input type="text" id="pqrs-resumen" name="resumen" placeholder="Titula brevemente tu solicitud" required>
+                        </div>
+                        <div class="full-width">
+                            <label for="pqrs-detalle">Detalle de la solicitud</label>
+                            <textarea id="pqrs-detalle" name="detalle" placeholder="Describe tu caso con el mayor detalle posible" required></textarea>
+                        </div>
+                        <div class="full-width">
+                            <label for="pqrs-archivo">Adjuntar evidencias (opcional)</label>
+                            <input type="file" id="pqrs-archivo" name="adjuntos[]" multiple accept=".pdf,.doc,.docx,.xls,.xlsx,.jpg,.jpeg,.png,.zip,.rar,.mp4">
+                            <span class="pqrs-file-hint">Puedes adjuntar varios archivos en formatos como PDF, Word, Excel, imágenes, comprimidos o video (máx. 10&nbsp;MB c/u).</span>
+                        </div>
+                        <div class="pqrs-submit">
+                            <button type="submit">Enviar solicitud</button>
+                        </div>
+                    </form>
+                    <p class="pqrs-help">Al remitir este formulario aceptas el tratamiento de tus datos personales conforme a las políticas institucionales.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="consultaModal" tabindex="-1" role="dialog" aria-labelledby="consultaModalLabel" aria-hidden="true" data-backdrop="false" data-keyboard="true" style="overflow-y: auto;">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h3 class="modal-title" id="consultaModalLabel">Consultar radicado PQRS</h3>
+            </div>
+            <div class="modal-body">
+                <form id="consultaForm">
+                    <div class="form-group">
+                        <label>Radicado</label>
+                        <input type="text" class="form-control" name="radicado" placeholder="Ingrese su radicado" required>
+                    </div>
+                </form>
+                <div id="consultaAlert" class="alert" style="display:none"></div>
+                <div id="consultaRes" style="display:none"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" id="consultaBtn"><i class="fa fa-search"></i> Consultar</button>
+            </div>
+        </div>
+    </div>
+    </div>
+
+<script>
+  (function() {
+    function getParam(name) {
+      const params = new URLSearchParams(window.location.search);
+      return params.get(name);
+    }
+    if (getParam('ok') === '1') {
+      jQuery(function($){
+        $('#pqrsModal').modal('hide');
+        alert('Tu PQRS fue radicada con éxito. Radicado: ' + (getParam('radicado') || ''));
+      });
+    }
+  })();
+</script>
+
+
+<section id="sp-bottom">
+    <div class="policaribe-bottom-grid">
+        <div class="bottom-column">
+            <img src="images/logo-blanco-footer.png" alt="Policaribe" style="max-width: 180px; height: auto;">
+            <p style="margin-top: 18px;">Formamos técnicos laborales a través de una educación inclusiva y de calidad, basada en valores como el respeto, la solidaridad y la excelencia.</p>
+            <p class="copy-right">© POLICARIBE 2025</p>
+        </div>
+        <div class="bottom-column">
+            <h6>Normatividad Institucional</h6>
+            <ul>
+                <li><a href="https://drive.google.com/file/d/1yp_BmQ_fDIB4RwKgo6LS5LXfrB_MQR6M/view?usp=sharing">Creación y reconocimiento Personería Jurídica</a></li>
+                <li><a href="policaribe/index.html#">Política de Tratamiento de Información Personal</a></li>
+            </ul>
+        </div>
+        <div class="bottom-column">
+            <h3>Enlaces rápidos</h3>
+            <ul>
+                <li><a href="policaribe/documentos/calendario-academico-virtual.pdf">Calendario Académico Virtual</a></li>
+                <li><a href="policaribe/documentos/calendario-academico-a-distancia.pdf">Calendario Académico a Distancia</a></li>
+                <li><a href="policaribe/documentos/estatuto-general.pdf">Estatuto General</a></li>
+                <li><a href="policaribe/index.html#">Derechos Pecuniarios</a></li>
+                <li><a href="http://Campuspolicaribe.q10.com">Inscripciones</a></li>
+            </ul>
+        </div>
+        <div class="bottom-column">
+            <h3>Contacto</h3>
+            <div class="contact-address">
+                <p><i class="fas fa-envelope"></i> contacto@policaribe.edu.co</p>
+                <p><i class="fas fa-phone"></i> +57 311 614 9733</p>
+            </div>
+            <div class="policaribe-social">
+                <p>SÍGUENOS</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/policaribe" target="_blank" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/policaribe_oficial/" target="_blank" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@policaribe" target="_blank" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer id="sp-footer">
+    © 2025 <a href="https://www.joomshaper.com/">Policaribe</a> · Todos los derechos reservados
+</footer>
+
+<script type="text/javascript" src="https://www.unisimon.edu.co/recursos/slick/classie.js"></script>
+<script type="text/javascript" src="https://www.unisimon.edu.co/recursos/slick/main.js"></script>
+<script type="text/javascript" src="https://www.unisimon.edu.co/recursos/slick/funciones.js"></script>
+  <script type="text/javascript" src="https://www.unisimon.edu.co/recursos/slick/menu.js"></script>
+
+  <script>
+    jQuery(document).ready(function($) {
+        $('#pqrsModal').appendTo('body');
+        $('body').removeClass('body-overlayed');
+        $('#sbox-overlay, #sbox-window').hide();
+        $('a[href^="#"]').on('click', function(e) {
+            var target = $(this.getAttribute('href'));
+            if(target.length) {
+                e.preventDefault();
+                $('html, body').stop().animate({
+                    scrollTop: target.offset().top - 120
+                }, 1000);
+            }
+        });
+
+        $('#pqrsModal').on('show.bs.modal', function () {
+            $('.pqrs-radicar-btn').attr('aria-expanded', 'true');
+        });
+
+        $('#pqrsModal').on('shown.bs.modal', function () {
+            $('#pqrs-nombre').trigger('focus');
+        });
+
+        $('#pqrsModal').on('hidden.bs.modal', function () {
+            var $form = $(this).find('form');
+            $form.trigger('reset');
+            $('.pqrs-radicar-btn').attr('aria-expanded', 'false').trigger('focus');
+            $('body').removeClass('body-overlayed');
+        });
+
+        $('#consultaBtn').on('click', function(e) {
+            e.preventDefault();
+            var $form = $('#consultaForm');
+            var radicado = $form.find('input[name="radicado"]').val();
+            var $alert = $('#consultaAlert');
+            var $res = $('#consultaRes');
+
+            if (!radicado) {
+                $alert.removeClass('alert-success').addClass('alert-danger').text('Por favor, ingrese un radicado.').show();
+                return;
+            }
+
+            $.ajax({
+                url: 'api/pqrs.php',
+                type: 'GET',
+                data: {
+                    type: 'consultar',
+                    radicado: radicado
+                },
+                dataType: 'json',
+                beforeSend: function() {
+                    $('#consultaBtn').prop('disabled', true).html('<i class="fa fa-spinner fa-spin"></i> Consultando...');
+                    $alert.hide();
+                    $res.hide();
+                },
+                success: function(response) {
+                    if (response.ok) {
+                        var data = response.data;
+                        var resHtml = '<p><strong>Radicado:</strong> ' + data.radicado + '</p>' +
+                                      '<p><strong>Nombre:</strong> ' + data.nombre + '</p>' +
+                                      '<p><strong>Tipo:</strong> ' + data.tipo + '</p>' +
+                                      '<p><strong>Estado:</strong> ' + data.estado + '</p>' +
+                                      '<p><strong>Fecha:</strong> ' + data.fecha + '</p>' +
+                                      '<p><strong>Resumen:</strong> ' + data.resumen + '</p>';
+                        $res.html(resHtml).show();
+                        $alert.hide();
+                    } else {
+                        $alert.removeClass('alert-success').addClass('alert-danger').text(response.error || 'Error al consultar.').show();
+                    }
+                },
+                error: function() {
+                    $alert.removeClass('alert-success').addClass('alert-danger').text('Error de conexión. Intente de nuevo.').show();
+                },
+                complete: function() {
+                    $('#consultaBtn').prop('disabled', false).html('<i class="fa fa-search"></i> Consultar');
+                }
+            });
+        });
+
+        $('#consultaModal').on('hidden.bs.modal', function () {
+            $('#consultaForm').trigger('reset');
+            $('#consultaAlert').hide();
+            $('#consultaRes').hide();
+            $('#btn-consultar-radicado').attr('aria-expanded', 'false').trigger('focus');
+            $('body').removeClass('body-overlayed modal-open');
+        });
+
+        $('#consultaModal').on('show.bs.modal', function () {
+            $('#btn-consultar-radicado').attr('aria-expanded', 'true');
+            // Asegurar que no haya overlay bloqueando
+            $('.modal-backdrop').remove();
+            $('body').removeClass('modal-open');
+        });
+
+        $('#consultaModal').on('shown.bs.modal', function () {
+            // Forzar focus al primer campo del formulario
+            $('#consultaForm input[name="radicado"]').focus();
+        });
+    });
+
+    // ========================================
+    // CHATBOT RESPONSIVO CON SCROLL - MÁS ALTO
+    // ========================================
+    (function() {
+        // Función para hacer el chatbot responsivo con mayor altura
+        function makeChatbotResponsive() {
+            // Buscar iframes de chatbot
+            const chatIframes = document.querySelectorAll(
+                'iframe[id*="chat"], iframe[class*="chat"], iframe[src*="tawk"], iframe[src*="intercom"]'
+            );
+            
+            chatIframes.forEach(function(iframe) {
+                if (window.innerWidth <= 768) {
+                    iframe.style.maxWidth = '360px';
+                    iframe.style.maxHeight = '600px';
+                    iframe.style.height = '600px';
+                    iframe.style.width = '100%';
+                }
+                
+                if (window.innerWidth <= 480) {
+                    iframe.style.maxWidth = '320px';
+                    iframe.style.maxHeight = '550px';
+                    iframe.style.height = '550px';
+                    iframe.style.right = '10px';
+                    iframe.style.bottom = '10px';
+                }
+            });
+
+            // Buscar contenedores de chatbot personalizados
+            const chatContainers = document.querySelectorAll(
+                '[id*="chatbot"], [class*="chatbot"], [id*="chat-widget"], [class*="chat-widget"]'
+            );
+            
+            chatContainers.forEach(function(container) {
+                if (window.innerWidth <= 768) {
+                    container.style.maxWidth = '360px';
+                    container.style.maxHeight = '600px';
+                    container.style.height = '600px';
+                    
+                    // Buscar el body del chat y agregar scroll
+                    const chatBody = container.querySelector(
+                        '[class*="body"], [class*="messages"], [id*="messages"]'
+                    );
+                    
+                    if (chatBody) {
+                        chatBody.style.maxHeight = '480px';
+                        chatBody.style.height = '480px';
+                        chatBody.style.overflowY = 'auto';
+                        chatBody.style.overflowX = 'hidden';
+                        chatBody.style.webkitOverflowScrolling = 'touch';
+                    }
+                    
+                    // Asegurar que el input esté visible
+                    const chatInput = container.querySelector(
+                        '[class*="input"], input[type="text"], textarea'
+                    );
+                    
+                    if (chatInput && chatInput.parentElement) {
+                        chatInput.parentElement.style.position = 'sticky';
+                        chatInput.parentElement.style.bottom = '0';
+                        chatInput.parentElement.style.background = '#fff';
+                        chatInput.parentElement.style.zIndex = '1000';
+                        chatInput.parentElement.style.padding = '12px';
+                        chatInput.parentElement.style.boxShadow = '0 -2px 8px rgba(0,0,0,0.15)';
+                    }
+                }
+                
+                if (window.innerWidth <= 480) {
+                    container.style.maxWidth = '320px';
+                    container.style.maxHeight = '550px';
+                    container.style.height = '550px';
+                    
+                    const chatBody = container.querySelector(
+                        '[class*="body"], [class*="messages"]'
+                    );
+                    if (chatBody) {
+                        chatBody.style.maxHeight = '420px';
+                        chatBody.style.height = '420px';
+                    }
+                }
+            });
+        }
+
+        // Ejecutar al cargar la página
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', makeChatbotResponsive);
+        } else {
+            makeChatbotResponsive();
+        }
+
+        // Ejecutar al redimensionar
+        window.addEventListener('resize', makeChatbotResponsive);
+
+        // Observer para detectar cuando se carga el chatbot dinámicamente
+        const observer = new MutationObserver(function(mutations) {
+            mutations.forEach(function(mutation) {
+                if (mutation.addedNodes.length) {
+                    makeChatbotResponsive();
+                }
+            });
+        });
+
+        // Observar cambios en el body
+        observer.observe(document.body, {
+            childList: true,
+            subtree: true
+        });
+
+        // Ejecutar después de 2 segundos por si el chatbot tarda en cargar
+        setTimeout(makeChatbotResponsive, 2000);
+    })();
+    (function(){
+      function htmlEscape(s){ return (s||'').replace(/[&<>"']/g,function(c){return({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','\'':'&#39;'})[c];}); }
+      jQuery(function($){
+        $('#consultaBtn').on('click', function(){
+          var $form = $('#consultaForm');
+          var $alert = $('#consultaAlert');
+          var $out = $('#consultaRes');
+          $alert.hide().removeClass('alert-success alert-danger alert-warning');
+          $out.hide().empty();
+          var rad = ($form.find('[name=radicado]').val()||'').trim();
+          if(!rad){ $alert.addClass('alert-danger').text('Ingrese su radicado').show(); return; }
+          $.getJSON('api/pqrs.php', { type: 'consultar', radicado: rad })
+            .done(function(res){
+              if(res && res.ok && res.data){
+                var d = res.data;
+                var html = '<table class="table table-striped">'
+                  + '<tr><th>Radicado</th><td>'+htmlEscape(d.radicado)+'</td></tr>'
+                  + '<tr><th>Nombre</th><td>'+htmlEscape(d.nombre)+'</td></tr>'
+                  + '<tr><th>Tipo</th><td>'+htmlEscape(d.tipo)+'</td></tr>'
+                  + '<tr><th>Estado</th><td>'+htmlEscape(d.estado)+'</td></tr>'
+                  + '<tr><th>Fecha</th><td>'+htmlEscape(d.fecha)+'</td></tr>'
+                  + '<tr><th>Resumen</th><td>'+htmlEscape(d.resumen)+'</td></tr>'
+                  + '</table>';
+                $out.html(html).show();
+              } else {
+                $alert.addClass('alert-warning').text(res && res.error ? res.error : 'No se encontró el radicado').show();
+              }
+            })
+            .fail(function(){ $alert.addClass('alert-danger').text('Error de conexión').show(); });
+        });
+      });
+    })();
+  </script>
+
+</body>
+</html>

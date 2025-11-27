@@ -1,0 +1,240 @@
+[30-Mar-2025 07:23:50 America/New_York] PHP Fatal error:  Uncaught Error: Undefined constant "MB_OVERLOAD_STRING" in /home/policaribe/public_html/sitio_web/libraries/vendor/joomla/string/src/phputf8/utf8.php:38
+Stack trace:
+#0 /home/policaribe/public_html/sitio_web/libraries/vendor/composer/autoload_real.php(66): require()
+#1 /home/policaribe/public_html/sitio_web/libraries/vendor/composer/autoload_real.php(56): composerRequire205c915b9c7d3e718e7c95793ee67ffe('2fb9d6f23c8e8fa...', '/home/policarib...')
+#2 /home/policaribe/public_html/sitio_web/libraries/vendor/autoload.php(7): ComposerAutoloaderInit205c915b9c7d3e718e7c95793ee67ffe::getLoader()
+#3 /home/policaribe/public_html/sitio_web/libraries/cms.php(36): require('/home/policarib...')
+#4 /home/policaribe/public_html/sitio_web/includes/framework.php(18): require_once('/home/policarib...')
+#5 /home/policaribe/public_html/sitio_web/index.php(40): require_once('/home/policarib...')
+#6 {main}
+  thrown in /home/policaribe/public_html/sitio_web/libraries/vendor/joomla/string/src/phputf8/utf8.php on line 38
+[30-Mar-2025 07:23:53 America/New_York] PHP Fatal error:  Uncaught Error: Undefined constant "MB_OVERLOAD_STRING" in /home/policaribe/public_html/sitio_web/libraries/vendor/joomla/string/src/phputf8/utf8.php:38
+Stack trace:
+#0 /home/policaribe/public_html/sitio_web/libraries/vendor/composer/autoload_real.php(66): require()
+#1 /home/policaribe/public_html/sitio_web/libraries/vendor/composer/autoload_real.php(56): composerRequire205c915b9c7d3e718e7c95793ee67ffe('2fb9d6f23c8e8fa...', '/home/policarib...')
+#2 /home/policaribe/public_html/sitio_web/libraries/vendor/autoload.php(7): ComposerAutoloaderInit205c915b9c7d3e718e7c95793ee67ffe::getLoader()
+#3 /home/policaribe/public_html/sitio_web/libraries/cms.php(36): require('/home/policarib...')
+#4 /home/policaribe/public_html/sitio_web/includes/framework.php(18): require_once('/home/policarib...')
+#5 /home/policaribe/public_html/sitio_web/index.php(40): require_once('/home/policarib...')
+#6 {main}
+  thrown in /home/policaribe/public_html/sitio_web/libraries/vendor/joomla/string/src/phputf8/utf8.php on line 38
+[30-Mar-2025 07:23:55 America/New_York] PHP Fatal error:  Uncaught Error: Undefined constant "MB_OVERLOAD_STRING" in /home/policaribe/public_html/sitio_web/libraries/vendor/joomla/string/src/phputf8/utf8.php:38
+Stack trace:
+#0 /home/policaribe/public_html/sitio_web/libraries/vendor/composer/autoload_real.php(66): require()
+#1 /home/policaribe/public_html/sitio_web/libraries/vendor/composer/autoload_real.php(56): composerRequire205c915b9c7d3e718e7c95793ee67ffe('2fb9d6f23c8e8fa...', '/home/policarib...')
+#2 /home/policaribe/public_html/sitio_web/libraries/vendor/autoload.php(7): ComposerAutoloaderInit205c915b9c7d3e718e7c95793ee67ffe::getLoader()
+#3 /home/policaribe/public_html/sitio_web/libraries/cms.php(36): require('/home/policarib...')
+#4 /home/policaribe/public_html/sitio_web/includes/framework.php(18): require_once('/home/policarib...')
+#5 /home/policaribe/public_html/sitio_web/index.php(40): require_once('/home/policarib...')
+#6 {main}
+  thrown in /home/policaribe/public_html/sitio_web/libraries/vendor/joomla/string/src/phputf8/utf8.php on line 38
+[30-Mar-2025 07:23:56 America/New_York] PHP Fatal error:  Uncaught Error: Undefined constant "MB_OVERLOAD_STRING" in /home/policaribe/public_html/sitio_web/libraries/vendor/joomla/string/src/phputf8/utf8.php:38
+Stack trace:
+#0 /home/policaribe/public_html/sitio_web/libraries/vendor/composer/autoload_real.php(66): require()
+#1 /home/policaribe/public_html/sitio_web/libraries/vendor/composer/autoload_real.php(56): composerRequire205c915b9c7d3e718e7c95793ee67ffe('2fb9d6f23c8e8fa...', '/home/policarib...')
+#2 /home/policaribe/public_html/sitio_web/libraries/vendor/autoload.php(7): ComposerAutoloaderInit205c915b9c7d3e718e7c95793ee67ffe::getLoader()
+#3 /home/policaribe/public_html/sitio_web/libraries/cms.php(36): require('/home/policarib...')
+#4 /home/policaribe/public_html/sitio_web/includes/framework.php(18): require_once('/home/policarib...')
+#5 /home/policaribe/public_html/sitio_web/index.php(40): require_once('/home/policarib...')
+#6 {main}
+  thrown in /home/policaribe/public_html/sitio_web/libraries/vendor/joomla/string/src/phputf8/utf8.php on line 38
+[01-Apr-2025 12:47:32 America/New_York] PHP Fatal error:  Uncaught Error: Undefined constant "MB_OVERLOAD_STRING" in /home/policaribe/public_html/sitio_web/libraries/vendor/joomla/string/src/phputf8/utf8.php:38
+Stack trace:
+#0 /home/policaribe/public_html/sitio_web/libraries/vendor/composer/autoload_real.php(66): require()
+#1 /home/policaribe/public_html/sitio_web/libraries/vendor/composer/autoload_real.php(56): composerRequire205c915b9c7d3e718e7c95793ee67ffe('2fb9d6f23c8e8fa...', '/home/policarib...')
+#2 /home/policaribe/public_html/sitio_web/libraries/vendor/autoload.php(7): ComposerAutoloaderInit205c915b9c7d3e718e7c95793ee67ffe::getLoader()
+#3 /home/policaribe/public_html/sitio_web/libraries/cms.php(36): require('/home/policarib...')
+#4 /home/policaribe/public_html/sitio_web/includes/framework.php(18): require_once('/home/policarib...')
+#5 /home/policaribe/public_html/sitio_web/index.php(40): require_once('/home/policarib...')
+#6 {main}
+  thrown in /home/policaribe/public_html/sitio_web/libraries/vendor/joomla/string/src/phputf8/utf8.php on line 38
+[01-Apr-2025 12:47:41 America/New_York] PHP Fatal error:  Uncaught Error: Undefined constant "MB_OVERLOAD_STRING" in /home/policaribe/public_html/sitio_web/libraries/vendor/joomla/string/src/phputf8/utf8.php:38
+Stack trace:
+#0 /home/policaribe/public_html/sitio_web/libraries/vendor/composer/autoload_real.php(66): require()
+#1 /home/policaribe/public_html/sitio_web/libraries/vendor/composer/autoload_real.php(56): composerRequire205c915b9c7d3e718e7c95793ee67ffe('2fb9d6f23c8e8fa...', '/home/policarib...')
+#2 /home/policaribe/public_html/sitio_web/libraries/vendor/autoload.php(7): ComposerAutoloaderInit205c915b9c7d3e718e7c95793ee67ffe::getLoader()
+#3 /home/policaribe/public_html/sitio_web/libraries/cms.php(36): require('/home/policarib...')
+#4 /home/policaribe/public_html/sitio_web/includes/framework.php(18): require_once('/home/policarib...')
+#5 /home/policaribe/public_html/sitio_web/index.php(40): require_once('/home/policarib...')
+#6 {main}
+  thrown in /home/policaribe/public_html/sitio_web/libraries/vendor/joomla/string/src/phputf8/utf8.php on line 38
+[01-Apr-2025 12:47:48 America/New_York] PHP Fatal error:  Uncaught Error: Undefined constant "MB_OVERLOAD_STRING" in /home/policaribe/public_html/sitio_web/libraries/vendor/joomla/string/src/phputf8/utf8.php:38
+Stack trace:
+#0 /home/policaribe/public_html/sitio_web/libraries/vendor/composer/autoload_real.php(66): require()
+#1 /home/policaribe/public_html/sitio_web/libraries/vendor/composer/autoload_real.php(56): composerRequire205c915b9c7d3e718e7c95793ee67ffe('2fb9d6f23c8e8fa...', '/home/policarib...')
+#2 /home/policaribe/public_html/sitio_web/libraries/vendor/autoload.php(7): ComposerAutoloaderInit205c915b9c7d3e718e7c95793ee67ffe::getLoader()
+#3 /home/policaribe/public_html/sitio_web/libraries/cms.php(36): require('/home/policarib...')
+#4 /home/policaribe/public_html/sitio_web/includes/framework.php(18): require_once('/home/policarib...')
+#5 /home/policaribe/public_html/sitio_web/index.php(40): require_once('/home/policarib...')
+#6 {main}
+  thrown in /home/policaribe/public_html/sitio_web/libraries/vendor/joomla/string/src/phputf8/utf8.php on line 38
+[01-Apr-2025 12:47:51 America/New_York] PHP Fatal error:  Uncaught Error: Undefined constant "MB_OVERLOAD_STRING" in /home/policaribe/public_html/sitio_web/libraries/vendor/joomla/string/src/phputf8/utf8.php:38
+Stack trace:
+#0 /home/policaribe/public_html/sitio_web/libraries/vendor/composer/autoload_real.php(66): require()
+#1 /home/policaribe/public_html/sitio_web/libraries/vendor/composer/autoload_real.php(56): composerRequire205c915b9c7d3e718e7c95793ee67ffe('2fb9d6f23c8e8fa...', '/home/policarib...')
+#2 /home/policaribe/public_html/sitio_web/libraries/vendor/autoload.php(7): ComposerAutoloaderInit205c915b9c7d3e718e7c95793ee67ffe::getLoader()
+#3 /home/policaribe/public_html/sitio_web/libraries/cms.php(36): require('/home/policarib...')
+#4 /home/policaribe/public_html/sitio_web/includes/framework.php(18): require_once('/home/policarib...')
+#5 /home/policaribe/public_html/sitio_web/index.php(40): require_once('/home/policarib...')
+#6 {main}
+  thrown in /home/policaribe/public_html/sitio_web/libraries/vendor/joomla/string/src/phputf8/utf8.php on line 38
+[07-Apr-2025 08:36:48 America/New_York] PHP Fatal error:  Uncaught Error: Undefined constant "MB_OVERLOAD_STRING" in /home/policaribe/public_html/sitio_web/libraries/vendor/joomla/string/src/phputf8/utf8.php:38
+Stack trace:
+#0 /home/policaribe/public_html/sitio_web/libraries/vendor/composer/autoload_real.php(66): require()
+#1 /home/policaribe/public_html/sitio_web/libraries/vendor/composer/autoload_real.php(56): composerRequire205c915b9c7d3e718e7c95793ee67ffe('2fb9d6f23c8e8fa...', '/home/policarib...')
+#2 /home/policaribe/public_html/sitio_web/libraries/vendor/autoload.php(7): ComposerAutoloaderInit205c915b9c7d3e718e7c95793ee67ffe::getLoader()
+#3 /home/policaribe/public_html/sitio_web/libraries/cms.php(36): require('/home/policarib...')
+#4 /home/policaribe/public_html/sitio_web/includes/framework.php(18): require_once('/home/policarib...')
+#5 /home/policaribe/public_html/sitio_web/index.php(40): require_once('/home/policarib...')
+#6 {main}
+  thrown in /home/policaribe/public_html/sitio_web/libraries/vendor/joomla/string/src/phputf8/utf8.php on line 38
+[07-Apr-2025 08:36:49 America/New_York] PHP Fatal error:  Uncaught Error: Undefined constant "MB_OVERLOAD_STRING" in /home/policaribe/public_html/sitio_web/libraries/vendor/joomla/string/src/phputf8/utf8.php:38
+Stack trace:
+#0 /home/policaribe/public_html/sitio_web/libraries/vendor/composer/autoload_real.php(66): require()
+#1 /home/policaribe/public_html/sitio_web/libraries/vendor/composer/autoload_real.php(56): composerRequire205c915b9c7d3e718e7c95793ee67ffe('2fb9d6f23c8e8fa...', '/home/policarib...')
+#2 /home/policaribe/public_html/sitio_web/libraries/vendor/autoload.php(7): ComposerAutoloaderInit205c915b9c7d3e718e7c95793ee67ffe::getLoader()
+#3 /home/policaribe/public_html/sitio_web/libraries/cms.php(36): require('/home/policarib...')
+#4 /home/policaribe/public_html/sitio_web/includes/framework.php(18): require_once('/home/policarib...')
+#5 /home/policaribe/public_html/sitio_web/index.php(40): require_once('/home/policarib...')
+#6 {main}
+  thrown in /home/policaribe/public_html/sitio_web/libraries/vendor/joomla/string/src/phputf8/utf8.php on line 38
+[07-Apr-2025 08:36:50 America/New_York] PHP Fatal error:  Uncaught Error: Undefined constant "MB_OVERLOAD_STRING" in /home/policaribe/public_html/sitio_web/libraries/vendor/joomla/string/src/phputf8/utf8.php:38
+Stack trace:
+#0 /home/policaribe/public_html/sitio_web/libraries/vendor/composer/autoload_real.php(66): require()
+#1 /home/policaribe/public_html/sitio_web/libraries/vendor/composer/autoload_real.php(56): composerRequire205c915b9c7d3e718e7c95793ee67ffe('2fb9d6f23c8e8fa...', '/home/policarib...')
+#2 /home/policaribe/public_html/sitio_web/libraries/vendor/autoload.php(7): ComposerAutoloaderInit205c915b9c7d3e718e7c95793ee67ffe::getLoader()
+#3 /home/policaribe/public_html/sitio_web/libraries/cms.php(36): require('/home/policarib...')
+#4 /home/policaribe/public_html/sitio_web/includes/framework.php(18): require_once('/home/policarib...')
+#5 /home/policaribe/public_html/sitio_web/index.php(40): require_once('/home/policarib...')
+#6 {main}
+  thrown in /home/policaribe/public_html/sitio_web/libraries/vendor/joomla/string/src/phputf8/utf8.php on line 38
+[07-Apr-2025 08:36:53 America/New_York] PHP Fatal error:  Uncaught Error: Undefined constant "MB_OVERLOAD_STRING" in /home/policaribe/public_html/sitio_web/libraries/vendor/joomla/string/src/phputf8/utf8.php:38
+Stack trace:
+#0 /home/policaribe/public_html/sitio_web/libraries/vendor/composer/autoload_real.php(66): require()
+#1 /home/policaribe/public_html/sitio_web/libraries/vendor/composer/autoload_real.php(56): composerRequire205c915b9c7d3e718e7c95793ee67ffe('2fb9d6f23c8e8fa...', '/home/policarib...')
+#2 /home/policaribe/public_html/sitio_web/libraries/vendor/autoload.php(7): ComposerAutoloaderInit205c915b9c7d3e718e7c95793ee67ffe::getLoader()
+#3 /home/policaribe/public_html/sitio_web/libraries/cms.php(36): require('/home/policarib...')
+#4 /home/policaribe/public_html/sitio_web/includes/framework.php(18): require_once('/home/policarib...')
+#5 /home/policaribe/public_html/sitio_web/index.php(40): require_once('/home/policarib...')
+#6 {main}
+  thrown in /home/policaribe/public_html/sitio_web/libraries/vendor/joomla/string/src/phputf8/utf8.php on line 38
+[07-Apr-2025 08:37:06 America/New_York] PHP Fatal error:  Uncaught Error: Undefined constant "MB_OVERLOAD_STRING" in /home/policaribe/public_html/sitio_web/libraries/vendor/joomla/string/src/phputf8/utf8.php:38
+Stack trace:
+#0 /home/policaribe/public_html/sitio_web/libraries/vendor/composer/autoload_real.php(66): require()
+#1 /home/policaribe/public_html/sitio_web/libraries/vendor/composer/autoload_real.php(56): composerRequire205c915b9c7d3e718e7c95793ee67ffe('2fb9d6f23c8e8fa...', '/home/policarib...')
+#2 /home/policaribe/public_html/sitio_web/libraries/vendor/autoload.php(7): ComposerAutoloaderInit205c915b9c7d3e718e7c95793ee67ffe::getLoader()
+#3 /home/policaribe/public_html/sitio_web/libraries/cms.php(36): require('/home/policarib...')
+#4 /home/policaribe/public_html/sitio_web/includes/framework.php(18): require_once('/home/policarib...')
+#5 /home/policaribe/public_html/sitio_web/index.php(40): require_once('/home/policarib...')
+#6 {main}
+  thrown in /home/policaribe/public_html/sitio_web/libraries/vendor/joomla/string/src/phputf8/utf8.php on line 38
+[07-Apr-2025 08:37:07 America/New_York] PHP Fatal error:  Uncaught Error: Undefined constant "MB_OVERLOAD_STRING" in /home/policaribe/public_html/sitio_web/libraries/vendor/joomla/string/src/phputf8/utf8.php:38
+Stack trace:
+#0 /home/policaribe/public_html/sitio_web/libraries/vendor/composer/autoload_real.php(66): require()
+#1 /home/policaribe/public_html/sitio_web/libraries/vendor/composer/autoload_real.php(56): composerRequire205c915b9c7d3e718e7c95793ee67ffe('2fb9d6f23c8e8fa...', '/home/policarib...')
+#2 /home/policaribe/public_html/sitio_web/libraries/vendor/autoload.php(7): ComposerAutoloaderInit205c915b9c7d3e718e7c95793ee67ffe::getLoader()
+#3 /home/policaribe/public_html/sitio_web/libraries/cms.php(36): require('/home/policarib...')
+#4 /home/policaribe/public_html/sitio_web/includes/framework.php(18): require_once('/home/policarib...')
+#5 /home/policaribe/public_html/sitio_web/index.php(40): require_once('/home/policarib...')
+#6 {main}
+  thrown in /home/policaribe/public_html/sitio_web/libraries/vendor/joomla/string/src/phputf8/utf8.php on line 38
+[07-Apr-2025 08:37:18 America/New_York] PHP Fatal error:  Uncaught Error: Undefined constant "MB_OVERLOAD_STRING" in /home/policaribe/public_html/sitio_web/libraries/vendor/joomla/string/src/phputf8/utf8.php:38
+Stack trace:
+#0 /home/policaribe/public_html/sitio_web/libraries/vendor/composer/autoload_real.php(66): require()
+#1 /home/policaribe/public_html/sitio_web/libraries/vendor/composer/autoload_real.php(56): composerRequire205c915b9c7d3e718e7c95793ee67ffe('2fb9d6f23c8e8fa...', '/home/policarib...')
+#2 /home/policaribe/public_html/sitio_web/libraries/vendor/autoload.php(7): ComposerAutoloaderInit205c915b9c7d3e718e7c95793ee67ffe::getLoader()
+#3 /home/policaribe/public_html/sitio_web/libraries/cms.php(36): require('/home/policarib...')
+#4 /home/policaribe/public_html/sitio_web/includes/framework.php(18): require_once('/home/policarib...')
+#5 /home/policaribe/public_html/sitio_web/index.php(40): require_once('/home/policarib...')
+#6 {main}
+  thrown in /home/policaribe/public_html/sitio_web/libraries/vendor/joomla/string/src/phputf8/utf8.php on line 38
+[07-Apr-2025 08:37:29 America/New_York] PHP Fatal error:  Uncaught Error: Undefined constant "MB_OVERLOAD_STRING" in /home/policaribe/public_html/sitio_web/libraries/vendor/joomla/string/src/phputf8/utf8.php:38
+Stack trace:
+#0 /home/policaribe/public_html/sitio_web/libraries/vendor/composer/autoload_real.php(66): require()
+#1 /home/policaribe/public_html/sitio_web/libraries/vendor/composer/autoload_real.php(56): composerRequire205c915b9c7d3e718e7c95793ee67ffe('2fb9d6f23c8e8fa...', '/home/policarib...')
+#2 /home/policaribe/public_html/sitio_web/libraries/vendor/autoload.php(7): ComposerAutoloaderInit205c915b9c7d3e718e7c95793ee67ffe::getLoader()
+#3 /home/policaribe/public_html/sitio_web/libraries/cms.php(36): require('/home/policarib...')
+#4 /home/policaribe/public_html/sitio_web/includes/framework.php(18): require_once('/home/policarib...')
+#5 /home/policaribe/public_html/sitio_web/index.php(40): require_once('/home/policarib...')
+#6 {main}
+  thrown in /home/policaribe/public_html/sitio_web/libraries/vendor/joomla/string/src/phputf8/utf8.php on line 38
+[07-Apr-2025 08:37:34 America/New_York] PHP Fatal error:  Uncaught Error: Undefined constant "MB_OVERLOAD_STRING" in /home/policaribe/public_html/sitio_web/libraries/vendor/joomla/string/src/phputf8/utf8.php:38
+Stack trace:
+#0 /home/policaribe/public_html/sitio_web/libraries/vendor/composer/autoload_real.php(66): require()
+#1 /home/policaribe/public_html/sitio_web/libraries/vendor/composer/autoload_real.php(56): composerRequire205c915b9c7d3e718e7c95793ee67ffe('2fb9d6f23c8e8fa...', '/home/policarib...')
+#2 /home/policaribe/public_html/sitio_web/libraries/vendor/autoload.php(7): ComposerAutoloaderInit205c915b9c7d3e718e7c95793ee67ffe::getLoader()
+#3 /home/policaribe/public_html/sitio_web/libraries/cms.php(36): require('/home/policarib...')
+#4 /home/policaribe/public_html/sitio_web/includes/framework.php(18): require_once('/home/policarib...')
+#5 /home/policaribe/public_html/sitio_web/index.php(40): require_once('/home/policarib...')
+#6 {main}
+  thrown in /home/policaribe/public_html/sitio_web/libraries/vendor/joomla/string/src/phputf8/utf8.php on line 38
+[07-Apr-2025 08:37:40 America/New_York] PHP Fatal error:  Uncaught Error: Undefined constant "MB_OVERLOAD_STRING" in /home/policaribe/public_html/sitio_web/libraries/vendor/joomla/string/src/phputf8/utf8.php:38
+Stack trace:
+#0 /home/policaribe/public_html/sitio_web/libraries/vendor/composer/autoload_real.php(66): require()
+#1 /home/policaribe/public_html/sitio_web/libraries/vendor/composer/autoload_real.php(56): composerRequire205c915b9c7d3e718e7c95793ee67ffe('2fb9d6f23c8e8fa...', '/home/policarib...')
+#2 /home/policaribe/public_html/sitio_web/libraries/vendor/autoload.php(7): ComposerAutoloaderInit205c915b9c7d3e718e7c95793ee67ffe::getLoader()
+#3 /home/policaribe/public_html/sitio_web/libraries/cms.php(36): require('/home/policarib...')
+#4 /home/policaribe/public_html/sitio_web/includes/framework.php(18): require_once('/home/policarib...')
+#5 /home/policaribe/public_html/sitio_web/index.php(40): require_once('/home/policarib...')
+#6 {main}
+  thrown in /home/policaribe/public_html/sitio_web/libraries/vendor/joomla/string/src/phputf8/utf8.php on line 38
+[07-Apr-2025 08:37:51 America/New_York] PHP Fatal error:  Uncaught Error: Undefined constant "MB_OVERLOAD_STRING" in /home/policaribe/public_html/sitio_web/libraries/vendor/joomla/string/src/phputf8/utf8.php:38
+Stack trace:
+#0 /home/policaribe/public_html/sitio_web/libraries/vendor/composer/autoload_real.php(66): require()
+#1 /home/policaribe/public_html/sitio_web/libraries/vendor/composer/autoload_real.php(56): composerRequire205c915b9c7d3e718e7c95793ee67ffe('2fb9d6f23c8e8fa...', '/home/policarib...')
+#2 /home/policaribe/public_html/sitio_web/libraries/vendor/autoload.php(7): ComposerAutoloaderInit205c915b9c7d3e718e7c95793ee67ffe::getLoader()
+#3 /home/policaribe/public_html/sitio_web/libraries/cms.php(36): require('/home/policarib...')
+#4 /home/policaribe/public_html/sitio_web/includes/framework.php(18): require_once('/home/policarib...')
+#5 /home/policaribe/public_html/sitio_web/index.php(40): require_once('/home/policarib...')
+#6 {main}
+  thrown in /home/policaribe/public_html/sitio_web/libraries/vendor/joomla/string/src/phputf8/utf8.php on line 38
+[07-Apr-2025 08:37:53 America/New_York] PHP Fatal error:  Uncaught Error: Undefined constant "MB_OVERLOAD_STRING" in /home/policaribe/public_html/sitio_web/libraries/vendor/joomla/string/src/phputf8/utf8.php:38
+Stack trace:
+#0 /home/policaribe/public_html/sitio_web/libraries/vendor/composer/autoload_real.php(66): require()
+#1 /home/policaribe/public_html/sitio_web/libraries/vendor/composer/autoload_real.php(56): composerRequire205c915b9c7d3e718e7c95793ee67ffe('2fb9d6f23c8e8fa...', '/home/policarib...')
+#2 /home/policaribe/public_html/sitio_web/libraries/vendor/autoload.php(7): ComposerAutoloaderInit205c915b9c7d3e718e7c95793ee67ffe::getLoader()
+#3 /home/policaribe/public_html/sitio_web/libraries/cms.php(36): require('/home/policarib...')
+#4 /home/policaribe/public_html/sitio_web/includes/framework.php(18): require_once('/home/policarib...')
+#5 /home/policaribe/public_html/sitio_web/index.php(40): require_once('/home/policarib...')
+#6 {main}
+  thrown in /home/policaribe/public_html/sitio_web/libraries/vendor/joomla/string/src/phputf8/utf8.php on line 38
+[07-Apr-2025 08:37:57 America/New_York] PHP Fatal error:  Uncaught Error: Undefined constant "MB_OVERLOAD_STRING" in /home/policaribe/public_html/sitio_web/libraries/vendor/joomla/string/src/phputf8/utf8.php:38
+Stack trace:
+#0 /home/policaribe/public_html/sitio_web/libraries/vendor/composer/autoload_real.php(66): require()
+#1 /home/policaribe/public_html/sitio_web/libraries/vendor/composer/autoload_real.php(56): composerRequire205c915b9c7d3e718e7c95793ee67ffe('2fb9d6f23c8e8fa...', '/home/policarib...')
+#2 /home/policaribe/public_html/sitio_web/libraries/vendor/autoload.php(7): ComposerAutoloaderInit205c915b9c7d3e718e7c95793ee67ffe::getLoader()
+#3 /home/policaribe/public_html/sitio_web/libraries/cms.php(36): require('/home/policarib...')
+#4 /home/policaribe/public_html/sitio_web/includes/framework.php(18): require_once('/home/policarib...')
+#5 /home/policaribe/public_html/sitio_web/index.php(40): require_once('/home/policarib...')
+#6 {main}
+  thrown in /home/policaribe/public_html/sitio_web/libraries/vendor/joomla/string/src/phputf8/utf8.php on line 38
+[07-Apr-2025 08:38:11 America/New_York] PHP Fatal error:  Uncaught Error: Undefined constant "MB_OVERLOAD_STRING" in /home/policaribe/public_html/sitio_web/libraries/vendor/joomla/string/src/phputf8/utf8.php:38
+Stack trace:
+#0 /home/policaribe/public_html/sitio_web/libraries/vendor/composer/autoload_real.php(66): require()
+#1 /home/policaribe/public_html/sitio_web/libraries/vendor/composer/autoload_real.php(56): composerRequire205c915b9c7d3e718e7c95793ee67ffe('2fb9d6f23c8e8fa...', '/home/policarib...')
+#2 /home/policaribe/public_html/sitio_web/libraries/vendor/autoload.php(7): ComposerAutoloaderInit205c915b9c7d3e718e7c95793ee67ffe::getLoader()
+#3 /home/policaribe/public_html/sitio_web/libraries/cms.php(36): require('/home/policarib...')
+#4 /home/policaribe/public_html/sitio_web/includes/framework.php(18): require_once('/home/policarib...')
+#5 /home/policaribe/public_html/sitio_web/index.php(40): require_once('/home/policarib...')
+#6 {main}
+  thrown in /home/policaribe/public_html/sitio_web/libraries/vendor/joomla/string/src/phputf8/utf8.php on line 38
+[07-Apr-2025 08:38:20 America/New_York] PHP Fatal error:  Uncaught Error: Undefined constant "MB_OVERLOAD_STRING" in /home/policaribe/public_html/sitio_web/libraries/vendor/joomla/string/src/phputf8/utf8.php:38
+Stack trace:
+#0 /home/policaribe/public_html/sitio_web/libraries/vendor/composer/autoload_real.php(66): require()
+#1 /home/policaribe/public_html/sitio_web/libraries/vendor/composer/autoload_real.php(56): composerRequire205c915b9c7d3e718e7c95793ee67ffe('2fb9d6f23c8e8fa...', '/home/policarib...')
+#2 /home/policaribe/public_html/sitio_web/libraries/vendor/autoload.php(7): ComposerAutoloaderInit205c915b9c7d3e718e7c95793ee67ffe::getLoader()
+#3 /home/policaribe/public_html/sitio_web/libraries/cms.php(36): require('/home/policarib...')
+#4 /home/policaribe/public_html/sitio_web/includes/framework.php(18): require_once('/home/policarib...')
+#5 /home/policaribe/public_html/sitio_web/index.php(40): require_once('/home/policarib...')
+#6 {main}
+  thrown in /home/policaribe/public_html/sitio_web/libraries/vendor/joomla/string/src/phputf8/utf8.php on line 38
+[07-Apr-2025 08:38:22 America/New_York] PHP Fatal error:  Uncaught Error: Undefined constant "MB_OVERLOAD_STRING" in /home/policaribe/public_html/sitio_web/libraries/vendor/joomla/string/src/phputf8/utf8.php:38
+Stack trace:
+#0 /home/policaribe/public_html/sitio_web/libraries/vendor/composer/autoload_real.php(66): require()
+#1 /home/policaribe/public_html/sitio_web/libraries/vendor/composer/autoload_real.php(56): composerRequire205c915b9c7d3e718e7c95793ee67ffe('2fb9d6f23c8e8fa...', '/home/policarib...')
+#2 /home/policaribe/public_html/sitio_web/libraries/vendor/autoload.php(7): ComposerAutoloaderInit205c915b9c7d3e718e7c95793ee67ffe::getLoader()
+#3 /home/policaribe/public_html/sitio_web/libraries/cms.php(36): require('/home/policarib...')
+#4 /home/policaribe/public_html/sitio_web/includes/framework.php(18): require_once('/home/policarib...')
+#5 /home/policaribe/public_html/sitio_web/index.php(40): require_once('/home/policarib...')
+#6 {main}
+  thrown in /home/policaribe/public_html/sitio_web/libraries/vendor/joomla/string/src/phputf8/utf8.php on line 38
