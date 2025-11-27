@@ -1,0 +1,20 @@
+[01-Apr-2025 12:47:33 America/New_York] PHP Fatal error:  Uncaught Error: Undefined constant "MB_OVERLOAD_STRING" in /home/policaribe/public_html/sitio_web/libraries/vendor/joomla/string/src/phputf8/utf8.php:38
+Stack trace:
+#0 /home/policaribe/public_html/sitio_web/libraries/vendor/composer/autoload_real.php(66): require()
+#1 /home/policaribe/public_html/sitio_web/libraries/vendor/composer/autoload_real.php(56): composerRequire205c915b9c7d3e718e7c95793ee67ffe('2fb9d6f23c8e8fa...', '/home/policarib...')
+#2 /home/policaribe/public_html/sitio_web/libraries/vendor/autoload.php(7): ComposerAutoloaderInit205c915b9c7d3e718e7c95793ee67ffe::getLoader()
+#3 /home/policaribe/public_html/sitio_web/libraries/cms.php(36): require('/home/policarib...')
+#4 /home/policaribe/public_html/sitio_web/administrator/includes/framework.php(18): require_once('/home/policarib...')
+#5 /home/policaribe/public_html/sitio_web/administrator/index.php(40): require_once('/home/policarib...')
+#6 {main}
+  thrown in /home/policaribe/public_html/sitio_web/libraries/vendor/joomla/string/src/phputf8/utf8.php on line 38
+[01-Apr-2025 12:47:36 America/New_York] PHP Fatal error:  Uncaught Error: Undefined constant "MB_OVERLOAD_STRING" in /home/policaribe/public_html/sitio_web/libraries/vendor/joomla/string/src/phputf8/utf8.php:38
+Stack trace:
+#0 /home/policaribe/public_html/sitio_web/libraries/vendor/composer/autoload_real.php(66): require()
+#1 /home/policaribe/public_html/sitio_web/libraries/vendor/composer/autoload_real.php(56): composerRequire205c915b9c7d3e718e7c95793ee67ffe('2fb9d6f23c8e8fa...', '/home/policarib...')
+#2 /home/policaribe/public_html/sitio_web/libraries/vendor/autoload.php(7): ComposerAutoloaderInit205c915b9c7d3e718e7c95793ee67ffe::getLoader()
+#3 /home/policaribe/public_html/sitio_web/libraries/cms.php(36): require('/home/policarib...')
+#4 /home/policaribe/public_html/sitio_web/administrator/includes/framework.php(18): require_once('/home/policarib...')
+#5 /home/policaribe/public_html/sitio_web/administrator/index.php(40): require_once('/home/policarib...')
+#6 {main}
+  thrown in /home/policaribe/public_html/sitio_web/libraries/vendor/joomla/string/src/phputf8/utf8.php on line 38
