@@ -51,6 +51,64 @@ a[href*="avalpaycenter.com"] { display: none !important; }
 	var gtm4wp_datalayer_name = "dataLayer";
 	var dataLayer = dataLayer || [];
 </script>
+<script>
+(function(){
+  var BASE = (window.location.hostname === 'localhost'
+    ? (window.location.origin + '/Software-Institucional-CMS')
+    : 'https://policaribe.edu.co');
+  function fixUrl(s){
+    s = (s||'').trim();
+    if(!s) return s;
+    // Absolutas
+    if(/^https?:\/\//i.test(s)){
+      try {
+        var u = new URL(s);
+        if(window.location.hostname === 'localhost' && u.origin === window.location.origin){
+          if(u.pathname.indexOf('/policaribe/') === 0 || u.pathname.indexOf('/showimagen/') === 0 || u.pathname.indexOf('/uploads/') === 0){
+            return BASE + u.pathname;
+          }
+        }
+      } catch(e){}
+      return s;
+    }
+    if(s.indexOf('data:') === 0) return s;
+    // Normalizar legacy
+    s = s.replace(/^\/sitio_web\//, '/');
+    // Root-leading
+    if(s.charAt(0) === '/') return BASE + s;
+    // Relativas que suben a policaribe
+    if(/^(\.\.\/)+policaribe\//.test(s) || /^\.\/policaribe\//.test(s)){
+      var cleaned = s.replace(/^(\.\.\/)+/, '').replace(/^\.\//, '');
+      return BASE + '/' + cleaned.replace(/\s/g, '%20');
+    }
+    // Resolver relativas contra la URL actual y anclar al BASE
+    try {
+      var abs = new URL(s, window.location.href).pathname;
+      abs = abs.replace(/^\/Software-Institucional-CMS/, '');
+      return BASE + (abs.charAt(0) === '/' ? abs : ('/' + abs));
+    } catch(e){
+      return BASE + '/' + s.replace(/\s/g, '%20');
+    }
+  }
+  document.addEventListener('DOMContentLoaded', function(){
+    var imgs = document.querySelectorAll('img[data-src], img[src]');
+    imgs.forEach(function(img){
+      var ds = img.getAttribute('data-src');
+      if(ds){
+        var u = fixUrl(ds);
+        img.setAttribute('src', u);
+        var dsset = img.getAttribute('data-srcset');
+        if(dsset){ img.setAttribute('srcset', dsset); }
+        img.classList.remove('lazyload');
+      } else {
+        var src = img.getAttribute('src');
+        var u2 = fixUrl(src);
+        if(u2 !== src){ img.setAttribute('src', u2); }
+      }
+    });
+  });
+})();
+</script>
 <!-- End Google Tag Manager for WordPress by gtm4wp.com -->
 <!-- Search Engine Optimization by Rank Math - https://rankmath.com/ -->
 <title>POLICARIBE</title>

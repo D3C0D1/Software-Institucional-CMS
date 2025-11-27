@@ -2420,7 +2420,9 @@
 <script>
 // Calendario y Noticias dinámicos conectados al panel de administración
 (function($){
-  var SITE_URL = window.location.origin + '/sitio_web';
+  var SITE_URL = (window.location.hostname === 'localhost'
+    ? (window.location.origin + '/Software-Institucional-CMS')
+    : 'https://policaribe.edu.co');
   function normSrc(s){
     if(!s) return 'images/demo/blog/1.jpg';
     s = (s||'').trim();

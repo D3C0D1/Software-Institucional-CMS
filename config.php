@@ -4,17 +4,27 @@
  * CECAR Blog System
  */
 
-// Configuración de la base de datos
-define('DB_HOST', 'localhost');
-define('DB_NAME', 'policaribe');
-define('DB_USER', 'root');
-define('DB_PASS', 'mysql');
-define('DB_CHARSET', 'utf8mb4');
+// Configuración de la base de datos por entorno
+$__isLocalHost = isset($_SERVER['HTTP_HOST']) && in_array($_SERVER['HTTP_HOST'], ['localhost', '127.0.0.1']);
+$__isAmpps = strpos(__DIR__, '/Applications/AMPPS/') !== false;
+if ($__isLocalHost || $__isAmpps) {
+    define('DB_HOST', 'localhost');
+    define('DB_NAME', 'policaribe');
+    define('DB_USER', 'root');
+    define('DB_PASS', 'mysql');
+    define('DB_CHARSET', 'utf8mb4');
+} else {
+    define('DB_HOST', 'localhost');
+    define('DB_NAME', 'poli_policaribe');
+    define('DB_USER', 'poli_admin');
+    define('DB_PASS', 'A0347a1312#');
+    define('DB_CHARSET', 'utf8mb4');
+}
 
 // Configuración del sitio
 // Configuración del sitio
 if (isset($_SERVER['HTTP_HOST']) && $_SERVER['HTTP_HOST'] === 'localhost') {
-    define('SITE_URL', 'http://localhost/sitio_web');
+    define('SITE_URL', 'http://localhost/Software-Institucional-CMS');
 } else {
     define('SITE_URL', 'https://policaribe.edu.co');
 }

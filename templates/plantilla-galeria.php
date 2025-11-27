@@ -15,6 +15,14 @@ $grid_limite = 6;
 $grid_offset = ($pagina - 1) * $grid_limite;
 $grid_articulos = obtenerArticulos($categoria_id, $grid_limite, $grid_offset, $busqueda);
 $grid_total_paginas = max(1, ceil($total_articulos / $grid_limite));
+function normalize_src($s){
+    $s = html_entity_decode($s, ENT_QUOTES, 'UTF-8');
+    $s = preg_replace('#^https?://localhost/sitio_web#', SITE_URL, $s);
+    if (!preg_match('/^https?:\/\//', $s)) {
+        $s = (strpos($s, '/') === 0) ? SITE_URL . $s : SITE_URL . '/' . $s;
+    }
+    return $s;
+}
 ?>
 <!DOCTYPE html>
 <html prefix="og: http://ogp.me/ns#" lang="es-co">
@@ -353,7 +361,7 @@ $grid_total_paginas = max(1, ceil($total_articulos / $grid_limite));
                                     </div>
                                     <a class="readmore" href="https://policaribe.edu.co/templates/plantilla-articulo.php?slug=<?php echo $featured['slug']; ?>">Leer más...</a>
                                     <?php if (!empty($featured['imagen_principal'])): ?>
-                                        <?php $__src = $featured['imagen_principal']; if (!preg_match('/^https?:\/\//', $__src)) { $__src = (strpos($__src, '/') === 0) ? SITE_URL . $__src : SITE_URL . '/' . $__src; } ?>
+                                        <?php $__src = normalize_src($featured['imagen_principal']); ?>
                                         <a class="moduleItemImage" href="https://policaribe.edu.co/templates/plantilla-articulo.php?slug=<?php echo $featured['slug']; ?>" title="Leer más &quot;<?php echo htmlspecialchars($featured['titulo']); ?>&quot;">
                                             <img src="<?php echo htmlspecialchars($__src); ?>" alt="<?php echo htmlspecialchars($featured['titulo']); ?>" />
                                         </a>
@@ -376,7 +384,7 @@ $grid_total_paginas = max(1, ceil($total_articulos / $grid_limite));
                                                 <div class="item">
                                                     <a class="cv-img" href="https://policaribe.edu.co/templates/plantilla-articulo.php?slug=<?php echo $a['slug']; ?>" title="Leer más &quot;<?php echo htmlspecialchars($a['titulo']); ?>&quot;">
                                                         <?php if (!empty($a['imagen_principal'])): ?>
-                                                            <?php $__src = $a['imagen_principal']; if (!preg_match('/^https?:\/\//', $__src)) { $__src = (strpos($__src, '/') === 0) ? SITE_URL . $__src : SITE_URL . '/' . $__src; } ?>
+                                                            <?php $__src = normalize_src($a['imagen_principal']); ?>
                                                             <img src="<?php echo htmlspecialchars($__src); ?>" alt="<?php echo htmlspecialchars($a['titulo']); ?>" />
                                                         <?php endif; ?>
                                                     </a>
@@ -427,7 +435,7 @@ $grid_total_paginas = max(1, ceil($total_articulos / $grid_limite));
                                             <div class="grid-item">
                                                 <a href="https://policaribe.edu.co/templates/plantilla-articulo.php?slug=<?php echo $ga['slug']; ?>" title="Leer más &quot;<?php echo htmlspecialchars($ga['titulo']); ?>&quot;">
                                                     <?php if (!empty($ga['imagen_principal'])): ?>
-                                                        <?php $__src = $ga['imagen_principal']; if (!preg_match('/^https?:\/\//', $__src)) { $__src = (strpos($__src, '/') === 0) ? SITE_URL . $__src : SITE_URL . '/' . $__src; } ?>
+                                                        <?php $__src = normalize_src($ga['imagen_principal']); ?>
                                                         <img src="<?php echo htmlspecialchars($__src); ?>" alt="<?php echo htmlspecialchars($ga['titulo']); ?>" />
                                                     <?php endif; ?>
                                                 </a>

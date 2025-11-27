@@ -78,7 +78,9 @@ if(typeof jQuery !== 'undefined'){
 
 if(typeof jQuery !== 'undefined'){
   jQuery(function($){
-    var SITE_URL = window.location.origin + '/sitio_web';
+    var SITE_URL = (window.location.hostname === 'localhost'
+      ? (window.location.origin + '/Software-Institucional-CMS')
+      : 'https://policaribe.edu.co');
     function normSrc(s){
       if(!s) return 'images/demo/blog/1.jpg';
       s = (s||'').trim();
@@ -218,11 +220,11 @@ function buildCandidates(s){
   s = (s || '').trim();
   if(!s){ return ['images/demo/blog/1.jpg']; }
   var p = s.replace(/^\/+/, '');
-  if(p.indexOf('sitio_web/') === 0){ p = p.substring('sitio_web/'.length); }
+  if(p.indexOf('Software-Institucional-CMS/') === 0){ p = p.substring('Software-Institucional-CMS/'.length); }
   else if(p.indexOf('policaribe/') === 0){ p = p.substring('policaribe/'.length); }
   p = p.replace(/^\/+/, '');
   out.push(window.location.origin + '/' + p);
-  out.push(window.location.origin + '/sitio_web/' + p);
+  out.push(window.location.origin + '/Software-Institucional-CMS/' + p);
   out.push(window.location.origin + '/policaribe/' + p);
   if(/^https?:\/\//i.test(s)){ out.push(s); }
   var uniq = []; var seen = {};
