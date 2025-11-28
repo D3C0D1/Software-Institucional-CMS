@@ -329,6 +329,10 @@ $mensaje = getMensaje();
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script>
       jQuery(function($){
+        // Limpia cualquier backdrop residual tras el redirect de login
+        $('.modal-backdrop').remove();
+        $('body').removeClass('modal-open');
+
         $('.sidebar-toggle').on('click', function(){
           $(this).toggleClass('collapsed');
           $(this).next('.sidebar-section').toggleClass('collapsed');

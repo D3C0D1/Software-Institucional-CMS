@@ -79,7 +79,7 @@
         background-color: #128C7E;
     }
 
-    </style>
+</style>
     
     <style>
     /* Estilos generales */
@@ -145,7 +145,7 @@
     }
     
     /* Responsive eslogan */
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 720px) {
         .eslogan-text {
             font-size: 28px !important;
         }
@@ -165,7 +165,7 @@
         }
     }
     
-    @media (max-width: 991px) {
+    @media (max-width: 720px) {
         .eslogan-text {
             font-size: 32px !important;
         }
@@ -368,12 +368,19 @@
         color: #4d4d4d;
     }
 
+    @media (min-width: 721px) {
+        .preheader-bar { position: relative; }
+        .preheader-center { position: absolute; left: 50%; transform: translateX(-50%); flex: 0 0 auto; }
+        .preheader-left { justify-content: flex-start; }
+        .preheader-right { justify-content: flex-end; }
+    }
+
     .preheader-right a {
         text-decoration: none;
     }
 
     .preheader-medalla {
-        max-width: 220px;
+        max-width: 253px;
         width: 100%;
         height: auto;
     }
@@ -455,16 +462,19 @@
         color: #ffd166 !important;
     }
 
-    @media (max-width: 991px) {
+    @media (max-width: 720px) {
         .preheader-bar {
             flex-wrap: wrap;
             gap: 15px;
         }
 
-        .preheader-left,
-        .preheader-right {
+        .preheader-left {
             width: 100%;
             justify-content: center;
+        }
+        .preheader-right {
+            width: 100%;
+            justify-content: flex-end;
         }
 
         .preheader-center {
@@ -487,27 +497,37 @@
 
     #menu-es {background-color:#901913}
 
-    @media (max-width: 991px), (orientation: portrait) {
+    @media (max-width: 720px), (orientation: portrait) {
         .preheader-center .menu-mobile { display: block; }
     }
 
-    @media (max-width: 480px) {
+    @media (max-width: 720px) {
         .preheader-sede { padding: 8px 12px; font-size: 12px; gap: 8px; }
     }
 
     .menu-mobile .navbar-toggle { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border: 0; background: #FBBC21; border-radius: 6px; }
     .menu-mobile .icon-bar { display: block; width: 20px; height: 2px; background: #fff; margin: 3px 0; }
 
-    #ml-menu { position: fixed; left: 0; right: 0; top: 0; bottom: 0; background: #fff; z-index: 9999; transform: translateY(-100%); transition: transform .25s ease; }
-    #ml-menu.show { transform: translateY(0); }
-    #ml-menu.menu { display: none; }
-    #ml-menu.menu.show { display: block; }
-    #ml-menu .menu__wrap { padding: 60px 12px; }
-    #ml-menu .menu__level { list-style: none; margin: 0; padding: 0; display: none; }
-    #ml-menu .menu__level.active { display: block; }
-    #ml-menu .menu__level .menu__item { border-bottom: 1px solid #e5e5e5; }
-    #ml-menu .menu__level .menu__link { display: block; padding: 14px 12px; text-decoration: none; color: #222; }
-    .action.action--close { border: 0; background: #fff; }
+    #qa-modal { position: fixed; left: 0; right: 0; top: 0; bottom: 0; background: rgba(0,0,0,.6); z-index: 99999; opacity: 0; visibility: hidden; transition: opacity .25s ease, visibility .25s ease; }
+    #qa-modal.show { opacity: 1; visibility: visible; }
+    #qa-modal .qa-dialog { background: #fff; border-radius: 0; padding: 16px; width: 92%; max-width: 520px; margin: 12vh auto; box-shadow: 0 10px 30px rgba(0,0,0,.25); border: 1px solid #e5e5e5; }
+    #qa-modal .qa-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+    #qa-modal .qa-close { border: 0; background: transparent; font-size: 22px; }
+    #qa-modal .qa-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    #qa-modal .qa-item { display: block; padding: 12px; border: 1px solid #e5e5e5; border-radius: 0; text-decoration: none; color: #222; -webkit-text-fill-color: #222; background: #f9fafb; }
+    #qa-modal .qa-item i { margin-right: 8px; }
+    #qa-modal .qa-item[data-sub]{ position: relative; padding-right: 28px; }
+    #qa-modal .qa-item[data-sub]::after{ content: "\25BE"; position: absolute; right: 10px; top: 50%; transform: translateY(-50%) rotate(0deg); color: #666; transition: transform .2s ease; }
+    #qa-modal .qa-item.open[data-sub]::after{ transform: translateY(-50%) rotate(180deg); }
+    #qa-modal .qa-sublist { display: none; margin-top: 8px; }
+    #eventos, #event-popover{ display:none !important; }
+    #qa-modal .qa-item.open + .qa-sublist { display: block; }
+    #qa-modal .qa-sublist a { display: block; padding: 8px; border: 1px dashed #ddd; border-radius: 0; margin-top: 6px; color: #222; -webkit-text-fill-color: #222; text-decoration: none; background: #fff; }
+    #qa-modal .qa-item:hover { filter: brightness(0.98); }
+    #qa-modal .qa-grid .qa-item:nth-child(3n+1) { background: #f5f6f8; border-color: #e3e6ea; }
+    #qa-modal .qa-grid .qa-item:nth-child(3n+2) { background: #fff7e6; border-color: #ffe3a6; }
+    #qa-modal .qa-grid .qa-item:nth-child(3n)   { background: #fff0f0; border-color: #f6c8c8; }
+    @media (min-width: 721px) { #qa-modal .qa-dialog { width: 700px; } #qa-modal .qa-grid { grid-template-columns: repeat(3, 1fr); } }
 
     /* CORRECCIÓN: Forzar colores del menú UNISIMON */
     #menu-es .b51 {
@@ -909,7 +929,7 @@
     }
 
     /* En móviles se deja el comportamiento original */
-    @media (max-width: 991px) {
+    @media (max-width: 720px) {
         #menu-es .b51 .content {
             padding: 10px 15px;
             min-height: auto;
@@ -1138,14 +1158,14 @@
     }
     
     /* Responsive para tablets */
-    @media (max-width: 991px) {
+    @media (max-width: 720px) {
         .sppb-title-heading {
             font-size: 36px;
         }
     }
     
     /* Responsive para móviles */
-    @media (max-width: 767px) {
+    @media (max-width: 720px) {
         .sppb-title-heading {
             font-size: 28px;
         }
@@ -1393,7 +1413,7 @@
     }
     
     /* Responsive - Tabletas horizontales */
-    @media (min-width: 768px) and (max-width: 1023px) {
+    @media (min-width: 721px) and (max-width: 1023px) {
         .hero-slider {
             max-height: 380px;
         }
@@ -1413,7 +1433,7 @@
     }
     
     /* Responsive - Tabletas verticales y móviles grandes */
-    @media (min-width: 481px) and (max-width: 767px) {
+    @media (max-width: 720px) {
         .hero-slider {
             max-height: 300px;
             min-height: 200px;
@@ -1461,7 +1481,7 @@
     }
     
     /* Responsive - Móviles */
-    @media (max-width: 480px) {
+    @media (max-width: 720px) {
         .hero-slider {
             max-height: 250px;
             min-height: 180px;
@@ -1553,7 +1573,9 @@
     #datepicker .has-event a {
         background-color: #ECC31F !important;
         color: #2b2b2b !important;
-        border-radius: 50% !important;
+        border-radius: 0 !important;
+        display: block;
+        padding: 6px 0;
     }
     .acciones-secundarias{background:#fff}
     .acciones-secundarias .container{max-width:1200px;margin:0 auto;display:flex;justify-content:center;gap:28px;padding:8px 16px 0;flex-wrap:nowrap}
@@ -1563,7 +1585,7 @@
     .sec-btn:after{content:'';position:absolute;left:0;right:0;bottom:-6px;height:3px;background:#ddd;opacity:.6;transform:scaleX(0);transition:.18s ease transform}
     .sec-btn:hover{color:#666}
     .sec-btn:hover:after{background:#ECC31F;opacity:1;transform:scaleX(1)}
-    @media(max-width:991px){.acciones-secundarias .container{flex-wrap:wrap;gap:18px}.sec-btn{font-size:16px;padding:10px 8px}}
+    @media(max-width:720px){.acciones-secundarias .container{flex-wrap:wrap;gap:18px}.sec-btn{font-size:16px;padding:10px 8px}}
     #datepicker{background:transparent;border-radius:0;box-shadow:none;padding:0}
     .ui-datepicker{width:100%;background:#fff;border:none;border-radius:0;box-shadow:none;padding:0}
     .ui-datepicker .ui-datepicker-header{background:#fff;color:#2b2b2b;border:none;padding:12px 8px 8px;border-radius:8px;margin-bottom:12px;display:flex;align-items:center;justify-content:space-between}
@@ -1576,11 +1598,9 @@
     .ui-datepicker-calendar td{background:transparent;border:none;padding:0}
     .ui-datepicker .ui-state-default{border:none;background:transparent;border-radius:0;padding:10px 0;color:#2b2b2b;font-weight:400;font-size:14px;transition:all 0.2s ease;position:relative}
     .ui-datepicker .ui-state-hover{background:#f8f8f8;color:#2b2b2b}
-    .ui-datepicker .ui-state-active{background:#ECC31F;color:#2b2b2b;font-weight:600;border-radius:18px;padding:6px 10px;display:inline-block}
-    #datepicker .has-event a{background:transparent;position:relative}
-    #datepicker .has-event a::after{content:'';position:absolute;left:50%;bottom:4px;width:4px;height:4px;background:#ECC31F;border-radius:50%;transform:translateX(-50%)}
-    @media(max-width:768px){.ui-datepicker .ui-datepicker-title{font-size:18px}; .ui-datepicker{padding:12px}; .ui-datepicker-calendar th{padding:10px 0 6px;font-size:12px}; .ui-datepicker .ui-state-default{padding:8px 0;font-size:13px}}
-    @media(max-width:480px){.ui-datepicker{padding:10px}; .ui-datepicker .ui-datepicker-header{padding:10px 6px 6px}; .ui-datepicker-calendar th{padding:8px 0 4px;font-size:11px}; .ui-datepicker .ui-state-default{padding:6px 0;font-size:12px}; .ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next{width:28px;height:28px}}
+    .ui-datepicker .ui-state-active{background:#ECC31F;color:#2b2b2b;font-weight:600;border-radius:0;padding:6px 0;display:block}
+    @media(max-width:720px){.ui-datepicker .ui-datepicker-title{font-size:18px}; .ui-datepicker{padding:12px}; .ui-datepicker-calendar th{padding:10px 0 6px;font-size:12px}; .ui-datepicker .ui-state-default{padding:8px 0;font-size:13px}}
+    @media(max-width:720px){.ui-datepicker{padding:10px}; .ui-datepicker .ui-datepicker-header{padding:10px 6px 6px}; .ui-datepicker-calendar th{padding:8px 0 4px;font-size:11px}; .ui-datepicker .ui-state-default{padding:6px 0;font-size:12px}; .ui-datepicker .ui-datepicker-prev, .ui-datepicker .ui-datepicker-next{width:28px;height:28px}}
     #eventos .ev-card{background:#fff;border-radius:12px;box-shadow:0 10px 24px rgba(0,0,0,.12);padding:12px 14px;margin-bottom:12px}
     #eventos .ev-title{font-weight:600;color:#2b2b2b;margin:0 0 6px}
     #eventos .ev-desc{color:#666;font-size:13px}
@@ -1598,7 +1618,7 @@
     .calendar-popover li:last-child{border-bottom:none}
     .calendar-popover a{color:#7a1510;text-decoration:none;font-weight:500;font-size:14px}
     .calendar-popover a:hover{color:#b5241b}
-    @media(max-width:768px){.calendar-popover{position:static;right:auto;top:auto;margin-top:16px;width:100%}}
+    @media(max-width:720px){.calendar-popover{position:static;right:auto;top:auto;margin-top:16px;width:100%}}
     </style>
 
     <style>
@@ -1873,7 +1893,7 @@
         margin: 0;
     }
 
-    @media (max-width: 991px) {
+    @media (max-width: 720px) {
         .policaribe-section {
             padding: 48px 18px;
         }
@@ -1896,7 +1916,7 @@
         }
     }
 
-    @media (max-width: 767px) {
+    @media (max-width: 720px) {
         .policaribe-section {
             padding: 36px 16px;
         }
@@ -1934,7 +1954,7 @@
     }
 
     /* Chatbot responsivo con scroll */
-    @media (max-width: 768px) {
+    @media (max-width: 720px) {
         /* Para widgets de chatbot externos (Tawk.to, Intercom, etc.) */
         iframe[id*="chat"], 
         iframe[class*="chat"],
@@ -1986,7 +2006,7 @@
     }
 
     /* Estilos adicionales para pantallas muy pequeñas */
-    @media (max-width: 480px) {
+    @media (max-width: 720px) {
         iframe[id*="chat"], 
         iframe[class*="chat"],
         [id*="chatbot"],
@@ -2004,7 +2024,7 @@
     }
     
     /* Chatbot responsivo adicional - ajustar tamaño en móviles */
-    @media (max-width: 768px) {
+    @media (max-width: 720px) {
         /* Ajustar chatbots flotantes para móviles */
         [class*="chat"]:not(input):not(textarea):not(button), 
         [id*="chat"]:not(input):not(textarea):not(button), 
@@ -2020,6 +2040,91 @@
         [class*="tawk"] {
             z-index: 9998 !important;
         }
+    }
+    </style>
+    <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      var menu = document.getElementById('ml-menu');
+      var qaModal = document.getElementById('qa-modal');
+      var toggle = document.getElementById('preheader-hamburger');
+      var headerToggle = document.getElementById('header-hamburger');
+      var closeBtn = menu ? menu.querySelector('.action--close') : null;
+      var qaClose = qaModal ? qaModal.querySelector('.qa-close') : null;
+      var levels = menu ? menu.querySelectorAll('.menu__level') : [];
+      var mainLevel = menu ? menu.querySelector('.menu__level[data-menu="main"]') : null;
+      function openMenu(){
+        if(qaModal){
+          qaModal.classList.add('show');
+          document.body.style.overflow = 'hidden';
+          if(toggle){ toggle.setAttribute('aria-expanded','true'); }
+          if(headerToggle){ headerToggle.setAttribute('aria-expanded','true'); }
+          return;
+        }
+        if(menu){
+          menu.classList.add('show');
+          document.body.style.overflow = 'hidden';
+          if(levels && levels.length){ levels.forEach(function(el){ el.classList.remove('active'); }); }
+          if(mainLevel){ mainLevel.classList.add('active'); }
+          if(toggle){ toggle.setAttribute('aria-expanded','true'); }
+        }
+      }
+      function closeMenu(){
+        if(qaModal && qaModal.classList.contains('show')){
+          qaModal.classList.remove('show');
+          document.body.style.overflow = '';
+          if(toggle){ toggle.setAttribute('aria-expanded','false'); }
+          if(headerToggle){ headerToggle.setAttribute('aria-expanded','false'); }
+          return;
+        }
+        if(menu){
+          menu.classList.remove('show');
+          document.body.style.overflow = '';
+          if(toggle){ toggle.setAttribute('aria-expanded','false'); }
+        }
+      }
+      if(toggle){ toggle.addEventListener('click', openMenu); }
+      if(headerToggle){ headerToggle.addEventListener('click', openMenu); }
+      if(closeBtn){ closeBtn.addEventListener('click', closeMenu); }
+      if(qaClose){ qaClose.addEventListener('click', closeMenu); }
+      if(qaModal){ qaModal.addEventListener('click', function(e){ if(e.target === qaModal){ closeMenu(); } }); }
+      document.addEventListener('keydown', function(e){ if(e.key === 'Escape'){ closeMenu(); } });
+      var subLinks = menu ? menu.querySelectorAll('.menu__link[data-submenu]') : [];
+      subLinks.forEach(function(link){
+        link.addEventListener('click', function(e){
+          var id = this.getAttribute('data-submenu');
+          if(id){
+            e.preventDefault();
+            var target = menu.querySelector('.menu__level[data-menu="'+id+'"]');
+            if(target){
+              if(levels && levels.length){ levels.forEach(function(el){ el.classList.remove('active'); }); }
+              target.classList.add('active');
+            }
+          }
+        });
+      });
+      var qaSubTriggers = qaModal ? qaModal.querySelectorAll('.qa-item[data-sub]') : [];
+      qaSubTriggers.forEach(function(el){
+        el.addEventListener('click', function(e){
+          e.preventDefault();
+          el.classList.toggle('open');
+          var next = el.nextElementSibling;
+          if(next && next.classList && next.classList.contains('qa-sublist')){
+            next.style.display = el.classList.contains('open') ? 'block' : 'none';
+          }
+        });
+      });
+    });
+    </script>
+
+    <style>
+    @media (max-width: 720px){
+      .hero-slider{ display: none !important; }
+      .hero-slider-mobile{ display: block !important; }
+      #menu-es{ position: static !important; z-index: auto !important; }
+    }
+    @media (min-width: 721px){
+      .hero-slider{ display: block !important; }
+      .hero-slider-mobile{ display: none !important; }
     }
     </style>
 </head>
@@ -2058,62 +2163,33 @@
     <a href="https://www.unisimon.edu.co/servicios/bienestaruniversitario"><div class="mb10">Bienestar Universitario</div></a>
 </div>
 
-<!-- Menu mobile desplegable -->
-<nav id="ml-menu" class="menu">
-    <div class="pad5 bwhite w100 top0 abs">
-        <div class="content">
-            <div class="fleft">
-                <button class="action action--close" aria-label="Cerrar menú">
-                    <i class="fas fa-times"></i>
-                </button>
+<div id="qa-modal">
+    <div class="qa-dialog">
+        <div class="qa-header">
+            <span>Acciones rápidas</span>
+            <button class="qa-close" aria-label="Cerrar"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="qa-grid">
+            <a class="qa-item" href="https://site2.q10.com/preinscripcion?aplentId=cd2173fa-287d-40c7-84a7-ce6098ccf063" target="_blank"><i class="fas fa-user-graduate"></i>Inscripciones</a>
+            <a class="qa-item" href="#section-policredito"><i class="fas fa-award"></i>Obtén una beca</a>
+            <a class="qa-item" data-sub="programas"><i class="fas fa-book"></i>Oferta Académica</a>
+            <div class="qa-sublist">
+                <a href="policaribe/programas/auxiliar-administrativo.html"><i class="fas fa-briefcase"></i>Auxiliar Administrativo</a>
+                <a href="policaribe/programas/preparacion-yentrenamiento-fisico.html"><i class="fas fa-dumbbell"></i>Preparación y Entrenamiento Físico</a>
+                <a href="policaribe/programas/seguridad-ocupacionalylaboral.html"><i class="fas fa-hard-hat"></i>Seguridad Ocupacional y Laboral</a>
+                <a href="policaribe/programas/auxiliar-en-enfermeria.html"><i class="fas fa-notes-medical"></i>Auxiliar en Enfermería</a>
+                <a href="policaribe/programas/asistente-marketing-y-comunicaciones.html"><i class="fas fa-bullhorn"></i>Asistente de Marketing y Comunicaciones</a>
+                <a href="policaribe/programas/auxiliar-contable-y-financiero.html"><i class="fas fa-calculator"></i>Auxiliar Contable y Financiero</a>
+                <a href="policaribe/programas/animacion-graficayde-multimedia.html"><i class="fas fa-photo-video"></i>Animación Gráfica y de Multimedia</a>
+                <a href="policaribe/programas/auxiliar-en-educacion-para-la-primera-infancia.html"><i class="fas fa-child"></i>Auxiliar en Educación para la Primera Infancia</a>
             </div>
-            <div class="fright">
-                <a target="_blank" href="http://campuspolicaribe.q10.com">
-                    <img src="showimagen/showimage/campus.webp" 
-                         class="m13" 
-                         alt="youtube" 
-                         style="width:120px; height:31px;">
-                </a>
-                <a target="_blank" href="https://www.facebook.com/unisimonbolivar">
-                    <img class="w20px" src="https://www.unisimon.edu.co/recursos/img/redes-facebook2.png" alt="facebook">
-                </a>
-                <a target="_blank" href="https://www.instagram.com/unisimon/">
-                    <img class="w20px" src="https://www.unisimon.edu.co/recursos/img/redes-instagram2.png" class="ml3" alt="instagram">
-                </a>
-                <a target="_blank" href="https://x.com/unisimon">
-                    <img class="w20px" src="https://www.unisimon.edu.co/recursos/img/twi.png" class="ml3" alt="twitter">
-                </a>
-                <a target="_blank" href="https://www.youtube.com/user/videosunisimon">
-                    <img class="w20px" src="https://www.unisimon.edu.co/recursos/img/redes-youtube2.png" class="ml3" alt="youtube">
-                </a>
-            </div>
-            <div class="clear"></div>
+            <a class="qa-item" href="templates/plantilla-galeria.php"><i class="fas fa-newspaper"></i>Noticias</a>
+            <a class="qa-item" href="pqrs.html"><i class="fas fa-envelope"></i>PQRS</a>
+            <a class="qa-item" href="admin/login.php"><i class="fas fa-user-tie"></i>Empleados</a>
+            <a class="qa-item" href="http://campuspolicaribe.q10.com" target="_blank"><i class="fas fa-school"></i>Campus</a>
         </div>
     </div>
-    <div class="menu__wrap">
-        <ul data-menu="main" class="menu__level">
-            <li class="menu__item"><a class="menu__link" href="index.html">Inicio</a></li>
-            <li class="menu__item"><a class="menu__link" href="policaribe/quienes-somos.html">Quienes somos</a></li>
-            <li class="menu__item"><a class="menu__link" href="cursos-cortos/index.html">Diplomados</a></li>
-            <li class="menu__item"><a class="menu__link" data-submenu="submenu-programas" href="#section-programas">Oferta Académica</a></li>
-            <li class="menu__item"><a class="menu__link" href="templates/plantilla-galeria.php">Noticias</a></li>
-            <li class="menu__item"><a class="menu__link" href="pqrs.html">PQRS</a></li>
-            <li class="menu__item"><a class="menu__link" href="#section-policredito">Obtén una beca</a></li>
-            <li class="menu__item"><a class="menu__link" href="https://site2.q10.com/preinscripcion?aplentId=cd2173fa-287d-40c7-84a7-ce6098ccf063" target="_blank">Inscripciones</a></li>
-            <li class="menu__item"><a class="menu__link" href="admin/login.php">Empleados</a></li>
-        </ul>
-        <ul data-menu="submenu-programas" class="menu__level">
-            <li class="menu__item"><a class="menu__link" href="policaribe/programas/auxiliar-administrativo.html">Auxiliar Administrativo</a></li>
-            <li class="menu__item"><a class="menu__link" href="policaribe/programas/preparacion-yentrenamiento-fisico.html">Preparación y Entrenamiento Físico</a></li>
-            <li class="menu__item"><a class="menu__link" href="policaribe/programas/seguridad-ocupacionalylaboral.html">Auxiliar en Seguridad Ocupacional y Laboral</a></li>
-            <li class="menu__item"><a class="menu__link" href="policaribe/programas/asistente-marketing-y-comunicaciones.html">Asistente de Marketing y Comunicaciones</a></li>
-            <li class="menu__item"><a class="menu__link" href="policaribe/programas/auxiliar-en-enfermeria.html">Auxiliar en Enfermería</a></li>
-            <li class="menu__item"><a class="menu__link" href="policaribe/programas/auxiliar-contable-y-financiero.html">Auxiliar Contable y Financiero</a></li>
-            <li class="menu__item"><a class="menu__link" href="policaribe/programas/animacion-graficayde-multimedia.html">Animación Gráfica y de Multimedia</a></li>
-            <li class="menu__item"><a class="menu__link" href="policaribe/programas/auxiliar-en-educacion-para-la-primera-infancia.html">Auxiliar en Educación para la Primera Infancia</a></li>
-        </ul>
-    </div>
-</nav>
+</div>
 
 
 <!-- HEADER DE UNISIMON -->
@@ -2194,9 +2270,9 @@
                         <i class="fas fa-user-graduate"></i>
                         <span>Inscripciones</span>
                     </a>
-                    <a href="admin/login.php" class="btn-empleados">
-                        <i class="fas fa-user-tie"></i>
-                        <span>Empleados</span>
+                    <a href="cursos-cortos/index.html" class="btn-empleados">
+                        <i class="fas fa-book-open"></i>
+                        <span>Diplomados</span>
                     </a>
                     <button class="btn-menu" id="header-hamburger" aria-label="Abrir menú">
                       <i class="fas fa-bars"></i>
@@ -2298,8 +2374,10 @@
         </div>
     <div class="acciones-secundarias">
         <div class="container">
-            <a class="sec-btn" href="http://localhost/sitio_web/policaribe/documentos/calendario-academico-virtual.pdf"><i class="fa fa-calendar"></i> Calendario Académico Virtual</a>
-            <a class="sec-btn" href="http://localhost/sitio_web/policaribe/documentos/calendario-academico-a-distancia.pdf"><i class="fa fa-calendar"></i> Calendario Académico a Distancia</a>
+            <a class="sec-btn" href="documentos/calendario-academico-2026.pdf"><i class="fa fa-calendar"></i> Calendario Académico</a>
+            <a class="sec-btn" href="documentos/derechos-pecuniarios-2026.pdf"><i class="fa fa-file"></i> Derechos Pecuniarios</a>
+            <a class="sec-btn" href="documentos/valores-maicula-2026.pdf"><i class="fa fa-file"></i> Valores de Matrícula</a>
+            <a class="sec-btn" href="documentos/Estatutos-generale-2026.pdf"><i class="fa fa-file"></i> Estatuto General</a>
         </div>
     </div>
 </div>
@@ -2361,17 +2439,17 @@
                         <h6>Normatividad Institucional</h6>
                         <ul>
                             <li><a href="https://drive.google.com/file/d/1yp_BmQ_fDIB4RwKgo6LS5LXfrB_MQR6M/view?usp=sharing">Creación y reconocimiento Personería Jurídica</a></li>
-                            <li><a href="policaribe/index.html#">Política de Tratamiento de Información Personal</a></li>
+                            <li><a href="politicas-privacidad.html">Política de Tratamiento de Información Personal</a></li>
                         </ul>
                     </div>
                     <div class="bottom-column">
                         <h3>Enlaces rápidos</h3>
                         <ul>
-                            <li><a href="policaribe/documentos/calendario-academico-virtual.pdf">Calendario Académico Virtual</a></li>
-                            <li><a href="policaribe/documentos/calendario-academico-a-distancia.pdf">Calendario Académico a Distancia</a></li>
-                            <li><a href="policaribe/documentos/estatuto-general.pdf">Estatuto General</a></li>
-                            <li><a href="policaribe/index.html#">Derechos Pecuniarios</a></li>
-                            <li><a href="http://Campuspolicaribe.q10.com">Inscripciones</a></li>
+                            <li><a href="documentos/calendario-academico-virtual-2025.pdf">Calendario Académico Virtual</a></li>
+                            <li><a href="documentos/calendario-academico-a-distancia-2025.pdf">Calendario Académico a Distancia</a></li>
+                            <li><a href="documentos/estatuto-general-2025.pdf">Estatuto General</a></li>
+                            <li><a href="documentos/derechos-pecuniarios-2026.pdf">Derechos Pecuniarios</a></li>
+                            <li><a href="https://site2.q10.com/preinscripcion?aplentId=cd2173fa-287d-40c7-84a7-ce6098ccf063">Inscripciones</a></li>
                         </ul>
                     </div>
                     <div class="bottom-column">
@@ -2466,39 +2544,14 @@
   }
 
   function cargarFechasMes(year, month, cb){
-    $.getJSON('api/articulos.php', { type:'calendar-month', year:year, month:month }, function(resp){
-      cb(resp && resp.dates ? resp.dates : []);
-    });
+    cb([]);
   }
 
   function cargarEventosDia(date){
-    $.getJSON('api/articulos.php', { type:'calendar-day', date:date }, function(resp){
-      var $ev = $('#eventos').empty();
-      var $pop = $('#event-popover');
-      if(resp && resp.data && resp.data.length){
-        var listHtml = '<div class="pop-header"><span>Eventos</span><button class="pop-close" type="button" aria-label="Cerrar">×</button></div><ul>';
-        function tw(s, n){
-          var arr = (s||'').trim().split(/\s+/);
-          if(arr.length <= n) return s||'';
-          return arr.slice(0, n).join(' ') + '…';
-        }
-        resp.data.forEach(function(a){
-          var href = 'templates/plantilla-articulo.php?slug=' + encodeURIComponent(a.slug);
-          var html = '<a href="' + href + '"><div class="ev-card">'
-            +   '<p class="ev-title">' + a.titulo + '</p>'
-            +   '<p class="ev-desc">' + (a.descripcion_corta || '') + '</p>'
-            + '</div></a>';
-          $ev.append(html);
-          listHtml += '<li><a href="' + href + '">' + tw(a.titulo, 8) + '</a></li>';
-        });
-        listHtml += '</ul>';
-        $pop.html(listHtml).removeAttr('hidden');
-        $pop.find('.pop-close').on('click', function(){ $pop.attr('hidden', true); });
-      } else {
-        $ev.html('<p class="c6 fz12">Sin eventos para esta fecha.</p>');
-        $pop.attr('hidden', true).empty();
-      }
-    });
+    var $ev = $('#eventos').empty();
+    var $pop = $('#event-popover');
+    $ev.html('<p class="c6 fz12">Eventos deshabilitados temporalmente.</p>');
+    $pop.attr('hidden', true).empty();
   }
 
   $(function(){
@@ -2515,9 +2568,7 @@
       monthNames: ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'],
       dayNamesMin: ['Do','Lu','Ma','Mi','Ju','Vi','Sa'],
       beforeShowDay: function(date){
-        var d = $.datepicker.formatDate('yy-mm-dd', date);
-        var resaltado = !!fechasMes[d];
-        return [true, resaltado ? 'has-event' : '', resaltado ? 'Evento' : ''];
+        return [true, '', ''];
       },
       onChangeMonthYear: function(year, month){
         cargarFechasMes(year, month, function(dates){
@@ -2531,11 +2582,8 @@
 
     cargarFechasMes(y, m, function(dates){
       fechasMes = {};
-      dates.forEach(function(d){ fechasMes[d] = true; });
       $('#datepicker').datepicker('setDate', hoy);
       $('#datepicker').datepicker('refresh');
-      var hoyStr = $.datepicker.formatDate('yy-mm-dd', hoy);
-      cargarEventosDia(hoyStr);
     });
 
   $(document).on('click', function(e){

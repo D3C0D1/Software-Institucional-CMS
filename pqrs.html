@@ -238,6 +238,14 @@
         }
     }
 
+    @media (max-width: 720px) {
+        #menu-es .b51 { display: none !important; }
+    }
+
+    @media (max-width: 720px) {
+        #header-spacer { height: 48px !important; }
+    }
+
     #menu-es .b51 {
         background-color: #7a1510 !important;
     }
@@ -1024,9 +1032,12 @@
         color: #777;
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 720px) {
         .pqrs-content {
-            padding-top: 100px;
+            padding-top: 32px !important;
+        }
+        .pqrs-section {
+            padding: 24px 16px !important;
         }
         .pqrs-form-wrapper {
             padding: 24px;
@@ -1810,7 +1821,7 @@
     </div>
     
     <!-- Espaciador para compensar el header fijo -->
-    <div style="height: 105px;"></div>
+    <div id="header-spacer" style="height: 105px;"></div>
 </div>
 <!-- FIN HEADER DE UNISIMON -->
 
@@ -1978,7 +1989,7 @@
             <h6>Normatividad Institucional</h6>
             <ul>
                 <li><a href="https://drive.google.com/file/d/1yp_BmQ_fDIB4RwKgo6LS5LXfrB_MQR6M/view?usp=sharing">Creación y reconocimiento Personería Jurídica</a></li>
-                <li><a href="policaribe/index.html#">Política de Tratamiento de Información Personal</a></li>
+                <li><a href="politicas-privacidad.html">Política de Tratamiento de Información Personal</a></li>
             </ul>
         </div>
         <div class="bottom-column">
@@ -2257,6 +2268,7 @@
                   + '<tr><th>Estado</th><td>'+htmlEscape(d.estado)+'</td></tr>'
                   + '<tr><th>Fecha</th><td>'+htmlEscape(d.fecha)+'</td></tr>'
                   + '<tr><th>Resumen</th><td>'+htmlEscape(d.resumen)+'</td></tr>'
+                  + '<tr><th>Respuesta</th><td>'+htmlEscape(d.respuesta || 'Pendiente de respuesta')+'</td></tr>'
                   + '</table>';
                 $out.html(html).show();
               } else {

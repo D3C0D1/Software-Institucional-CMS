@@ -80,7 +80,65 @@ color: black;
 
 #sp-section-4{ background-color:#262626;color:#545454;padding:30px 0; }
 #sp-bottom{ background-color:#212121;color:#5c5c5c;padding:80px 0px; }
-#sp-footer{ background-color:#1c1c1c;color:#545454; }
+	#sp-footer{ background-color:#1c1c1c;color:#545454; }
+		</style>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<style>
+	@media (max-width: 720px) { #sp-header { display: none !important; } }
+	.abs { position: fixed; }
+	.top0 { top: 0; left: 0; right: 0; }
+	.zind10 { z-index: 1000; }
+	.w100 { width: 100%; }
+	.bwhite { background: #fff; }
+
+	/* Layout preheader */
+	.preheader-bar { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+	.preheader-left, .preheader-center, .preheader-right { display: flex; align-items: center; gap: 15px; }
+	.preheader-medalla { max-width: 253px; width: 100%; height: auto; }
+	.preheader-logo img { max-height: 62px; width: auto; height: auto; }
+	.preheader-center .menu-mobile { display: none; }
+	.preheader-radio img { width: 120px; height: 31px; }
+	.preheader-social img { width: 28px; height: 28px; }
+	.preheader-separator { color: #808080; font-size: 20px; line-height: 1; }
+	.preheader-contacto { color: #4d4d4d; font-weight: 500; letter-spacing: 0.5px; }
+	.preheader-sede { display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(135deg, #b5241b, #7a1510); border-radius: 999px; padding: 8px 20px; font-size: 13px; color: #ffffff; }
+	.preheader-sede i { font-size: 16px; color: #ffd166; }
+	.preheader-sede a { color: #ffffff !important; font-weight: 700; text-decoration: none; }
+	.pad-tb10 { padding: 14px 0; }
+	.content { max-width: 1200px; margin: 0 auto; }
+
+	/* Mobile tweaks */
+	@media (max-width: 720px) {
+	  .preheader-bar { flex-wrap: wrap; gap: 15px; }
+	  .preheader-left { width: 100%; justify-content: center; }
+	  .preheader-right { width: 100%; justify-content: flex-end; }
+	  .preheader-center { width: 100%; justify-content: center; }
+	  .preheader-center .menu-mobile { display: block; margin-right: 10px; }
+	  .preheader-logo img { max-height: 48px; }
+      .preheader-sede { padding: 0; width: 36px; height: 36px; border-radius: 8px; gap: 0; position: relative; justify-content: center; }
+      .preheader-sede i { font-size: 18px; margin: 0; }
+      .preheader-sede a { position: absolute; left: 0; top: 0; width: 100%; height: 100%; text-indent: -9999px; overflow: hidden; }
+	}
+
+	/* Menú principal estilos esenciales */
+	#menu-es { background-color: #901913; }
+	#menu-es .nav.navbar-nav li a { color: #ffffff !important; background-color: #901913 !important; text-decoration: none !important; }
+	.header-inscripciones { display: flex; align-items: center; gap: 10px; padding: 0 10px; }
+	.btn-inscripciones, .btn-empleados { display: flex; align-items: center; gap: 8px; background: transparent; color: #ffffff !important; text-decoration: none !important; font-weight: 600; font-size: 14px; }
+	.menu-mobile .navbar-toggle { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border: 0; background: #FBBC21; border-radius: 6px; }
+	.menu-mobile .icon-bar { display: block; width: 20px; height: 2px; background: #fff; margin: 3px 0; }
+
+	/* Navegación en móvil */
+	@media (max-width: 720px) {
+	  #menu-es .b51 .content { padding: 10px 15px; align-items: center; }
+	  #menu-es .b51 .content nav { display: block; }
+	  #menu-es .nav.navbar-nav { display: block !important; height: auto; }
+	  #menu-es .nav.navbar-nav > li { display: block; }
+	  #menu-es .nav.navbar-nav > li > a { display: block; padding: 12px 15px; height: auto; }
+	  #menu-es .nav.navbar-nav > li .dropdown-menu { position: relative; top: 0; left: 0; transform: none; box-shadow: none; border-radius: 0; background: transparent; padding: 0; display: block; }
+	  #menu-es .nav.navbar-nav > li .dropdown-menu > li > a { padding: 10px 15px 10px 25px; border-bottom: 1px solid rgba(255, 255, 255, 0.1); color: #ffffff !important; }
+	  #menu-es .nav.navbar-nav > li .dropdown-menu > li:last-child > a { border-bottom: none; }
+	}
 	</style>
 	<script src="media/jui/js/jquery.min.js@3b66c58aad706a03eaa212f3b3d8cf5d" type="text/javascript"></script>
 	<script src="media/jui/js/jquery-noconflict.js@3b66c58aad706a03eaa212f3b3d8cf5d" type="text/javascript"></script>
@@ -109,6 +167,84 @@ var sp_gotop = '1';
                 <body class="site com-content view-category layout-blog no-task itemid-696 es-co ltr  sticky-header layout-fluid">
 
                     <div class="body-innerwrapper">
+<div class="rel w100" id="tope">
+  <div class="abs top0 zind10 w100 bwhite" id="menu-es">
+    <div class="container-fluid">
+      <div class="content">
+        <div class="preheader-bar pad-tb10">
+          <div class="preheader-left">
+            <img src="../images/acreditacion-logo.png" class="preheader-medalla" alt="Acreditación Policaribe">
+          </div>
+          <div class="preheader-center">
+            <div class="menu-mobile">
+              <button class="navbar-toggle" aria-label="Abrir menú">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+            <a href="../index.html" class="preheader-logo">
+              <img src="../recursos/img/policaribe-horizontal-color.png" alt="logo">
+            </a>
+          </div>
+          <div class="preheader-right">
+            <a target="_blank" href="http://campuspolicaribe.q10.com/" class="preheader-radio">
+              <img src="../showimagen/showimage/campus.webp" style="width:120px; height:31px;" alt="Campus Policaribe">
+            </a>
+            <span class="preheader-separator">|</span>
+            <a href="#" id="facebookLink" class="preheader-social">
+              <img src="https://www.unisimon.edu.co/recursos/img/ICONO_REDES_FINAL.svg" alt="facebook">
+            </a>
+            <span class="preheader-separator">|</span>
+            <a href="mailto:contacto@policaribe.edu.co" class="preheader-contacto">CONTACTO</a>
+            <div class="preheader-sede">
+              <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+              <a href="https://site2.q10.com/preinscripcion?aplentId=cd2173fa-287d-40c7-84a7-ce6098ccf063" target="_blank">Obtén una beca</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="b51 dnonem">
+      <div class="content">
+        <nav class="w90 fleft rel">
+          <ul class="nav navbar-nav rel">
+            <li class="active-menu"><a href="../index.html">Inicio</a></li>
+            <li><a href="../info/index.html">Quienes somos</a></li>
+            <li><a href="../cursos-cortos/index.html">Diplomados</a></li>
+            <li class="dropdown">
+              <a href="#section-programas" class="dropdown-toggle">Oferta Académica</a>
+              <ul class="dropdown-menu">
+                <li><a href="programas/auxiliar-administrativo.html">Auxiliar Administrativo</a></li>
+                <li><a href="programas/preparacion-yentrenamiento-fisico.html">Preparación y Entrenamiento Físico</a></li>
+                <li><a href="programas/seguridad-ocupacionalylaboral.html">Auxiliar en Seguridad Ocupacional y Laboral</a></li>
+                <li><a href="programas/asistente-marketing-y-comunicaciones.html">Asistente de Marketing y Comunicaciones</a></li>
+                <li><a href="programas/auxiliar-en-enfermeria.html">Auxiliar en Enfermería</a></li>
+                <li><a href="programas/auxiliar-contable-y-financiero.html">Auxiliar Contable y Financiero</a></li>
+                <li><a href="programas/animacion-graficayde-multimedia.html">Animación Gráfica y de Multimedia</a></li>
+                <li><a href="programas/auxiliar-en-educacion-para-la-primera-infancia.html">Auxiliar en Educación para la Primera Infancia</a></li>
+              </ul>
+            </li>
+            <li><a href="../templates/plantilla-galeria.php">Noticias</a></li>
+            <li><a href="pqrs.html">PQRS</a></li>
+          </ul>
+        </nav>
+        <div class="header-inscripciones">
+          <a href="https://site2.q10.com/preinscripcion?aplentId=cd2173fa-287d-40c7-84a7-ce6098ccf063" target="_blank" class="btn-inscripciones">
+            <i class="fas fa-user-graduate"></i>
+            <span>Inscripciones</span>
+          </a>
+          <a href="../cursos-cortos/index.html" class="btn-empleados">
+            <i class="fas fa-book-open"></i>
+            <span>Diplomados</span>
+          </a>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+  </div>
+  <div style="height: 120px;"></div>
+</div>
 <header id="sp-header"><div class="container"><div class="row"><div id="sp-logo" class="col-xs-8 col-sm-3 col-md-3"><div class="sp-column "><a class="logo" href="index.html"><h1><img class="sp-default-logo hidden-xs" src="images/logo-full-color.png" alt="Policaribe"><img class="sp-default-logo visible-xs" src="images/logo-full-color.png" alt="Policaribe"></h1></a></div></div><div id="sp-menu" class="col-xs-4 col-sm-9 col-md-9"><div class="sp-column "><div class="sp-module macro-top-search"><div class="sp-module-content"><div class="icon-top-wrapper">
 	<i class="search-icon icon-search"></i>
 	<i id="search_close" class="remove-search icon-remove"></i>
@@ -424,7 +560,7 @@ Formamos técnicos laborales a través de una educación inclusiva y de calidad,
 
 --></div>
 </div></div></div></div><div id="sp-bottom2" class="col-sm-6 col-md-3"><div class="sp-column "><div class="sp-module "><h6 class="sp-module-title">Normatividad Institucional</h6><div class="sp-module-content"><ul class="nav menu">
-<li class="item-529"><a href="https://drive.google.com/file/d/1yp_BmQ_fDIB4RwKgo6LS5LXfrB_MQR6M/view?usp=sharing" >Creación y reconocimiento Personería Jurídica</a></li><li class="item-692"><a href="noticias.html#" >Política de Tratamiento de Información Personal</a></li></ul>
+<li class="item-529"><a href="https://drive.google.com/file/d/1yp_BmQ_fDIB4RwKgo6LS5LXfrB_MQR6M/view?usp=sharing" >Creación y reconocimiento Personería Jurídica</a></li><li class="item-692"><a href="../politicas-privacidad.html" >Política de Tratamiento de Información Personal</a></li></ul>
 </div></div></div></div><div id="sp-bottom3" class="col-sm-6 col-md-3"><div class="sp-column "><div class="sp-module "><h3 class="sp-module-title">Enlaces rápidos</h3><div class="sp-module-content"><ul class="nav menu">
 <li class="item-482"><a href="documentos/calendario-academico-virtual.pdf" >Calendario Académico Virtual</a></li><li class="item-483"><a href="documentos/calendario-academico-a-distancia.pdf" >Calendario Académico a Distancia</a></li><li class="item-528"><a href="documentos/estatuto-general.pdf" >Estatuto General</a></li><li class="item-484"><a href="http://www.joomshaper.com/join-now" >Derechos Pecuniarios</a></li><li class="item-697"><a href="http://Campuspolicaribe.q10.com" >Inscripciones</a></li></ul>
 </div></div></div></div><div id="sp-bottom4" class="col-sm-6 col-md-3"><div class="sp-column "><div class="sp-module "><h3 class="sp-module-title">Contacto</h3><div class="sp-module-content">

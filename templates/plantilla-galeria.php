@@ -231,6 +231,15 @@ function normalize_src($s){
       .mobile-menu .mobile-menu-items a{display:block;padding:14px 12px;text-decoration:none;color:#222}
       @media (max-width:991px), (orientation:portrait){.btn-hamburger{display:inline-flex}.b51{display:none}}
       @media (max-width:480px){.preheader-sede{padding:8px 12px;font-size:12px;gap:8px}}
+      @media (max-width:720px){
+        .preheader-left, .preheader-right{display:none !important}
+        .preheader-separator{display:none !important}
+        .preheader-bar{padding:8px 12px}
+        #tope > div[style*="height"]{height:56px !important}
+        .preheader-sede{padding:0;width:36px;height:36px;border-radius:8px;gap:0;position:relative;justify-content:center}
+        .preheader-sede i{font-size:18px;margin:0}
+        .preheader-sede a{position:absolute;left:0;top:0;width:100%;height:100%;text-indent:-9999px;overflow:hidden}
+      }
       h1.title{font-weight:700;font-size:48px;line-height:1.15}
       .introtext p{font-size:19px;color:#6b6b6b}
       .readmore{display:inline-block;margin:12px 0 24px;font-size:16px;padding:8px 14px}

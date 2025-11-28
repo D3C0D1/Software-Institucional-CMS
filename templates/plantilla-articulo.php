@@ -72,8 +72,169 @@ $categoriasArr = is_array($todasCategorias) ? $todasCategorias : array_filter(ar
         @media (max-width:992px){.itemTitle{font-size:40px}.hg-img{height:420px}}
         @media (max-width:640px){.itemTitle{font-size:30px}.hg-img{height:300px}}
     </style>
+    <style>
+      .abs{position:fixed}
+      .top0{top:0;left:0;right:0}
+      .zind10{z-index:1000}
+      .w100{width:100%}
+      .bwhite{background:#fff}
+      .rel.w100{margin-bottom:0}
+      body > .rel.w100:nth-of-type(2){display:none !important}
+      .preheader-bar{display:flex;align-items:center;justify-content:space-between;flex-wrap:nowrap;gap:28px;background-color:#eaeaea}
+      .preheader-left,.preheader-center,.preheader-right{display:flex;align-items:center;gap:15px}
+      #menu-es .container-fluid{padding:0;background-color:#eaeaea}
+      #menu-es .content{max-width:1600px;margin:0 auto;padding:0 8px;box-sizing:border-box}
+      .preheader-center{flex:1 1 auto;justify-content:center;text-align:center}
+      .preheader-right{justify-content:flex-end}
+      .preheader-medalla{max-width:253px;width:100%;height:auto}
+      .preheader-logo img{max-height:62px;width:auto;height:auto}
+      .preheader-radio img{width:120px;height:31px}
+      .preheader-social img{width:28px;height:28px}
+      .preheader-separator{color:#808080;font-size:20px;line-height:1;margin:0 12px}
+      .preheader-contacto{color:#4d4d4d;font-weight:600;letter-spacing:.5px}
+      .preheader-contacto:hover{color:#05803b}
+      .preheader-sede{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,#b5241b,#7a1510);border:none;border-radius:999px;padding:8px 20px;font-size:13px;letter-spacing:.2px;font-weight:600;color:#fff;box-shadow:0 6px 16px rgba(122,21,16,.28);transition:transform .2s ease,box-shadow .2s ease}
+      .preheader-sede i{font-size:16px;color:#ffd166}
+      .preheader-sede a{color:#fff !important;font-weight:700;text-decoration:none}
+      .preheader-sede:hover{transform:translateY(-1px);box-shadow:0 10px 22px rgba(122,21,16,.38)}
+      #menu-es .b51{background-color:#7a1510 !important}
+      .b51 a,#menu-es .nav.navbar-nav li a{color:#fff !important;background-color:#7a1510 !important;text-decoration:none !important}
+      .b51 .content{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:56px}
+      #menu-es .nav.navbar-nav{display:flex !important;flex-wrap:nowrap !important;justify-content:flex-start;align-items:center;width:100%;gap:0;padding:0;height:56px}
+      #menu-es .b51 nav{width:auto;flex:1 1 auto}
+      #menu-es .nav.navbar-nav>li{float:none !important;display:flex;margin:0;padding:0;flex:0 1 auto;text-align:center;white-space:nowrap;align-items:stretch}
+      #menu-es .nav.navbar-nav>li>a{font-size:16px;font-weight:600;padding:0 14px;white-space:nowrap;position:relative;background-color:#7a1510 !important;color:#fff !important;transition:background-color .12s ease,color .12s ease;display:flex;align-items:center;justify-content:flex-start;height:56px}
+      #menu-es .nav.navbar-nav>li.dropdown>a::after{content:'\25BE';font-size:11px;margin-left:6px;color:#ffc04d;transition:transform .18s ease,color .18s ease}
+      #menu-es .nav.navbar-nav>li:hover>a,#menu-es .nav.navbar-nav>li>a:focus-visible{background-color:#fff !important;color:#2b2b2b !important}
+      #menu-es .nav.navbar-nav>li.dropdown:hover>a::after{transform:rotate(180deg);color:#2b2b2b}
+      #menu-es .nav.navbar-nav>li.active-menu>a{background-color:#5a0e0a;color:#ffc04d !important}
+      .header-inscripciones{display:flex;align-items:center;gap:8px;padding:0 10px;flex:0 0 auto;white-space:nowrap}
+      .btn-inscripciones{display:flex;align-items:center;gap:8px;background-color:#ECC31F;color:#7a1510 !important;padding:10px 20px;border-radius:5px;text-decoration:none !important;font-weight:600;font-size:14px;white-space:nowrap}
+      .btn-empleados{display:flex;align-items:center;gap:8px;background-color:#7a1510;color:#fff !important;padding:10px 20px;border-radius:5px;text-decoration:none !important;font-weight:600;font-size:14px;white-space:nowrap}
+      .btn-empleados:hover{background-color:#5f110d;color:#fff !important}
+      .btn-hamburger{display:none;align-items:center;justify-content:center;width:40px;height:40px;border:0;background:#7a1510;color:#fff;border-radius:6px}
+      .btn-hamburger span{display:block;width:20px;height:2px;background:#fff;margin:3px 0}
+      .mobile-menu{position:fixed;left:0;right:0;top:0;bottom:0;background:#fff;z-index:9999;transform:translateY(-100%);transition:transform .25s ease}
+      .mobile-menu.show{transform:translateY(0)}
+      .mobile-menu .mobile-menu-content{padding:60px 12px}
+      .mobile-menu .mobile-menu-close{position:absolute;left:12px;top:12px;border:0;background:#fff;font-size:24px}
+      .mobile-menu .mobile-menu-items{list-style:none;margin:0;padding:0}
+      .mobile-menu .mobile-menu-items li{border-bottom:1px solid #e5e5e5}
+      .mobile-menu .mobile-menu-items a{display:block;padding:14px 12px;text-decoration:none;color:#222}
+      @media (max-width:991px), (orientation:portrait){.btn-hamburger{display:inline-flex}.b51{display:none}}
+      @media (max-width:480px){.preheader-sede{padding:8px 12px;font-size:12px;gap:8px}}
+      #menu-es, #menu-es .b51, #menu-es .nav.navbar-nav, #menu-es .nav.navbar-nav li a, .preheader-bar, .preheader-bar a, .header-inscripciones, .btn-inscripciones, .btn-empleados{font-family:'Roboto',Arial,sans-serif !important}
+    </style>
+    <style>
+        .rel.w100{margin-bottom:0}
+        .preheader-bar{display:flex;align-items:center;justify-content:space-between;gap:20px}
+        .preheader-left,.preheader-center,.preheader-right{display:flex;align-items:center;gap:15px}
+        .preheader-medalla{max-width:253px;width:100%;height:auto}
+        .preheader-logo img{max-height:62px;width:auto;height:auto}
+        .menu-mobile .navbar-toggle{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border:0;background:#FBBC21;border-radius:6px}
+        .menu-mobile .icon-bar{display:block;width:20px;height:2px;background:#fff;margin:3px 0}
+        .preheader-radio img{width:120px;height:31px}
+        .preheader-social img{width:28px;height:28px}
+        .preheader-separator{color:#808080;font-size:20px;line-height:1}
+        .preheader-contacto{color:#4d4d4d;font-weight:500;letter-spacing:.5px}
+        .preheader-sede{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,#b5241b,#7a1510);border-radius:999px;padding:8px 20px;font-size:13px;color:#fff}
+        .preheader-sede i{font-size:16px;color:#ffd166}
+        .preheader-sede a{color:#fff !important;font-weight:700;text-decoration:none}
+        #menu-es{background-color:#901913}
+        #menu-es .nav.navbar-nav li a{color:#fff !important;background-color:#901913 !important;text-decoration:none !important}
+        .header-inscripciones{display:flex;align-items:center;gap:10px;padding:0 10px}
+        .btn-inscripciones,.btn-empleados{display:flex;align-items:center;gap:8px;background:transparent;color:#fff !important;text-decoration:none !important;font-weight:600;font-size:14px}
+        @media (max-width:720px){.preheader-bar{flex-wrap:wrap;gap:15px}.preheader-left,.preheader-right{width:100%}.preheader-left{justify-content:center}.preheader-right{justify-content:flex-end}.preheader-center{width:100%;justify-content:center}.preheader-logo img{max-height:48px}}
+        @media (max-width:720px){
+          #menu-es .b51 .content{padding:10px 15px;align-items:center}
+          #menu-es .nav.navbar-nav{display:block !important;height:auto}
+          #menu-es .nav.navbar-nav>li{display:block}
+          #menu-es .nav.navbar-nav>li>a{display:block;padding:12px 15px;height:auto}
+          #menu-es .nav.navbar-nav>li .dropdown-menu{position:relative;top:0;left:0;transform:none;box-shadow:none;border-radius:0;background:transparent;padding:0;display:block}
+          #menu-es .nav.navbar-nav>li .dropdown-menu>li>a{padding:10px 15px 10px 25px;border-bottom:1px solid rgba(255,255,255,.1);color:#fff !important}
+          #menu-es .nav.navbar-nav>li .dropdown-menu>li:last-child>a{border-bottom:none}
+        }
+    </style>
 </head>
 <body id="bd">
+    <div class="rel w100" id="tope">
+      <div class="abs top0 zind10 w100 bwhite" id="menu-es">
+        <div class="container-fluid">
+          <div class="content">
+            <div class="preheader-bar pad-tb10">
+              <div class="preheader-left">
+                <img src="<?php echo SITE_URL; ?>/images/acreditacion-logo.png" class="preheader-medalla" alt="Acreditación Policaribe">
+              </div>
+              <div class="preheader-center">
+                <button class="btn-hamburger" aria-label="Menú"><span></span><span></span><span></span></button>
+                <a href="<?php echo SITE_URL; ?>/" class="preheader-logo">
+                  <img src="<?php echo SITE_URL; ?>/recursos/img/policaribe-horizontal-color.png" alt="policaribe logo">
+                </a>
+              </div>
+              <div class="preheader-right">
+                <a target="_blank" href="http://campuspolicaribe.q10.com/" class="preheader-radio">
+                  <img src="<?php echo SITE_URL; ?>/showimagen/showimage/campus.webp" style="width:120px; height:31px;" alt="campus policaribe">
+                </a>
+                <span class="preheader-separator">|</span>
+                <a href="#" id="facebookLink" class="preheader-social">
+                  <img src="https://www.unisimon.edu.co/recursos/img/ICONO_REDES_FINAL.svg" alt="facebook">
+                </a>
+                <span class="preheader-separator">|</span>
+                <a href="mailto:contacto@policaribe.edu.co" class="preheader-contacto">CONTACTO</a>
+                <div class="preheader-sede">
+                  <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                  <a href="https://site2.q10.com/preinscripcion?aplentId=cd2173fa-287d-40c7-84a7-ce6098ccf063" target="_blank">Obtén una beca</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="mobileMenu" class="mobile-menu" hidden>
+          <div class="mobile-menu-content">
+            <button class="mobile-menu-close" aria-label="Cerrar">×</button>
+            <ul class="mobile-menu-items"></ul>
+          </div>
+        </div>
+        <div class="b51 dnonem">
+          <div class="content">
+            <nav class="w90 fleft rel">
+              <ul class="nav navbar-nav rel">
+                <li class="active-menu"><a href="<?php echo SITE_URL; ?>/index.html">Inicio</a></li>
+                <li><a href="<?php echo SITE_URL; ?>/info/index.html">Quienes somos</a></li>
+                <li><a href="<?php echo SITE_URL; ?>/cursos-cortos/index.html">Diplomados</a></li>
+                <li class="dropdown">
+                  <a href="<?php echo SITE_URL; ?>/index.html#section-programas" class="dropdown-toggle">Oferta Académica</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="<?php echo SITE_URL; ?>/policaribe/programas/auxiliar-administrativo.html">Auxiliar Administrativo</a></li>
+                    <li><a href="<?php echo SITE_URL; ?>/policaribe/programas/preparacion-yentrenamiento-fisico.html">Preparación y Entrenamiento Físico</a></li>
+                    <li><a href="<?php echo SITE_URL; ?>/policaribe/programas/seguridad-ocupacionalylaboral.html">Auxiliar en Seguridad Ocupacional y Laboral</a></li>
+                    <li><a href="<?php echo SITE_URL; ?>/policaribe/programas/asistente-marketing-y-comunicaciones.html">Asistente de Marketing y Comunicaciones</a></li>
+                    <li><a href="<?php echo SITE_URL; ?>/policaribe/programas/auxiliar-en-enfermeria.html">Auxiliar en Enfermería</a></li>
+                    <li><a href="<?php echo SITE_URL; ?>/policaribe/programas/auxiliar-contable-y-financiero.html">Auxiliar Contable y Financiero</a></li>
+                    <li><a href="<?php echo SITE_URL; ?>/policaribe/programas/animacion-graficayde-multimedia.html">Animación Gráfica y de Multimedia</a></li>
+                    <li><a href="<?php echo SITE_URL; ?>/policaribe/programas/auxiliar-en-educacion-para-la-primera-infancia.html">Auxiliar en Educación para la Primera Infancia</a></li>
+                  </ul>
+                </li>
+                <li><a href="<?php echo SITE_URL; ?>/templates/plantilla-galeria.php">Noticias</a></li>
+                <li><a href="<?php echo SITE_URL; ?>/pqrs.html">PQRS</a></li>
+              </ul>
+            </nav>
+            <div class="header-inscripciones">
+              <a href="https://site2.q10.com/preinscripcion?aplentId=cd2173fa-287d-40c7-84a7-ce6098ccf063" target="_blank" class="btn-inscripciones">
+                <i class="fas fa-user-graduate"></i>
+                <span>Inscripciones</span>
+              </a>
+              <a href="<?php echo SITE_URL; ?>/cursos-cortos/index.html" class="btn-empleados">
+                <i class="fas fa-book-open"></i>
+                <span>Diplomados</span>
+              </a>
+            </div>
+            <div class="clear"></div>
+          </div>
+        </div>
+      </div>
+      <div style="height: 110px;"></div>
+    </div>
     <section id="content" class="block">
         <div class="row">
             <div id="content_main">
@@ -244,5 +405,21 @@ $categoriasArr = is_array($todasCategorias) ? $todasCategorias : array_filter(ar
         }
       });
     </script>
-</body>
-</html>
+    <script>
+      jQuery(function($){
+        var $hamb = $('#menu-es .btn-hamburger');
+        var $mobile = $('#mobileMenu');
+        var $items = $mobile.find('.mobile-menu-items');
+        if($hamb.length){
+          $hamb.on('click', function(e){ e.preventDefault(); $mobile.attr('hidden', false).addClass('show'); });
+          $mobile.find('.mobile-menu-close').on('click', function(e){ e.preventDefault(); $mobile.removeClass('show').attr('hidden', true); });
+          var $navLinks = $('#menu-es .nav.navbar-nav > li > a').clone();
+          $items.empty();
+          $navLinks.each(function(){ var href=$(this).attr('href'); var text=$(this).text(); $('<li><a></a></li>').appendTo($items).find('a').attr('href', href).text(text); });
+          var $extras = $('.header-inscripciones a').clone();
+          $extras.each(function(){ var href=$(this).attr('href'); var text=$(this).text(); $('<li><a></a></li>').appendTo($items).find('a').attr('href', href).text(text); });
+        }
+      });
+    </script>
+  </body>
+  </html>

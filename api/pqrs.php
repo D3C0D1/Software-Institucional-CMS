@@ -4,6 +4,13 @@ require_once __DIR__ . '/../config.php';
 header('Content-Type: application/json; charset=utf-8');
 
 $db = getDB();
+$hasPolicaribe = false;
+try {
+    $chk = $db->query("SHOW COLUMNS FROM pqrs LIKE 'policaribe'");
+    $hasPolicaribe = $chk && $chk->fetch() ? true : false;
+} catch (Exception $e) {
+    $hasPolicaribe = false;
+}
 
 function json_response($data, $code = 200) {
     http_response_code($code);
@@ -20,11 +27,12 @@ try {
             json_response(['ok' => false, 'error' => 'Radicado requerido'], 400);
         }
 
-        $stmt = $db->prepare("SELECT radicado, nombre, tipo, estado, fecha_radicado, resumen FROM pqrs WHERE radicado = :radicado LIMIT 1");
+        $sql = "SELECT radicado, nombre, tipo, estado, fecha_radicado, resumen" . ($hasPolicaribe ? ", COALESCE(respuesta, policaribe) AS respuesta" : ", respuesta") . " FROM pqrs WHERE radicado = :radicado LIMIT 1";
+        $stmt = $db->prepare($sql);
         $stmt->execute([':radicado' => $radicado]);
         $row = $stmt->fetch();
         if (!$row) {
-            json_response(['ok' => false, 'error' => 'No se encontró el radicado'], 404);
+            json_response(['ok' => false, 'error' => 'No se encontró el radicado'], 200);
         }
         $data = [
             'radicado' => $row['radicado'],
@@ -32,7 +40,8 @@ try {
             'tipo'     => $row['tipo'],
             'estado'   => $row['estado'],
             'fecha'    => formatearFecha($row['fecha_radicado'], 'd/m/Y H:i'),
-            'resumen'  => $row['resumen']
+            'resumen'  => $row['resumen'],
+            'respuesta'=> $row['respuesta']
         ];
         json_response(['ok' => true, 'data' => $data]);
     }

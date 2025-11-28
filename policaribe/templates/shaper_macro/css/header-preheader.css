@@ -220,6 +220,20 @@
   .site-cta { width:100%; justify-content:center; order:2; }
   #offcanvas-toggler { order:1; }
 }
+@media (max-width: 720px){
+  :root { --preheader-height: 36px; }
+  .site-preheader .container{ padding: 4px 14px; }
+  .site-preheader .preheader-left{ align-items:center; gap: 8px; }
+  .site-preheader .preheader-right{ align-items:center; gap: 8px; }
+  .site-preheader .preheader-left > *:not(:last-child)::after,
+  .site-preheader .preheader-right > *:not(:last-child)::after { height: 10px; margin: 0 6px; }
+  .site-preheader .preheader-phone{
+    width: 28px; height: 28px; padding: 0; border-radius: 6px; box-sizing: border-box;
+    display: inline-flex; align-items: center; justify-content: center; gap: 0; font-size: 0; line-height: 1;
+  }
+  .site-preheader .preheader-phone i{ font-size: 16px; margin: 0; }
+  .preheader-campus, .preheader-inscripciones{ padding: 4px 10px; }
+}
 .preheader-submenu a[href$=".pdf"]::before {
   content: "\f1c1"; /* fa-file-pdf-o */
   font: normal normal normal 14px/1 FontAwesome;

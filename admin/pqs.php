@@ -17,10 +17,37 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             echo json_encode(['ok'=>false,'error'=>'Datos inválidos']); exit;
         }
         try{
-            $stmt = $db->prepare('UPDATE pqrs SET respuesta = :r, estado = :e WHERE id = :id');
+            $hasPolicaribe = false;
+            try {
+                $chk = $db->query("SHOW COLUMNS FROM pqrs LIKE 'policaribe'");
+                $hasPolicaribe = $chk && $chk->fetch() ? true : false;
+            } catch (Exception $e) { $hasPolicaribe = false; }
+            if ($hasPolicaribe) {
+                $stmt = $db->prepare('UPDATE pqrs SET respuesta = :r, policaribe = :r, estado = :e WHERE id = :id');
+            } else {
+                $stmt = $db->prepare('UPDATE pqrs SET respuesta = :r, estado = :e WHERE id = :id');
+            }
             $stmt->execute([':r'=>$respuesta, ':e'=>$estado, ':id'=>$id]);
             echo json_encode(['ok'=>true]);
         }catch(Exception $e){ echo json_encode(['ok'=>false,'error'=>'Error de servidor']); }
+        exit;
+    }
+    if ($accion === 'detalle') {
+        header('Content-Type: application/json; charset=utf-8');
+        $id = (int)($_POST['id'] ?? 0);
+        if ($id <= 0) { echo json_encode(['ok'=>false,'error'=>'ID inválido']); exit; }
+        try {
+            $stmt = $db->prepare('SELECT id, radicado, nombre, identificacion, correo, telefono, tipo, resumen, detalle, estado, fecha_radicado FROM pqrs WHERE id = :id LIMIT 1');
+            $stmt->execute([':id'=>$id]);
+            $p = $stmt->fetch();
+            if (!$p) { echo json_encode(['ok'=>false,'error'=>'No encontrado']); exit; }
+            $st2 = $db->prepare('SELECT id, nombre_original, ruta, mime, size, fecha_subida FROM pqrs_adjuntos WHERE pqrs_id = :id ORDER BY fecha_subida DESC');
+            $st2->execute([':id'=>$id]);
+            $adj = $st2->fetchAll();
+            echo json_encode(['ok'=>true,'data'=>['pqrs'=>$p,'adjuntos'=>$adj]]);
+        } catch (Exception $e) {
+            echo json_encode(['ok'=>false,'error'=>'Error de servidor']);
+        }
         exit;
     }
     if ($accion === 'estado') {
@@ -69,6 +96,7 @@ try {
         INDEX idx_estado (estado)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;");
     $db->exec("ALTER TABLE pqrs ADD COLUMN respuesta LONGTEXT NULL");
+    $db->exec("ALTER TABLE pqrs ADD COLUMN policaribe LONGTEXT NULL");
     $db->exec("CREATE TABLE IF NOT EXISTS pqrs_adjuntos (
         id INT AUTO_INCREMENT PRIMARY KEY,
         pqrs_id INT NOT NULL,
@@ -262,6 +290,7 @@ try {
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>var SITE_URL = '<?php echo SITE_URL; ?>';</script>
     <script>
       jQuery(function($){
         $('.sidebar-toggle').on('click', function(){
@@ -304,6 +333,7 @@ try {
               </div>
             </form>
             <div id="respAlert" class="alert" style="display:none"></div>
+            <div id="respDetails" class="well well-sm" style="display:none; margin-top:10px"></div>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
@@ -320,6 +350,33 @@ try {
           $('#respRadicado').val($(this).data('radicado'));
           $('#respNombre').val($(this).data('nombre'));
           $('#respAlert').hide().removeClass('alert-success alert-danger');
+          $('#respDetails').hide().empty();
+          $.ajax({ url: 'pqs.php', method: 'POST', data: { accion: 'detalle', id: id }, dataType: 'json' })
+            .done(function(res){
+              if(res && res.ok && res.data){
+                var p = res.data.pqrs || {};
+                var adj = res.data.adjuntos || [];
+                function esc(s){ return String(s||'').replace(/[&<>"']/g, function(c){ return ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','\'':'&#39;'})[c]; }); }
+                var html = '<table class="table table-condensed">'
+                  + '<tr><th>Tipo</th><td>'+esc(p.tipo)+'</td></tr>'
+                  + '<tr><th>Correo</th><td>'+esc(p.correo)+'</td></tr>'
+                  + '<tr><th>Teléfono</th><td>'+esc(p.telefono)+'</td></tr>'
+                  + '<tr><th>Fecha</th><td>'+esc(p.fecha_radicado)+'</td></tr>'
+                  + '<tr><th>Resumen</th><td>'+esc(p.resumen)+'</td></tr>'
+                  + '<tr><th>Detalle</th><td style="white-space:pre-wrap">'+esc(p.detalle)+'</td></tr>'
+                  + '</table>';
+                if(adj.length){
+                  html += '<h5><i class="fa fa-paperclip"></i> Adjuntos</h5><ul class="list-unstyled">';
+                  adj.forEach(function(a){
+                    var href = a.ruta || '';
+                    if(href && href.indexOf('http')!==0){ href = SITE_URL + '/' + href.replace(/^\/*/, ''); }
+                    html += '<li><a href="'+esc(href)+'" target="_blank">'+esc(a.nombre_original||'Archivo')+'</a> <small>(' + esc(a.mime||'') + ')</small></li>';
+                  });
+                  html += '</ul>';
+                }
+                $('#respDetails').html(html).show();
+              }
+            });
           $('#respModal').modal('show');
         });
         $('#respSaveBtn').on('click', function(){
