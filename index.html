@@ -337,10 +337,9 @@
 
     /* Preheader layout */
     .preheader-bar {
-        display: flex;
+        display: grid !important;
         align-items: center;
-        justify-content: space-between;
-        flex-wrap: nowrap;
+        grid-template-columns: 1fr auto 1fr;
         gap: 20px;
     }
 
@@ -353,25 +352,26 @@
     }
 
     .preheader-left {
-        flex: 0 0 auto;
+        justify-self: start;
     }
 
     .preheader-center {
-        flex: 1 1 auto;
         justify-content: center;
+        justify-self: center;
+        min-width: 0;
     }
 
     .preheader-right {
-        flex: 0 0 auto;
         gap: 18px;
         font-weight: 500;
         color: #4d4d4d;
+        justify-self: end;
     }
 
     @media (min-width: 721px) {
-        .preheader-bar { position: relative; }
-        .preheader-center { position: absolute; left: 50%; transform: translateX(-50%); flex: 0 0 auto; }
+        .preheader-bar { position: static; }
         .preheader-left { justify-content: flex-start; }
+        .preheader-center { position: static; transform: none; }
         .preheader-right { justify-content: flex-end; }
     }
 
@@ -463,36 +463,13 @@
     }
 
     @media (max-width: 720px) {
-        .preheader-bar {
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-
-        .preheader-left {
-            width: 100%;
-            justify-content: center;
-        }
-        .preheader-right {
-            width: 100%;
-            justify-content: flex-end;
-        }
-
-        .preheader-center {
-            width: 100%;
-        }
-
-        .preheader-center .menu-mobile {
-            display: block;
-            margin-right: 10px;
-        }
-
-        .preheader-center {
-            justify-content: center;
-        }
-
-        .preheader-logo img {
-            max-height: 48px;
-        }
+        .preheader-bar { grid-template-columns: 1fr; gap: 15px; }
+        .preheader-left, .preheader-center, .preheader-right { width: 100%; }
+        .preheader-left { justify-content: center; }
+        .preheader-right { justify-content: flex-end; }
+        .preheader-center { justify-content: center; position: static !important; transform: none; left: auto; }
+        .preheader-center .menu-mobile { display: block; margin-right: 10px; }
+        .preheader-logo img { max-height: 48px; }
     }
 
     #menu-es {background-color:#901913}
@@ -914,6 +891,29 @@
     
     .btn-empleados i {
         font-size: 16px;
+    }
+
+    .btn-diplomados-mobile {
+        display: none;
+        align-items: center;
+        gap: 8px;
+        background-color: transparent;
+        color: #ffffff !important;
+        padding: 0;
+        border-radius: 0;
+        text-decoration: none !important;
+        font-weight: 600;
+        font-size: 14px;
+        transition: none;
+        white-space: nowrap;
+    }
+    .btn-diplomados-mobile i { font-size: 16px; }
+    @media (max-width: 720px){
+        .btn-empleados{display:none !important}
+        .btn-diplomados-mobile{display:inline-flex !important}
+    }
+    @media (min-width: 721px){
+        .btn-diplomados-mobile{display:none !important}
     }
 
     /* Ajustes responsivos para pantallas medianas */
@@ -2270,7 +2270,11 @@
                         <i class="fas fa-user-graduate"></i>
                         <span>Inscripciones</span>
                     </a>
-                    <a href="cursos-cortos/index.html" class="btn-empleados">
+                    <a href="https://policaribe.edu.co/admin/login.php" class="btn-empleados">
+                        <i class="fas fa-user-tie"></i>
+                        <span>Empleados</span>
+                    </a>
+                    <a href="cursos-cortos/index.html" class="btn-diplomados-mobile">
                         <i class="fas fa-book-open"></i>
                         <span>Diplomados</span>
                     </a>
@@ -2377,7 +2381,7 @@
             <a class="sec-btn" href="documentos/calendario-academico-2026.pdf"><i class="fa fa-calendar"></i> Calendario Académico</a>
             <a class="sec-btn" href="documentos/derechos-pecuniarios-2026.pdf"><i class="fa fa-file"></i> Derechos Pecuniarios</a>
             <a class="sec-btn" href="documentos/valores-maicula-2026.pdf"><i class="fa fa-file"></i> Valores de Matrícula</a>
-            <a class="sec-btn" href="documentos/Estatutos-generale-2026.pdf"><i class="fa fa-file"></i> Estatuto General</a>
+            <a class="sec-btn" href="documentos/estatuto-general-2025.pdf"><i class="fa fa-file"></i> Estatuto General</a>
         </div>
     </div>
 </div>
