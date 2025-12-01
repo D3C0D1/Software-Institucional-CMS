@@ -1,6 +1,6 @@
 // Chatbot Policaribe: botón flotante y panel con lógicas básicas
 (function(){
-  const waNumber = '573042134088';
+  const waNumber = '573116149733';
   const waUrl = `https://wa.me/${waNumber}`;
 
   const programs = [
